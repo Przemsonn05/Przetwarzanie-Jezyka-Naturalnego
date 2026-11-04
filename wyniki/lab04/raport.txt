@@ -1,0 +1,177 @@
+
+==========================================================================================
+ANALIZA KORPUSU
+==========================================================================================
+Zdania: 7949, tokeny: 178663
+Różne czasowniki: 1679, różne rzeczowniki: 5203
+Relacje czasownik -> dopełnienie rzeczownikowe: 3890
+Odrzucone jako nieprzechodnie (dopełnienie w < 20% wystąpień): постати (13%), постојати (6%), вратити (18%)
+
+==========================================================================================
+WYBRANE CZASOWNIKI PRZECHODNIE (100)
+==========================================================================================
+ Lp | czasownik      | obj-rzecz. | obj-wszyst. | wystąpienia | przechodniość
+  1 | имати          |        364 |         337 |         393 |         0.858
+  2 | чинити         |        100 |         115 |         142 |         0.810
+  3 | представљати   |         99 |          94 |          99 |         0.949
+  4 | добити         |         79 |          78 |          98 |         0.796
+  5 | освојити       |         58 |          83 |          95 |         0.874
+  6 | обухватати     |         52 |          46 |          46 |         1.000
+  7 | донети         |         47 |          47 |          51 |         0.922
+  8 | послати        |         41 |          46 |          57 |         0.807
+  9 | дати           |         37 |          45 |          51 |         0.882
+ 10 | прихватити     |         31 |          36 |          41 |         0.878
+ 11 | заузимати      |         30 |          33 |          43 |         0.767
+ 12 | признати       |         28 |          39 |          42 |         0.929
+ 13 | водити         |         27 |          32 |          49 |         0.653
+ 14 | преузети       |         27 |          27 |          30 |         0.900
+ 15 | прогласити     |         27 |          32 |          44 |         0.727
+ 16 | наставити      |         26 |          24 |          47 |         0.511
+ 17 | оставити       |         26 |          32 |          42 |         0.762
+ 18 | повратити      |         24 |          22 |          23 |         0.957
+ 19 | заузети        |         24 |          41 |          57 |         0.719
+ 20 | стећи          |         23 |          24 |          27 |         0.889
+ 21 | формирати      |         23 |          25 |          38 |         0.658
+ 22 | извршити       |         23 |          24 |          25 |         0.960
+ 23 | носити         |         22 |          23 |          25 |         0.920
+ 24 | користити      |         22 |          23 |          43 |         0.535
+ 25 | доносити       |         22 |          14 |          17 |         0.824
+ 26 | основати       |         21 |          31 |          34 |         0.912
+ 27 | изгубити       |         21 |          20 |          25 |         0.800
+ 28 | подићи         |         21 |          23 |          28 |         0.821
+ 29 | вршити         |         21 |          21 |          24 |         0.875
+ 30 | давати         |         20 |          23 |          21 |         1.000
+  ... (pełna lista w czasowniki_przechodnie.csv)
+
+==========================================================================================
+WYBRANE RZECZOWNIKI (50)
+==========================================================================================
+ Lp | rzeczownik     | jako dopełnienie | wystąpienia
+  1 | власт          |               43 |         340
+  2 | део            |               35 |         453
+  3 | име            |               34 |         172
+  4 | град           |               34 |         686
+  5 | држава         |               27 |         459
+  6 | титула         |               26 |          84
+  7 | одлука         |               26 |         111
+  8 | право          |               23 |          96
+  9 | медаља         |               23 |          36
+ 10 | независност    |               21 |          84
+ 11 | становник      |               21 |         136
+ 12 | територија     |               18 |         236
+ 13 | статус         |               18 |          44
+ 14 | назив          |               17 |          98
+ 15 | улога          |               17 |          31
+ 16 | већина         |               16 |          78
+ 17 | место          |               16 |         126
+ 18 | област         |               15 |         206
+ 19 | победа         |               15 |          52
+ 20 | утицај         |               15 |          68
+ 21 | земља          |               14 |         286
+ 22 | аутономија     |               14 |          36
+ 23 | војска         |               13 |         240
+ 24 | традиција      |               13 |          42
+ 25 | подручје       |               13 |         196
+ 26 | подршка        |               12 |          34
+ 27 | повеља         |               12 |          54
+ 28 | помоћ          |               11 |          76
+ 29 | функција       |               11 |          22
+ 30 | манастир       |               11 |          78
+ 31 | рат            |               10 |         385
+ 32 | живот          |               10 |         105
+ 33 | мир            |               10 |          60
+ 34 | црква          |               10 |         190
+ 35 | борба          |                9 |         101
+ 36 | закон          |                9 |          89
+ 37 | успех          |                9 |          22
+ 38 | резултат       |                9 |          45
+ 39 | син            |                9 |         150
+ 40 | положај        |                9 |          63
+ 41 | република      |                9 |         310
+ 42 | површина       |                9 |          57
+ 43 | скупштина      |                9 |         137
+ 44 | политика       |                9 |          62
+ 45 | култура        |                8 |         117
+ 46 | пораз          |                8 |          38
+ 47 | отпор          |                8 |          43
+ 48 | граница        |                8 |         120
+ 49 | преговор       |                8 |          49
+ 50 | услов          |                8 |          31
+
+==========================================================================================
+WARIANT A: 100 czasowników przechodnich, kolokacje czasownik–dopełnienie
+==========================================================================================
+Zbiór treningowy: 50 wektorów × 100 składowych
+Suma kolokacji: 762, niezerowe składowe: 338 (6.8% macierzy)
+Sieć 10×10, 20000 iteracji: błąd kwantyzacji = 0.3361, błąd topograficzny = 0.00%
+Zajęte neurony: 41 / 100
+Neurony z więcej niż jednym rzeczownikiem (najbliżej siebie w przestrzeni 100D):
+  neuron (0, 9): део, територија
+  neuron (9, 6): одлука, закон
+  neuron (9, 2): независност, република
+  neuron (0, 3): становник, утицај
+  neuron (0, 0): статус, син
+  neuron (5, 9): већина, граница
+  neuron (0, 6): место, положај
+  neuron (2, 7): област, подручје
+  neuron (9, 9): рат, борба
+
+==========================================================================================
+WARIANT B: 100 najczęstszych czasowników, kolokacje czasownik–dopełnienie
+==========================================================================================
+Zbiór treningowy: 50 wektorów × 100 składowych
+Suma kolokacji: 617, niezerowe składowe: 263 (5.3% macierzy)
+Rzeczowniki bez żadnej kolokacji z tymi czasownikami: пораз, отпор
+Sieć 10×10, 20000 iteracji: błąd kwantyzacji = 0.2764, błąd topograficzny = 0.00%
+Zajęte neurony: 43 / 100
+Neurony z więcej niż jednym rzeczownikiem (najbliżej siebie w przestrzeni 100D):
+  neuron (9, 9): део, територија
+  neuron (0, 3): независност, република
+  neuron (9, 6): већина, граница
+  neuron (9, 0): утицај, успех
+  neuron (1, 9): рат, борба
+  neuron (0, 9): политика, преговор
+  neuron (2, 7): пораз, отпор
+
+==========================================================================================
+WARIANT C: 100 czasowników przechodnich, kolokacje w oknie ±5 wyrazów
+==========================================================================================
+Zbiór treningowy: 50 wektorów × 100 składowych
+Suma kolokacji: 1784, niezerowe składowe: 824 (16.5% macierzy)
+Sieć 10×10, 20000 iteracji: błąd kwantyzacji = 0.2916, błąd topograficzny = 0.00%
+Zajęte neurony: 49 / 100
+Neurony z więcej niż jednym rzeczownikiem (najbliżej siebie w przestrzeni 100D):
+  neuron (0, 0): територија, површина
+
+==========================================================================================
+PORÓWNANIE WARIANTÓW – czy wynik zależy od wyboru czasowników?
+==========================================================================================
+Wspólne czasowniki w A i B: 49 / 100
+  A vs B: korelacja Spearmana odległości na mapie = 0.701, wspólni sąsiedzi (5 najbliższych) = 48.0%
+  A vs C: korelacja Spearmana odległości na mapie = 0.405, wspólni sąsiedzi (5 najbliższych) = 30.0%
+  B vs C: korelacja Spearmana odległości na mapie = 0.429, wspólni sąsiedzi (5 najbliższych) = 30.0%
+
+Zapisano wyniki w folderze 'wyniki\lab04':
+  - czasowniki_przechodnie.csv
+  - podsumowanie.json
+  - raport.txt
+  - rzeczowniki.csv
+  - uczenie.png
+  - wariant_A_macierz.png
+  - wariant_A_mapa.csv
+  - wariant_A_mapa.png
+  - wariant_A_pca.png
+  - wariant_A_plaszczyzny.png
+  - wariant_A_zbior_treningowy.csv
+  - wariant_B_macierz.png
+  - wariant_B_mapa.csv
+  - wariant_B_mapa.png
+  - wariant_B_pca.png
+  - wariant_B_plaszczyzny.png
+  - wariant_B_zbior_treningowy.csv
+  - wariant_C_macierz.png
+  - wariant_C_mapa.csv
+  - wariant_C_mapa.png
+  - wariant_C_pca.png
+  - wariant_C_plaszczyzny.png
+  - wariant_C_zbior_treningowy.csv

@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+# postęp parsowania (plik roboczy lab04_parsowanie.py)
+dane/*.postep
+# duży plik grafu (14 MB) - generowany przez lab03_wyrazy_zipf_graf.py
+wyniki/lab03/graf_sasiedztwa.gexf
