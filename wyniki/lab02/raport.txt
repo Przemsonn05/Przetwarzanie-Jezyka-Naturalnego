@@ -1,18 +1,14 @@
 ====================================================================================
 WERYFIKACJA KORPUSU
 ====================================================================================
-Długość pliku wejściowego:   967373 znaków
-Brak znaków spoza alfabetu serbskiego.
-Długość po ponownym czyszczeniu: 967373 znaków
-Po czyszczeniu zostały tylko litery alfabetu i spacje: True
-Alfabet (30 liter): а б в г д ђ е ж з и ј к л љ м н њ о п р с т ћ у ф х ц ч џ ш
-
+Długość korpusu: 967373 znaków
+Korpus zawiera wyłącznie litery serbskiego alfabetu i spacje - OK.
+Występuje 30 z 30 liter alfabetu: а б в г д ђ е ж з и ј к л љ м н њ о п р с т ћ у ф х ц ч џ ш
 
 ====================================================================================
 ANALIZA 1: SAME LITERY (bez spacji)
 ====================================================================================
-Liczba znaków w korpusie: 818001
-Liczba różnych symboli:   30
+Liczba znaków: 818001, liczba różnych symboli: 30
 
  Lp | Znak        | Liczność | Udział [%] |        p |  -log2 p | Kod Huffmana   | Dł.
 --------------------------------------------------------------------------------------
@@ -50,27 +46,24 @@ Liczba różnych symboli:   30
     | SUMA        |   818001 |   100.0000 |  1.00000 |
 
 WYNIKI:
-  Entropia H                         = 4.302352 bit/znak
-  Entropia maksymalna log2(30)       = 4.906891 bit/znak
-  Redundancja 1 - H/Hmax             = 12.3202 %
-  Średnia długość kodu Huffmana L    = 4.336787 bit/znak
-  Różnica L - H                      = 0.034435 bit/znak
-  Efektywność kodu H/L               = 99.2060 %
-  Warunek H <= L < H + 1             = True
-  Kod o stałej długości              = 5 bit/znak
-
-  Rozmiar tekstu kodem stałej dł.    = 4090005 bitów
-  Rozmiar tekstu kodem Huffmana      = 3547496 bitów
-  Teoretyczne minimum (H * N)        = 3519328 bitów
-  Kompresja względem kodu stałego    = 13.26 %
-  Dekodowanie odtwarza tekst         = True
-
+  Entropia H                          = 4.302352 bit/znak
+  Entropia maksymalna log2(30)        = 4.906891 bit/znak
+  Redundancja 1 - H/Hmax              = 12.3202 %
+  Średnia długość kodu Huffmana L     = 4.336787 bit/znak
+  Różnica L - H                       = 0.034435 bit/znak
+  Efektywność kodu H/L                = 99.2060 %
+  Warunek H <= L < H + 1              = True
+  Kod o stałej długości               = 5 bit/znak
+  Rozmiar tekstu kodem stałej dł.     = 4090005 bitów
+  Rozmiar tekstu kodem Huffmana       = 3547496 bitów
+  Teoretyczne minimum (H * N)         = 3519328 bitów
+  Oszczędność względem kodu stałego   = 13.26 %
+  Dekodowanie odtwarza tekst          = True
 
 ====================================================================================
 ANALIZA 2: LITERY + SPACJA
 ====================================================================================
-Liczba znaków w korpusie: 967373
-Liczba różnych symboli:   31
+Liczba znaków: 967373, liczba różnych symboli: 31
 
  Lp | Znak        | Liczność | Udział [%] |        p |  -log2 p | Kod Huffmana   | Dł.
 --------------------------------------------------------------------------------------
@@ -109,31 +102,30 @@ Liczba różnych symboli:   31
     | SUMA        |   967373 |   100.0000 |  1.00000 |
 
 WYNIKI:
-  Entropia H                         = 4.258793 bit/znak
-  Entropia maksymalna log2(31)       = 4.954196 bit/znak
-  Redundancja 1 - H/Hmax             = 14.0366 %
-  Średnia długość kodu Huffmana L    = 4.288923 bit/znak
-  Różnica L - H                      = 0.030129 bit/znak
-  Efektywność kodu H/L               = 99.2975 %
-  Warunek H <= L < H + 1             = True
-  Kod o stałej długości              = 5 bit/znak
-
-  Rozmiar tekstu kodem stałej dł.    = 4836865 bitów
-  Rozmiar tekstu kodem Huffmana      = 4148988 bitów
-  Teoretyczne minimum (H * N)        = 4119842 bitów
-  Kompresja względem kodu stałego    = 14.22 %
-  Dekodowanie odtwarza tekst         = True
-
+  Entropia H                          = 4.258793 bit/znak
+  Entropia maksymalna log2(31)        = 4.954196 bit/znak
+  Redundancja 1 - H/Hmax              = 14.0366 %
+  Średnia długość kodu Huffmana L     = 4.288923 bit/znak
+  Różnica L - H                       = 0.030129 bit/znak
+  Efektywność kodu H/L                = 99.2975 %
+  Warunek H <= L < H + 1              = True
+  Kod o stałej długości               = 5 bit/znak
+  Rozmiar tekstu kodem stałej dł.     = 4836865 bitów
+  Rozmiar tekstu kodem Huffmana       = 4148988 bitów
+  Teoretyczne minimum (H * N)         = 4119842 bitów
+  Oszczędność względem kodu stałego   = 14.22 %
+  Dekodowanie odtwarza tekst          = True
 
 ====================================================================================
 PODSUMOWANIE
 ====================================================================================
-Wariant                |   H [bit] | L Huffman [bit] |    L - H |  H/L [%]
---------------------------------------------------------------------------
-Same litery            |   4.30235 |         4.33679 |  0.03443 |   99.206
-Litery + spacja        |   4.25879 |         4.28892 |  0.03013 |   99.298
+Wariant            |   H [bit] | L Huffman [bit] |    L - H |  H/L [%]
+----------------------------------------------------------------------
+Same litery        |   4.30235 |         4.33679 |  0.03443 |   99.206
+Litery + spacja    |   4.25879 |         4.28892 |  0.03013 |   99.298
 
 Wniosek: średnia długość kodu Huffmana jest tylko nieznacznie większa od entropii
-(H <= L < H + 1), więc kod Huffmana jest bliski optymalnemu. Różnica wynika z tego,
-że długości słów kodowych muszą być całkowite, a prawdopodobieństwa liter nie są
-potęgami 1/2.
+(H <= L < H + 1), więc kod Huffmana jest prawie optymalny. Różnica wynika z tego,
+że kod musi mieć całkowitą liczbę bitów, a -log2 p zwykle nie jest liczbą całkowitą.
+
+Wyniki zapisano w folderze wyniki\lab02

@@ -1,0 +1,26 @@
+Używam pobranego wcześniej tekstu z dane\surowy_serbski.txt (uruchom z opcją --pobierz, aby pobrać go od nowa).
+
+================================================================================
+CZYSZCZENIE KORPUSU
+================================================================================
+Tekst surowy:            1036853 znaków
+Korpus po czyszczeniu:    967373 znaków, 149373 wyrazów
+Wielkie litery zamienione na małe: 34154
+
+Usunięte (zamienione na spację) znaki spoza alfabetu:
+  grupa znaków                           |   liczba | najczęstsze przykłady
+  białe znaki (spacje, nowe linie)       |   159836 |   \n \u202f \u2009 \u2003
+  interpunkcja (. , ( ) – „ ” % ...)     |    29766 | , . ) ( - — : „ ” % ; “
+  cyfry i liczby (np. 1, 2, ²)           |    21112 | 1 0 9 2 3 8 4 5 7 6 ²
+  litery łacińskie                       |     4007 | i a m e n k r s o t v c
+  symbole (= + ° € ...)                  |     3921 | = ° + € − | >
+  litery greckie                         |      190 | α σ ρ ο ι ν β ς κ ί τ ε
+  cyrylica spoza alfabetu serbskiego     |       14 | ь ъ ѣ й ї ꙗ
+  litery innych alfabetów                |        6 | ن ی ش
+
+Kontrola wyniku:
+  tylko litery serbskiego alfabetu i spacje:  TAK
+  brak podwójnych spacji i spacji na brzegach: TAK
+  występuje 30 z 30 liter alfabetu
+
+Korpus zapisano w dane\oczyszczony_serbski.txt, raport w wyniki/lab01/.

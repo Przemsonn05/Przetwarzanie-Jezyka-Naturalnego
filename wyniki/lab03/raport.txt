@@ -1,3 +1,4 @@
+
 ====================================================================================
 CZĘŚĆ 1: WYRAZY POKRYWAJĄCE 90% TEKSTU
 ====================================================================================
@@ -212,8 +213,8 @@ Właściwości rdzenia:
   Wspólne wyrazy z top-100 najczęstszymi:      88 / 100
   Krawędzie wewnątrz rdzenia:                  1836 (gęstość 37.09%)
   Pary sąsiadów z co najmniej 1 wyrazem rdzenia: 60.56%
-  W rdzeniu, ale nie w top-100 częstości:  своје, поред, уз, само, међу, преко, области, земље, своју, међутим, их, хрватска
-  W top-100 częstości, ale nie w rdzeniu:  када, горе, црне, би, стефан, републике, србију, босне, царства, немања, југославија, један
+  W rdzeniu, ale nie w top-100 częstości:  своје, поред, уз, само, међу, преко, области, земље, међутим, своју, их, хрватска
+  W top-100 częstości, ale nie w rdzeniu:  када, горе, црне, стефан, би, републике, србију, босне, царства, немања, југославија, један
   Korelacja log(liczba sąsiadów) ~ log(liczność): 0.9796
 
 Wniosek: rdzeń tworzą głównie krótkie słowa funkcyjne (spójniki, przyimki,
@@ -226,3 +227,15 @@ PODSUMOWANIE
   Wyrazy pokrywające 90% tekstu: 11148 z 25608
   Prawo Zipfa: s = 0.9584, R² = 0.9652
   Rdzeń grafu (100 wyrazów), pierwsze 10: и, у, је, на, су, се, са, од, а, за
+
+Zapisano wyniki w folderze 'wyniki\lab03':
+  - graf_sasiedztwa.gexf
+  - pokrycie_tekstu.png
+  - prawo_zipfa.png
+  - raport.txt
+  - rdzen_100.csv
+  - rdzen_grafu.png
+  - rozklad_stopni.png
+  - stopnie_wezlow.csv
+  - wyrazy_pokrycie_90.csv
+  - zipf.csv

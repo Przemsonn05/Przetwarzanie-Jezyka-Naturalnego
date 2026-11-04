@@ -1,0 +1,127 @@
+﻿znak;kod_unicode;grupa;liczba
+ ;U+0020;białe znaki (spacje, nowe linie);154169
+,;U+002C;interpunkcja (. , ( ) – „ ” % ...);11585
+.;U+002E;interpunkcja (. , ( ) – „ ” % ...);11451
+\n;U+000A;białe znaki (spacje, nowe linie);5656
+1;U+0031;cyfry i liczby (np. 1, 2, ²);5264
+=;U+003D;symbole (= + ° € ...);3850
+0;U+0030;cyfry i liczby (np. 1, 2, ²);3056
+9;U+0039;cyfry i liczby (np. 1, 2, ²);2480
+2;U+0032;cyfry i liczby (np. 1, 2, ²);2455
+);U+0029;interpunkcja (. , ( ) – „ ” % ...);1789
+(;U+0028;interpunkcja (. , ( ) – „ ” % ...);1786
+3;U+0033;cyfry i liczby (np. 1, 2, ²);1560
+8;U+0038;cyfry i liczby (np. 1, 2, ²);1496
+4;U+0034;cyfry i liczby (np. 1, 2, ²);1373
+5;U+0035;cyfry i liczby (np. 1, 2, ²);1209
+7;U+0037;cyfry i liczby (np. 1, 2, ²);1086
+6;U+0036;cyfry i liczby (np. 1, 2, ²);1083
+i;U+0069;litery łacińskie;963
+-;U+002D;interpunkcja (. , ( ) – „ ” % ...);615
+—;U+2014;interpunkcja (. , ( ) – „ ” % ...);611
+:;U+003A;interpunkcja (. , ( ) – „ ” % ...);437
+„;U+201E;interpunkcja (. , ( ) – „ ” % ...);402
+a;U+0061;litery łacińskie;366
+m;U+006D;litery łacińskie;360
+”;U+201D;interpunkcja (. , ( ) – „ ” % ...);329
+%;U+0025;interpunkcja (. , ( ) – „ ” % ...);306
+e;U+0065;litery łacińskie;210
+n;U+006E;litery łacińskie;193
+k;U+006B;litery łacińskie;191
+r;U+0072;litery łacińskie;180
+s;U+0073;litery łacińskie;178
+o;U+006F;litery łacińskie;177
+t;U+0074;litery łacińskie;161
+v;U+0076;litery łacińskie;155
+c;U+0063;litery łacińskie;138
+u;U+0075;litery łacińskie;111
+";";U+003B;interpunkcja (. , ( ) – „ ” % ...);102
+“;U+201C;interpunkcja (. , ( ) – „ ” % ...);91
+d;U+0064;litery łacińskie;88
+l;U+006C;litery łacińskie;88
+/;U+002F;interpunkcja (. , ( ) – „ ” % ...);79
+h;U+0068;litery łacińskie;76
+p;U+0070;litery łacińskie;69
+x;U+0078;litery łacińskie;56
+"""";U+0022;interpunkcja (. , ( ) – „ ” % ...);55
+°;U+00B0;symbole (= + ° € ...);54
+–;U+2013;interpunkcja (. , ( ) – „ ” % ...);54
+²;U+00B2;cyfry i liczby (np. 1, 2, ²);50
+g;U+0067;litery łacińskie;43
+b;U+0062;litery łacińskie;41
+j;U+006A;litery łacińskie;32
+y;U+0079;litery łacińskie;30
+α;U+03B1;litery greckie;29
+w;U+0077;litery łacińskie;28
+z;U+007A;litery łacińskie;28
+σ;U+03C3;litery greckie;21
+';U+0027;interpunkcja (. , ( ) – „ ” % ...);18
+f;U+0066;litery łacińskie;17
+ρ;U+03C1;litery greckie;16
+ο;U+03BF;litery greckie;15
+ι;U+03B9;litery greckie;13
+…;U+2026;interpunkcja (. , ( ) – „ ” % ...);12
+ν;U+03BD;litery greckie;12
+?;U+003F;interpunkcja (. , ( ) – „ ” % ...);11
+β;U+03B2;litery greckie;10
+ς;U+03C2;litery greckie;10
+[;U+005B;interpunkcja (. , ( ) – „ ” % ...);10
+];U+005D;interpunkcja (. , ( ) – „ ” % ...);10
+κ;U+03BA;litery greckie;9
+\u202f;U+202F;białe znaki (spacje, nowe linie);9
+ί;U+03AF;litery greckie;8
+τ;U+03C4;litery greckie;8
+ε;U+03B5;litery greckie;7
+υ;U+03C5;litery greckie;6
++;U+002B;symbole (= + ° € ...);6
+λ;U+03BB;litery greckie;5
+ó;U+00F3;litery łacińskie;5
+έ;U+03AD;litery greckie;4
+ь;U+044C;cyrylica spoza alfabetu serbskiego;4
+ό;U+03CC;litery greckie;4
+€;U+20AC;symbole (= + ° € ...);4
+−;U+2212;symbole (= + ° € ...);3
+ъ;U+044A;cyrylica spoza alfabetu serbskiego;3
+ѣ;U+0463;cyrylica spoza alfabetu serbskiego;3
+{;U+007B;interpunkcja (. , ( ) – „ ” % ...);3
+’;U+2019;interpunkcja (. , ( ) – „ ” % ...);3
+!;U+0021;interpunkcja (. , ( ) – „ ” % ...);3
+ú;U+00FA;litery łacińskie;2
+é;U+00E9;litery łacińskie;2
+|;U+007C;symbole (= + ° € ...);2
+>;U+003E;symbole (= + ° € ...);2
+ن;U+0646;litery innych alfabetów;2
+ی;U+06CC;litery innych alfabetów;2
+ش;U+0634;litery innych alfabetów;2
+ş;U+015F;litery łacińskie;2
+й;U+0439;cyrylica spoza alfabetu serbskiego;2
+á;U+00E1;litery łacińskie;2
+č;U+010D;litery łacińskie;2
+ë;U+00EB;litery łacińskie;2
+q;U+0071;litery łacińskie;2
+ô;U+00F4;litery łacińskie;2
+ž;U+017E;litery łacińskie;2
+ά;U+03AC;litery greckie;2
+ω;U+03C9;litery greckie;2
+&;U+0026;interpunkcja (. , ( ) – „ ” % ...);1
+η;U+03B7;litery greckie;1
+π;U+03C0;litery greckie;1
+γ;U+03B3;litery greckie;1
+»;U+00BB;interpunkcja (. , ( ) – „ ” % ...);1
+«;U+00AB;interpunkcja (. , ( ) – „ ” % ...);1
+ý;U+00FD;litery łacińskie;1
+};U+007D;interpunkcja (. , ( ) – „ ” % ...);1
+ϊ;U+03CA;litery greckie;1
+ξ;U+03BE;litery greckie;1
+ă;U+0103;litery łacińskie;1
+ї;U+0457;cyrylica spoza alfabetu serbskiego;1
+ľ;U+013E;litery łacińskie;1
+\u2009;U+2009;białe znaki (spacje, nowe linie);1
+φ;U+03C6;litery greckie;1
+ꙗ;U+A657;cyrylica spoza alfabetu serbskiego;1
+ć;U+0107;litery łacińskie;1
+χ;U+03C7;litery greckie;1
+δ;U+03B4;litery greckie;1
+\u2003;U+2003;białe znaki (spacje, nowe linie);1
+μ;U+03BC;litery greckie;1
+š;U+0161;litery łacińskie;1

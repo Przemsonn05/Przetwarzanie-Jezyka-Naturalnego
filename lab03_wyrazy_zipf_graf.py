@@ -1,50 +1,51 @@
+"""
+LAB 3 - wyrazy pokrywające 90% tekstu, prawo Zipfa, graf wyrazów sąsiadujących.
+
+Kroki:
+  1. Liczymy, ile razy występuje każdy wyraz, sortujemy od najczęstszego i dodajemy
+     ich udziały, aż razem dadzą 90% tekstu -> tyle wyrazów "pokrywa" 90% tekstu.
+  2. Prawo Zipfa: częstość wyrazu f jest odwrotnie proporcjonalna do jego miejsca
+     w rankingu r, czyli f(r) ~ C / r^s, s ~ 1. Wyznaczamy s i C z wykresu log-log.
+  3. Graf: węzeł = wyraz, krawędź = dwa wyrazy stały w tekście obok siebie.
+     Dla każdego węzła zliczamy krawędzie (sąsiadów). 100 wyrazów z największą
+     liczbą sąsiadów to RDZEŃ grafu.
+
+Wyniki: wyniki/lab03/ (raport.txt, tabele CSV, wykresy PNG, graf w formacie GEXF dla programu Gephi).
+"""
 import os
-import sys
 from collections import Counter, defaultdict
 
 import matplotlib
 
-matplotlib.use("Agg")  # zapis wykresów do plików bez otwierania okien
+matplotlib.use("Agg")  # wykresy zapisujemy do plików, bez otwierania okien
 import matplotlib.pyplot as plt
 import networkx as nx
 import numpy as np
 
-from lab01 import SERBIAN_ALPHABET, clean_text
+from wspolne import CLEAN_FILE, SERBIAN_ALPHABET, report_to, results_dir
 
-# Konsola Windows domyślnie nie obsługuje cyrylicy
-sys.stdout.reconfigure(encoding="utf-8")
-
-INPUT_FILE = "oczyszczony_serbski.txt"
-OUTPUT_DIR = os.path.join("wyniki", "lab03")
-COVERAGE_TARGET = 0.90
-CORE_SIZE = 100
+OUTPUT_DIR = results_dir("lab03")
+COVERAGE_TARGET = 0.90   # jaką część tekstu mają pokryć najczęstsze wyrazy
+CORE_SIZE = 100          # wielkość rdzenia grafu
 
 
 def load_words(filename):
-    """Wczytuje korpus, czyści go tak samo jak w lab01 i dzieli na wyrazy."""
+    """Wczytuje oczyszczony korpus (lab 1) i dzieli go na wyrazy."""
     with open(filename, encoding="utf-8") as f:
-        text = clean_text(f.read())
-    words = text.split()
-    assert all(set(w) <= set(SERBIAN_ALPHABET) for w in words)
+        words = f.read().split()
+    assert all(set(w) <= set(SERBIAN_ALPHABET) for w in words), "korpus nie jest oczyszczony"
     return words
 
 
-def section(title, report):
-    lines = ["", "=" * 84, title, "=" * 84]
-    print("\n".join(lines))
-    report.extend(lines)
-
-
-def emit(line, report):
-    print(line)
-    report.append(line)
+def section(title):
+    print("\n" + "=" * 84 + "\n" + title + "\n" + "=" * 84)
 
 
 # ---------------------------------------------------------------------------
 # 1. Wyrazy pokrywające 90% tekstu
 # ---------------------------------------------------------------------------
-def coverage_analysis(words, counts, report):
-    section(f"CZĘŚĆ 1: WYRAZY POKRYWAJĄCE {COVERAGE_TARGET:.0%} TEKSTU", report)
+def coverage_analysis(words, counts):
+    section(f"CZĘŚĆ 1: WYRAZY POKRYWAJĄCE {COVERAGE_TARGET:.0%} TEKSTU")
 
     total = len(words)
     ranked = counts.most_common()
@@ -52,29 +53,29 @@ def coverage_analysis(words, counts, report):
     needed = int(np.searchsorted(cumulative, COVERAGE_TARGET) + 1)
 
     hapax = sum(1 for _, n in ranked if n == 1)
-    emit(f"Liczba wszystkich wyrazów (tokenów):         {total}", report)
-    emit(f"Liczba różnych wyrazów (typów):              {len(ranked)}", report)
-    emit(f"Wyrazy występujące tylko raz (hapax legomena): {hapax} "
-         f"({hapax / len(ranked):.2%} słownika)", report)
-    emit("", report)
-    emit(f"Aby pokryć {COVERAGE_TARGET:.0%} tekstu potrzeba {needed} najczęstszych wyrazów,", report)
-    emit(f"czyli {needed / len(ranked):.2%} wszystkich różnych wyrazów "
-         f"(pokrycie dokładne: {cumulative[needed - 1]:.4%}).", report)
-    emit("", report)
+    print(f"Liczba wszystkich wyrazów (tokenów):         {total}")
+    print(f"Liczba różnych wyrazów (typów):              {len(ranked)}")
+    print(f"Wyrazy występujące tylko raz (hapax legomena): {hapax} "
+         f"({hapax / len(ranked):.2%} słownika)")
+    print("")
+    print(f"Aby pokryć {COVERAGE_TARGET:.0%} tekstu potrzeba {needed} najczęstszych wyrazów,")
+    print(f"czyli {needed / len(ranked):.2%} wszystkich różnych wyrazów "
+         f"(pokrycie dokładne: {cumulative[needed - 1]:.4%}).")
+    print("")
 
-    emit("Ile wyrazów potrzeba do danego pokrycia:", report)
+    print("Ile wyrazów potrzeba do danego pokrycia:")
     for level in (0.25, 0.50, 0.75, 0.80, 0.90, 0.95, 0.99, 1.00):
         k = int(np.searchsorted(cumulative, level - 1e-12) + 1)
-        emit(f"  {level:>5.0%} tekstu -> {k:>6} wyrazów ({k / len(ranked):>7.2%} słownika)", report)
-    emit("", report)
+        print(f"  {level:>5.0%} tekstu -> {k:>6} wyrazów ({k / len(ranked):>7.2%} słownika)")
+    print("")
 
-    emit("Pierwsze 30 wyrazów z listy pokrywającej 90% tekstu:", report)
+    print("Pierwsze 30 wyrazów z listy pokrywającej 90% tekstu:")
     header = f"{'Ranga':>5} | {'Wyraz':<18} | {'Liczność':>8} | {'Udział [%]':>10} | {'Pokrycie skum. [%]':>18}"
-    emit(header, report)
-    emit("-" * len(header), report)
+    print(header)
+    print("-" * len(header))
     for i, (w, n) in enumerate(ranked[:30], 1):
-        emit(f"{i:>5} | {w:<18} | {n:>8} | {n / total * 100:>10.4f} | {cumulative[i - 1] * 100:>18.4f}", report)
-    emit(f"  ... (pełna lista {needed} wyrazów w pliku wyrazy_pokrycie_90.csv)", report)
+        print(f"{i:>5} | {w:<18} | {n:>8} | {n / total * 100:>10.4f} | {cumulative[i - 1] * 100:>18.4f}")
+    print(f"  ... (pełna lista {needed} wyrazów w pliku wyrazy_pokrycie_90.csv)")
 
     with open(os.path.join(OUTPUT_DIR, "wyrazy_pokrycie_90.csv"), "w", encoding="utf-8-sig") as f:
         f.write("ranga;wyraz;licznosc;udzial_procent;pokrycie_skumulowane_procent\n")
@@ -104,8 +105,8 @@ def coverage_analysis(words, counts, report):
 # ---------------------------------------------------------------------------
 # 2. Prawo Zipfa
 # ---------------------------------------------------------------------------
-def zipf_analysis(counts, report):
-    section("CZĘŚĆ 2: PRAWO ZIPFA", report)
+def zipf_analysis(counts):
+    section("CZĘŚĆ 2: PRAWO ZIPFA")
 
     ranked = counts.most_common()
     freqs = np.array([n for _, n in ranked], dtype=float)
@@ -125,43 +126,43 @@ def zipf_analysis(counts, report):
     no_hapax = freqs >= 2
     s2, C2, r2_2 = fit(no_hapax)
 
-    emit("Prawo Zipfa: f(r) ≈ C / r^s, przy czym w wersji klasycznej s ≈ 1,", report)
-    emit("czyli iloczyn r · f(r) powinien być w przybliżeniu stały.", report)
-    emit("", report)
-    emit("Dopasowanie (regresja liniowa log10 f = log10 C - s · log10 r):", report)
-    emit(f"{'':<34} | {'s':>7} | {'C':>8} | {'R²':>6}", report)
-    emit(f"{f'wszystkie wyrazy ({len(freqs)})':<34} | {s:>7.4f} | {C:>8.2f} | {r2:>6.4f}", report)
-    emit(f"{f'bez hapaksów, f >= 2 ({no_hapax.sum()})':<34} | {s2:>7.4f} | {C2:>8.2f} | {r2_2:>6.4f}", report)
-    emit("", report)
+    print("Prawo Zipfa: f(r) ≈ C / r^s, przy czym w wersji klasycznej s ≈ 1,")
+    print("czyli iloczyn r · f(r) powinien być w przybliżeniu stały.")
+    print("")
+    print("Dopasowanie (regresja liniowa log10 f = log10 C - s · log10 r):")
+    print(f"{'':<34} | {'s':>7} | {'C':>8} | {'R²':>6}")
+    print(f"{f'wszystkie wyrazy ({len(freqs)})':<34} | {s:>7.4f} | {C:>8.2f} | {r2:>6.4f}")
+    print(f"{f'bez hapaksów, f >= 2 ({no_hapax.sum()})':<34} | {s2:>7.4f} | {C2:>8.2f} | {r2_2:>6.4f}")
+    print("")
 
-    emit("Sprawdzenie r · f(r) dla wybranych rang:", report)
+    print("Sprawdzenie r · f(r) dla wybranych rang:")
     header = f"{'Ranga r':>7} | {'Wyraz':<18} | {'f(r)':>6} | {'r · f(r)':>9} | {'f model':>9} | {'f Zipf (s=1)':>12}"
-    emit(header, report)
-    emit("-" * len(header), report)
+    print(header)
+    print("-" * len(header))
     f1 = freqs[0]
     sample = [r for r in (1, 2, 3, 4, 5, 10, 20, 30, 50, 100, 200, 500, 1000, 2000, 5000, 10000)
               if r <= len(ranked)]
     for r in sample:
         w, n = ranked[r - 1]
-        emit(f"{r:>7} | {w:<18} | {n:>6} | {r * n:>9} | {predicted[r - 1]:>9.2f} | {f1 / r:>12.2f}", report)
-    emit("", report)
-    emit("Wniosek: w skali log-log zależność częstości od rangi jest w przybliżeniu", report)
-    emit(f"liniowa (R² = {r2:.3f}), więc rozkład ma charakter potęgowy zgodny z prawem", report)
+        print(f"{r:>7} | {w:<18} | {n:>6} | {r * n:>9} | {predicted[r - 1]:>9.2f} | {f1 / r:>12.2f}")
+    print("")
+    print("Wniosek: w skali log-log zależność częstości od rangi jest w przybliżeniu")
+    print(f"liniowa (R² = {r2:.3f}), więc rozkład ma charakter potęgowy zgodny z prawem")
     if abs(s - 1) <= 0.1:
-        emit(f"Zipfa. Wykładnik s = {s:.2f} ({s2:.2f} bez hapaksów) jest bliski klasycznej", report)
-        emit("wartości 1, więc korpus dobrze spełnia prawo Zipfa. Niewielkie spłaszczenie", report)
-        emit("rozkładu (s < 1) wynika z fleksyjności serbskiego (србија, србије, србији,", report)
-        emit("србију... liczone osobno) i bogatego słownictwa tekstów encyklopedycznych.", report)
+        print(f"Zipfa. Wykładnik s = {s:.2f} ({s2:.2f} bez hapaksów) jest bliski klasycznej")
+        print("wartości 1, więc korpus dobrze spełnia prawo Zipfa. Niewielkie spłaszczenie")
+        print("rozkładu (s < 1) wynika z fleksyjności serbskiego (србија, србије, србији,")
+        print("србију... liczone osobno) i bogatego słownictwa tekstów encyklopedycznych.")
     else:
-        emit(f"Zipfa. Wykładnik s = {s:.2f} ({s2:.2f} bez hapaksów) jest jednak wyraźnie", report)
-        emit("różny od klasycznego 1. Przyczyny:", report)
-        emit(f"  - mały korpus ({int(freqs.sum())} wyrazów), w którym {np.sum(freqs == 1)} wyrazów "
-             f"({np.mean(freqs == 1):.0%}) występuje raz,", report)
-        emit("  - serbski jest językiem fleksyjnym: jeden leksem ma wiele form (србија, србије,", report)
-        emit("    србији, србију...), co rozprasza częstości na wiele rzadkich form,", report)
-        emit("  - teksty encyklopedyczne mają bogate słownictwo (nazwy własne, terminy).", report)
-    emit("Odchylenia widać też dla kilku pierwszych rang (słowa funkcyjne и, у, је)", report)
-    emit("i w ogonie, gdzie wiele wyrazów ma tę samą małą częstość (schodki).", report)
+        print(f"Zipfa. Wykładnik s = {s:.2f} ({s2:.2f} bez hapaksów) jest jednak wyraźnie")
+        print("różny od klasycznego 1. Przyczyny:")
+        print(f"  - mały korpus ({int(freqs.sum())} wyrazów), w którym {np.sum(freqs == 1)} wyrazów "
+             f"({np.mean(freqs == 1):.0%}) występuje raz,")
+        print("  - serbski jest językiem fleksyjnym: jeden leksem ma wiele form (србија, србије,")
+        print("    србији, србију...), co rozprasza częstości na wiele rzadkich form,")
+        print("  - teksty encyklopedyczne mają bogate słownictwo (nazwy własne, terminy).")
+    print("Odchylenia widać też dla kilku pierwszych rang (słowa funkcyjne и, у, је)")
+    print("i w ogonie, gdzie wiele wyrazów ma tę samą małą częstość (schodki).")
 
     with open(os.path.join(OUTPUT_DIR, "zipf.csv"), "w", encoding="utf-8-sig") as f:
         f.write("ranga;wyraz;licznosc;ranga_razy_licznosc;licznosc_model\n")
@@ -201,8 +202,8 @@ def zipf_analysis(counts, report):
 # ---------------------------------------------------------------------------
 # 3. Graf wyrazów sąsiadujących i jego rdzeń
 # ---------------------------------------------------------------------------
-def neighbour_graph(words, counts, report):
-    section("CZĘŚĆ 3: GRAF WYRAZÓW SĄSIADUJĄCYCH I RDZEŃ", report)
+def neighbour_graph(words, counts):
+    section("CZĘŚĆ 3: GRAF WYRAZÓW SĄSIADUJĄCYCH I RDZEŃ")
 
     # Węzeł = wyraz, krawędź = dwa wyrazy wystąpiły w tekście obok siebie.
     # Krawędzie wychodzące z węzła liczymy w wersji skierowanej (następniki)
@@ -225,27 +226,27 @@ def neighbour_graph(words, counts, report):
 
     n_edges_directed = sum(out_degree.values())
     n_edges_undirected = len(edge_weights)
-    emit(f"Liczba węzłów (różnych wyrazów):              {len(vocab)}", report)
-    emit(f"Liczba krawędzi skierowanych (a → b):         {n_edges_directed}", report)
-    emit(f"Liczba krawędzi nieskierowanych (a — b):      {n_edges_undirected}", report)
-    emit(f"Średnia liczba sąsiadów węzła:                {np.mean(list(degree.values())):.3f}", report)
-    emit(f"Mediana liczby sąsiadów:                      {np.median(list(degree.values())):.0f}", report)
-    emit(f"Maksymalna liczba sąsiadów:                   {max(degree.values())}", report)
-    emit("", report)
+    print(f"Liczba węzłów (różnych wyrazów):              {len(vocab)}")
+    print(f"Liczba krawędzi skierowanych (a → b):         {n_edges_directed}")
+    print(f"Liczba krawędzi nieskierowanych (a — b):      {n_edges_undirected}")
+    print(f"Średnia liczba sąsiadów węzła:                {np.mean(list(degree.values())):.3f}")
+    print(f"Mediana liczby sąsiadów:                      {np.median(list(degree.values())):.0f}")
+    print(f"Maksymalna liczba sąsiadów:                   {max(degree.values())}")
+    print("")
 
     core = sorted(vocab, key=lambda w: (-degree[w], -counts[w], w))[:CORE_SIZE]
     core_set = set(core)
 
-    emit(f"RDZEŃ – {CORE_SIZE} wyrazów o największej liczbie sąsiadów:", report)
+    print(f"RDZEŃ – {CORE_SIZE} wyrazów o największej liczbie sąsiadów:")
     header = (f"{'Lp':>3} | {'Wyraz':<16} | {'Sąsiedzi':>8} | {'Wychodzące':>10} | "
               f"{'Wchodzące':>9} | {'Liczność':>8} | {'Ranga częst.':>12}")
-    emit(header, report)
-    emit("-" * len(header), report)
+    print(header)
+    print("-" * len(header))
     freq_rank = {w: i for i, (w, _) in enumerate(counts.most_common(), 1)}
     for i, w in enumerate(core, 1):
-        emit(f"{i:>3} | {w:<16} | {degree[w]:>8} | {out_degree[w]:>10} | "
-             f"{in_degree[w]:>9} | {counts[w]:>8} | {freq_rank[w]:>12}", report)
-    emit("", report)
+        print(f"{i:>3} | {w:<16} | {degree[w]:>8} | {out_degree[w]:>10} | "
+             f"{in_degree[w]:>9} | {counts[w]:>8} | {freq_rank[w]:>12}")
+    print("")
 
     # Właściwości rdzenia
     core_tokens = sum(counts[w] for w in core)
@@ -254,24 +255,24 @@ def neighbour_graph(words, counts, report):
     max_edges = CORE_SIZE * (CORE_SIZE - 1) // 2
     bigrams = list(zip(words, words[1:]))
     touching = sum(1 for a, b in bigrams if a in core_set or b in core_set)
-    emit("Właściwości rdzenia:", report)
-    emit(f"  Pokrycie tekstu przez wyrazy rdzenia:        {core_tokens / len(words):.2%}", report)
-    emit(f"  Wspólne wyrazy z top-{CORE_SIZE} najczęstszymi:      "
-         f"{len(core_set & top_freq)} / {CORE_SIZE}", report)
-    emit(f"  Krawędzie wewnątrz rdzenia:                  {len(core_edges)} "
-         f"(gęstość {len(core_edges) / max_edges:.2%})", report)
-    emit(f"  Pary sąsiadów z co najmniej 1 wyrazem rdzenia: {touching / len(bigrams):.2%}", report)
+    print("Właściwości rdzenia:")
+    print(f"  Pokrycie tekstu przez wyrazy rdzenia:        {core_tokens / len(words):.2%}")
+    print(f"  Wspólne wyrazy z top-{CORE_SIZE} najczęstszymi:      "
+         f"{len(core_set & top_freq)} / {CORE_SIZE}")
+    print(f"  Krawędzie wewnątrz rdzenia:                  {len(core_edges)} "
+         f"(gęstość {len(core_edges) / max_edges:.2%})")
+    print(f"  Pary sąsiadów z co najmniej 1 wyrazem rdzenia: {touching / len(bigrams):.2%}")
     only_degree = sorted(core_set - top_freq, key=lambda w: -degree[w])
     only_freq = sorted(top_freq - core_set, key=lambda w: -counts[w])
-    emit(f"  W rdzeniu, ale nie w top-{CORE_SIZE} częstości:  {', '.join(only_degree) or '-'}", report)
-    emit(f"  W top-{CORE_SIZE} częstości, ale nie w rdzeniu:  {', '.join(only_freq) or '-'}", report)
+    print(f"  W rdzeniu, ale nie w top-{CORE_SIZE} częstości:  {', '.join(only_degree) or '-'}")
+    print(f"  W top-{CORE_SIZE} częstości, ale nie w rdzeniu:  {', '.join(only_freq) or '-'}")
     corr = np.corrcoef(np.log([degree[w] for w in vocab if degree[w] > 0]),
                        np.log([counts[w] for w in vocab if degree[w] > 0]))[0, 1]
-    emit(f"  Korelacja log(liczba sąsiadów) ~ log(liczność): {corr:.4f}", report)
-    emit("", report)
-    emit("Wniosek: rdzeń tworzą głównie krótkie słowa funkcyjne (spójniki, przyimki,", report)
-    emit("formy czasownika 'бити', zaimki), które łączą się z bardzo wieloma różnymi", report)
-    emit("wyrazami. Liczba sąsiadów jest silnie skorelowana z częstością wyrazu.", report)
+    print(f"  Korelacja log(liczba sąsiadów) ~ log(liczność): {corr:.4f}")
+    print("")
+    print("Wniosek: rdzeń tworzą głównie krótkie słowa funkcyjne (spójniki, przyimki,")
+    print("formy czasownika 'бити', zaimki), które łączą się z bardzo wieloma różnymi")
+    print("wyrazami. Liczba sąsiadów jest silnie skorelowana z częstością wyrazu.")
 
     # Pliki wynikowe
     with open(os.path.join(OUTPUT_DIR, "rdzen_100.csv"), "w", encoding="utf-8-sig") as f:
@@ -327,23 +328,19 @@ def neighbour_graph(words, counts, report):
 
 
 def main():
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-    report = []
+    report_to(os.path.join(OUTPUT_DIR, "raport.txt"))
 
-    words = load_words(INPUT_FILE)
+    words = load_words(CLEAN_FILE)
     counts = Counter(words)
 
-    needed = coverage_analysis(words, counts, report)
-    s, r2 = zipf_analysis(counts, report)
-    core = neighbour_graph(words, counts, report)
+    needed = coverage_analysis(words, counts)
+    s, r2 = zipf_analysis(counts)
+    core = neighbour_graph(words, counts)
 
-    section("PODSUMOWANIE", report)
-    emit(f"  Wyrazy pokrywające {COVERAGE_TARGET:.0%} tekstu: {needed} z {len(counts)}", report)
-    emit(f"  Prawo Zipfa: s = {s:.4f}, R² = {r2:.4f}", report)
-    emit(f"  Rdzeń grafu ({CORE_SIZE} wyrazów), pierwsze 10: {', '.join(core[:10])}", report)
-
-    with open(os.path.join(OUTPUT_DIR, "raport.txt"), "w", encoding="utf-8") as f:
-        f.write("\n".join(report).lstrip())
+    section("PODSUMOWANIE")
+    print(f"  Wyrazy pokrywające {COVERAGE_TARGET:.0%} tekstu: {needed} z {len(counts)}")
+    print(f"  Prawo Zipfa: s = {s:.4f}, R² = {r2:.4f}")
+    print(f"  Rdzeń grafu ({CORE_SIZE} wyrazów), pierwsze 10: {', '.join(core[:10])}")
 
     print(f"\nZapisano wyniki w folderze '{OUTPUT_DIR}':")
     for name in sorted(os.listdir(OUTPUT_DIR)):

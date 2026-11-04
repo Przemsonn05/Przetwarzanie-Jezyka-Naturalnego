@@ -1,37 +1,39 @@
 """
-Lab 4: Sieć Kohonena (SOM) dla rzeczowników opisanych kolokacjami z czasownikami przechodnimi.
+LAB 4, krok 2 - sieć Kohonena dla rzeczowników opisanych kolokacjami z czasownikami przechodnimi.
 
-1. Z korpusu sparsowanego przez lab04_parsowanie.py wyznaczamy relacje
-   czasownik -> dopełnienie bliższe (relacja zależnościowa 'obj').
-2. Wybieramy 100 czasowników przechodnich (najczęściej występujących z dopełnieniem)
-   i 50 rzeczowników najczęściej będących ich dopełnieniem.
-3. Każdy rzeczownik = wektor o 100 składowych: składowa i to liczba kolokacji
-   rzeczownika z i-tym czasownikiem. 50 wektorów = zbiór treningowy.
-4. Uczymy sieć Kohonena i pokazujemy, jak rzeczowniki układają się na mapie
-   oraz które czasowniki (wymiary przestrzeni 100D) dominują w danym rejonie mapy.
-5. Sprawdzamy, jak wynik zależy od wyboru czasowników (warianty A, B, C).
+Idea: rzeczownik poznajemy po tym, z jakimi czasownikami się łączy
+("podjąć decyzję", "uchwalić ustawę" -> decyzja i ustawa są do siebie podobne).
+
+Kroki:
+  1. Z korpusu sparsowanego (lab04_parsowanie.py) bierzemy pary czasownik -> dopełnienie
+     (relacja 'obj', np. "подигао цркву" -> obj(подићи, црква)).
+  2. Wybieramy 100 czasowników przechodnich (najczęściej mających dopełnienie)
+     i 50 rzeczowników, które najczęściej są ich dopełnieniem.
+  3. Każdy rzeczownik zamieniamy na wektor o 100 składowych: składowa nr j = ile razy
+     rzeczownik był dopełnieniem j-tego czasownika. 50 wektorów = ZBIÓR TRENINGOWY.
+  4. Uczymy sieć Kohonena (mapa 10x10 neuronów). Podobne rzeczowniki trafiają w pobliskie
+     miejsca mapy; dla każdego neuronu widać, które czasowniki (wymiary przestrzeni 100D) dominują.
+  5. Sprawdzamy, jak wynik zależy od wyboru czasowników (warianty A, B, C).
+
+Wyniki: wyniki/lab04/ (raport.txt, tabele CSV, mapy i wykresy PNG, podsumowanie.json).
 """
 import csv
 import gzip
 import json
 import os
-import sys
 from collections import Counter, defaultdict
 
 import matplotlib
 
-matplotlib.use("Agg")
+matplotlib.use("Agg")  # wykresy zapisujemy do plików, bez otwierania okien
 import matplotlib.patheffects as pe
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.stats import spearmanr
 
-from lab01 import SERBIAN_ALPHABET
+from wspolne import PARSED_FILE, SERBIAN_ALPHABET, report_to, results_dir
 
-sys.stdout.reconfigure(encoding="utf-8")
-
-PARSED_FILE = os.path.join("dane", "korpus_sparsowany.tsv.gz")
-OUTPUT_DIR = os.path.join("wyniki", "lab04")
+OUTPUT_DIR = results_dir("lab04")
 N_NOUNS = 50
 N_VERBS = 100
 WINDOW = 5            # okno dla wariantu C (kolokacje w oknie ±5 wyrazów)
@@ -409,26 +411,10 @@ def run_variant(name, description, nouns, verbs, pairs, summary):
     return pos, history
 
 
-class Tee:
-    """Wypisuje na konsolę i jednocześnie zapisuje do pliku raportu."""
-    def __init__(self, path):
-        self.file = open(path, "w", encoding="utf-8")
-        self.stdout = sys.stdout
-
-    def write(self, text):
-        self.stdout.write(text)
-        self.file.write(text)
-
-    def flush(self):
-        self.stdout.flush()
-        self.file.flush()
-
-
 def main():
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-    sys.stdout = Tee(os.path.join(OUTPUT_DIR, "raport.txt"))
+    report_to(os.path.join(OUTPUT_DIR, "raport.txt"))
     if not os.path.exists(PARSED_FILE):
-        sys.exit(f"Brak pliku {PARSED_FILE} - najpierw uruchom lab04_parsowanie.py")
+        raise SystemExit(f"Brak pliku {PARSED_FILE} - najpierw uruchom lab04_parsowanie.py")
 
     section("ANALIZA KORPUSU")
     sentences = load_sentences(PARSED_FILE)
