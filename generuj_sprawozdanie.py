@@ -36,7 +36,7 @@ from slownik import GLOSSARY
 from sprawdz_wyniki import run_checks
 from wspolne import ARTICLES_FILE, CLEAN_FILE, PARSED_FILE, RAW_FILE, RESULTS_DIR, SERBIAN_ALPHABET
 
-AUTHOR = ""  # wpisz imię i nazwisko, np. AUTHOR = "Jan Kowalski"
+AUTHOR = "Przemysław Kondrat"
 OUTPUT = os.path.join("sprawozdanie", "sprawozdanie.pdf")
 FIG_DIR = os.path.join("sprawozdanie", "rysunki")
 R1, R2, R3, R4 = (os.path.join(RESULTS_DIR, f"lab0{i}") for i in range(1, 5))
