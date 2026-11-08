@@ -1,0 +1,827 @@
+
+==========================================================================================
+LEKSYKON
+==========================================================================================
+Rzeczowniki:  106  (m: 60, ż: 32, n: 14)
+Czasowniki:   120  (przechodnie: 77, nieprzechodnie: 24, zwrotne: 19; niedokonane: 60, dokonane: 60)
+Przymiotniki: 105
+Określniki:   13 + zwrotny dzierżawczy svoj (ovaj, taj, onaj, moj, tvoj, njegov, njen, naš, vaš, njihov, jedan, neki, svaki)
+Zaimki osobowe: ja, mi, on, ona, one, oni, ono, ti, vi
+
+==========================================================================================
+PEŁNA ODMIANA - PRZYKŁADY
+==========================================================================================
+
+--- czasownik przechodni dokonany, podmiot - zaimek, dopełnienie - fraza z zaimkiem dzierżawczym: zaimek(ja, 1. os. sg, rodz. m) + pročitati + FR(moj + novi + knjiga, sg)  (60 form)
+  czynna  oznajmujący      prezent           oznajmujące  twierdzące  Ја прочитам своју нову књигу.   (Ja pročitam svoju novu knjigu.)
+  czynna  oznajmujący      prezent           oznajmujące  przeczące   Ја не прочитам своју нову књигу.   (Ja ne pročitam svoju novu knjigu.)
+  czynna  oznajmujący      prezent           pytające     twierdzące  Да ли ја прочитам своју нову књигу?   (Da li ja pročitam svoju novu knjigu?)
+  czynna  oznajmujący      prezent           pytające     przeczące   Да ли ја не прочитам своју нову књигу?   (Da li ja ne pročitam svoju novu knjigu?)
+  czynna  oznajmujący      perfekat          oznajmujące  twierdzące  Ја сам прочитао своју нову књигу.   (Ja sam pročitao svoju novu knjigu.)
+  czynna  oznajmujący      perfekat          oznajmujące  przeczące   Ја нисам прочитао своју нову књигу.   (Ja nisam pročitao svoju novu knjigu.)
+  czynna  oznajmujący      perfekat          pytające     twierdzące  Да ли сам ја прочитао своју нову књигу?   (Da li sam ja pročitao svoju novu knjigu?)
+  czynna  oznajmujący      perfekat          pytające     przeczące   Да ли ја нисам прочитао своју нову књигу?   (Da li ja nisam pročitao svoju novu knjigu?)
+  czynna  oznajmujący      aorist            oznajmujące  twierdzące  Ја прочитах своју нову књигу.   (Ja pročitah svoju novu knjigu.)
+  czynna  oznajmujący      aorist            oznajmujące  przeczące   Ја не прочитах своју нову књигу.   (Ja ne pročitah svoju novu knjigu.)
+  czynna  oznajmujący      aorist            pytające     twierdzące  Да ли ја прочитах своју нову књигу?   (Da li ja pročitah svoju novu knjigu?)
+  czynna  oznajmujący      aorist            pytające     przeczące   Да ли ја не прочитах своју нову књигу?   (Da li ja ne pročitah svoju novu knjigu?)
+  czynna  oznajmujący      pluskvamperfekat  oznajmujące  twierdzące  Ја сам био прочитао своју нову књигу.   (Ja sam bio pročitao svoju novu knjigu.)
+  czynna  oznajmujący      pluskvamperfekat  oznajmujące  przeczące   Ја нисам био прочитао своју нову књигу.   (Ja nisam bio pročitao svoju novu knjigu.)
+  czynna  oznajmujący      pluskvamperfekat  pytające     twierdzące  Да ли сам ја био прочитао своју нову књигу?   (Da li sam ja bio pročitao svoju novu knjigu?)
+  czynna  oznajmujący      pluskvamperfekat  pytające     przeczące   Да ли ја нисам био прочитао своју нову књигу?   (Da li ja nisam bio pročitao svoju novu knjigu?)
+  czynna  oznajmujący      futur I           oznajmujące  twierdzące  Ја ћу прочитати своју нову књигу.   (Ja ću pročitati svoju novu knjigu.)
+  czynna  oznajmujący      futur I           oznajmujące  przeczące   Ја нећу прочитати своју нову књигу.   (Ja neću pročitati svoju novu knjigu.)
+  czynna  oznajmujący      futur I           pytające     twierdzące  Да ли ћу ја прочитати своју нову књигу?   (Da li ću ja pročitati svoju novu knjigu?)
+  czynna  oznajmujący      futur I           pytające     przeczące   Да ли ја нећу прочитати своју нову књигу?   (Da li ja neću pročitati svoju novu knjigu?)
+  czynna  oznajmujący      futur II          oznajmujące  twierdzące  Ако ја будем прочитао своју нову књигу…   (Ako ja budem pročitao svoju novu knjigu…)
+  czynna  oznajmujący      futur II          oznajmujące  przeczące   Ако ја не будем прочитао своју нову књигу…   (Ako ja ne budem pročitao svoju novu knjigu…)
+  czynna  rozkazujący      imperativ         oznajmujące  twierdzące  Нека ја прочитам своју нову књигу!   (Neka ja pročitam svoju novu knjigu!)
+  czynna  rozkazujący      imperativ         oznajmujące  przeczące   Нека ја не прочитам своју нову књигу!   (Neka ja ne pročitam svoju novu knjigu!)
+  czynna  przypuszczający  potencijal I      oznajmujące  twierdzące  Ја бих прочитао своју нову књигу.   (Ja bih pročitao svoju novu knjigu.)
+  czynna  przypuszczający  potencijal I      oznajmujące  przeczące   Ја не бих прочитао своју нову књигу.   (Ja ne bih pročitao svoju novu knjigu.)
+  czynna  przypuszczający  potencijal I      pytające     twierdzące  Да ли бих ја прочитао своју нову књигу?   (Da li bih ja pročitao svoju novu knjigu?)
+  czynna  przypuszczający  potencijal I      pytające     przeczące   Да ли ја не бих прочитао своју нову књигу?   (Da li ja ne bih pročitao svoju novu knjigu?)
+  czynna  przypuszczający  potencijal II     oznajmujące  twierdzące  Ја бих био прочитао своју нову књигу.   (Ja bih bio pročitao svoju novu knjigu.)
+  czynna  przypuszczający  potencijal II     oznajmujące  przeczące   Ја не бих био прочитао своју нову књигу.   (Ja ne bih bio pročitao svoju novu knjigu.)
+  czynna  przypuszczający  potencijal II     pytające     twierdzące  Да ли бих ја био прочитао своју нову књигу?   (Da li bih ja bio pročitao svoju novu knjigu?)
+  czynna  przypuszczający  potencijal II     pytające     przeczące   Да ли ја не бих био прочитао своју нову књигу?   (Da li ja ne bih bio pročitao svoju novu knjigu?)
+  bierna  oznajmujący      prezent           oznajmujące  twierdzące  Моја нова књига је прочитана.   (Moja nova knjiga je pročitana.)
+  bierna  oznajmujący      prezent           oznajmujące  przeczące   Моја нова књига није прочитана.   (Moja nova knjiga nije pročitana.)
+  bierna  oznajmujący      prezent           pytające     twierdzące  Да ли је моја нова књига прочитана?   (Da li je moja nova knjiga pročitana?)
+  bierna  oznajmujący      prezent           pytające     przeczące   Да ли моја нова књига није прочитана?   (Da li moja nova knjiga nije pročitana?)
+  bierna  oznajmujący      perfekat          oznajmujące  twierdzące  Моја нова књига је била прочитана.   (Moja nova knjiga je bila pročitana.)
+  bierna  oznajmujący      perfekat          oznajmujące  przeczące   Моја нова књига није била прочитана.   (Moja nova knjiga nije bila pročitana.)
+  bierna  oznajmujący      perfekat          pytające     twierdzące  Да ли је моја нова књига била прочитана?   (Da li je moja nova knjiga bila pročitana?)
+  bierna  oznajmujący      perfekat          pytające     przeczące   Да ли моја нова књига није била прочитана?   (Da li moja nova knjiga nije bila pročitana?)
+  bierna  oznajmujący      aorist            oznajmujące  twierdzące  Моја нова књига би прочитана.   (Moja nova knjiga bi pročitana.)
+  bierna  oznajmujący      aorist            oznajmujące  przeczące   Моја нова књига не би прочитана.   (Moja nova knjiga ne bi pročitana.)
+  bierna  oznajmujący      aorist            pytające     twierdzące  Да ли моја нова књига би прочитана?   (Da li moja nova knjiga bi pročitana?)
+  bierna  oznajmujący      aorist            pytające     przeczące   Да ли моја нова књига не би прочитана?   (Da li moja nova knjiga ne bi pročitana?)
+  bierna  oznajmujący      imperfekat        oznajmujące  twierdzące  Моја нова књига беше прочитана.   (Moja nova knjiga beše pročitana.)
+  bierna  oznajmujący      imperfekat        oznajmujące  przeczące   Моја нова књига не беше прочитана.   (Moja nova knjiga ne beše pročitana.)
+  bierna  oznajmujący      imperfekat        pytające     twierdzące  Да ли моја нова књига беше прочитана?   (Da li moja nova knjiga beše pročitana?)
+  bierna  oznajmujący      imperfekat        pytające     przeczące   Да ли моја нова књига не беше прочитана?   (Da li moja nova knjiga ne beše pročitana?)
+  bierna  oznajmujący      futur I           oznajmujące  twierdzące  Моја нова књига ће бити прочитана.   (Moja nova knjiga će biti pročitana.)
+  bierna  oznajmujący      futur I           oznajmujące  przeczące   Моја нова књига неће бити прочитана.   (Moja nova knjiga neće biti pročitana.)
+  bierna  oznajmujący      futur I           pytające     twierdzące  Да ли ће моја нова књига бити прочитана?   (Da li će moja nova knjiga biti pročitana?)
+  bierna  oznajmujący      futur I           pytające     przeczące   Да ли моја нова књига неће бити прочитана?   (Da li moja nova knjiga neće biti pročitana?)
+  bierna  oznajmujący      futur II          oznajmujące  twierdzące  Ако моја нова књига буде прочитана…   (Ako moja nova knjiga bude pročitana…)
+  bierna  oznajmujący      futur II          oznajmujące  przeczące   Ако моја нова књига не буде прочитана…   (Ako moja nova knjiga ne bude pročitana…)
+  bierna  rozkazujący      imperativ         oznajmujące  twierdzące  Нека моја нова књига буде прочитана!   (Neka moja nova knjiga bude pročitana!)
+  bierna  rozkazujący      imperativ         oznajmujące  przeczące   Нека моја нова књига не буде прочитана!   (Neka moja nova knjiga ne bude pročitana!)
+  bierna  przypuszczający  potencijal I      oznajmujące  twierdzące  Моја нова књига би била прочитана.   (Moja nova knjiga bi bila pročitana.)
+  bierna  przypuszczający  potencijal I      oznajmujące  przeczące   Моја нова књига не би била прочитана.   (Moja nova knjiga ne bi bila pročitana.)
+  bierna  przypuszczający  potencijal I      pytające     twierdzące  Да ли би моја нова књига била прочитана?   (Da li bi moja nova knjiga bila pročitana?)
+  bierna  przypuszczający  potencijal I      pytające     przeczące   Да ли моја нова књига не би била прочитана?   (Da li moja nova knjiga ne bi bila pročitana?)
+
+--- czasownik przechodni niedokonany, podmiot - fraza rzeczownikowa, dopełnienie - zaimek: FR(naš + veliki + pas, sg) + čuvati + zaimek(ona, 3. os. sg, rodz. f)  (64 form)
+  czynna  oznajmujący      prezent           oznajmujące  twierdzące  Наш велики пас је чува.   (Naš veliki pas je čuva.)
+  czynna  oznajmujący      prezent           oznajmujące  przeczące   Наш велики пас је не чува.   (Naš veliki pas je ne čuva.)
+  czynna  oznajmujący      prezent           pytające     twierdzące  Да ли је наш велики пас чува?   (Da li je naš veliki pas čuva?)
+  czynna  oznajmujący      prezent           pytające     przeczące   Да ли је наш велики пас не чува?   (Da li je naš veliki pas ne čuva?)
+  czynna  oznajmujący      perfekat          oznajmujące  twierdzące  Наш велики пас ју је чувао.   (Naš veliki pas ju je čuvao.)
+  czynna  oznajmujący      perfekat          oznajmujące  przeczące   Наш велики пас је није чувао.   (Naš veliki pas je nije čuvao.)
+  czynna  oznajmujący      perfekat          pytające     twierdzące  Да ли ју је наш велики пас чувао?   (Da li ju je naš veliki pas čuvao?)
+  czynna  oznajmujący      perfekat          pytające     przeczące   Да ли је наш велики пас није чувао?   (Da li je naš veliki pas nije čuvao?)
+  czynna  oznajmujący      aorist            oznajmujące  twierdzące  Наш велики пас је чува.   (Naš veliki pas je čuva.)
+  czynna  oznajmujący      aorist            oznajmujące  przeczące   Наш велики пас је не чува.   (Naš veliki pas je ne čuva.)
+  czynna  oznajmujący      aorist            pytające     twierdzące  Да ли је наш велики пас чува?   (Da li je naš veliki pas čuva?)
+  czynna  oznajmujący      aorist            pytające     przeczące   Да ли је наш велики пас не чува?   (Da li je naš veliki pas ne čuva?)
+  czynna  oznajmujący      imperfekat        oznajmujące  twierdzące  Наш велики пас је чуваше.   (Naš veliki pas je čuvaše.)
+  czynna  oznajmujący      imperfekat        oznajmujące  przeczące   Наш велики пас је не чуваше.   (Naš veliki pas je ne čuvaše.)
+  czynna  oznajmujący      imperfekat        pytające     twierdzące  Да ли је наш велики пас чуваше?   (Da li je naš veliki pas čuvaše?)
+  czynna  oznajmujący      imperfekat        pytające     przeczące   Да ли је наш велики пас не чуваше?   (Da li je naš veliki pas ne čuvaše?)
+  czynna  oznajmujący      pluskvamperfekat  oznajmujące  twierdzące  Наш велики пас ју је био чувао.   (Naš veliki pas ju je bio čuvao.)
+  czynna  oznajmujący      pluskvamperfekat  oznajmujące  przeczące   Наш велики пас је није био чувао.   (Naš veliki pas je nije bio čuvao.)
+  czynna  oznajmujący      pluskvamperfekat  pytające     twierdzące  Да ли ју је наш велики пас био чувао?   (Da li ju je naš veliki pas bio čuvao?)
+  czynna  oznajmujący      pluskvamperfekat  pytające     przeczące   Да ли је наш велики пас није био чувао?   (Da li je naš veliki pas nije bio čuvao?)
+  czynna  oznajmujący      futur I           oznajmujące  twierdzące  Наш велики пас ће је чувати.   (Naš veliki pas će je čuvati.)
+  czynna  oznajmujący      futur I           oznajmujące  przeczące   Наш велики пас је неће чувати.   (Naš veliki pas je neće čuvati.)
+  czynna  oznajmujący      futur I           pytające     twierdzące  Да ли ће је наш велики пас чувати?   (Da li će je naš veliki pas čuvati?)
+  czynna  oznajmujący      futur I           pytające     przeczące   Да ли је наш велики пас неће чувати?   (Da li je naš veliki pas neće čuvati?)
+  czynna  oznajmujący      futur II          oznajmujące  twierdzące  Ако је наш велики пас буде чувао…   (Ako je naš veliki pas bude čuvao…)
+  czynna  oznajmujący      futur II          oznajmujące  przeczące   Ако је наш велики пас не буде чувао…   (Ako je naš veliki pas ne bude čuvao…)
+  czynna  rozkazujący      imperativ         oznajmujące  twierdzące  Нека је наш велики пас чува!   (Neka je naš veliki pas čuva!)
+  czynna  rozkazujący      imperativ         oznajmujące  przeczące   Нека је наш велики пас не чува!   (Neka je naš veliki pas ne čuva!)
+  czynna  przypuszczający  potencijal I      oznajmujące  twierdzące  Наш велики пас би је чувао.   (Naš veliki pas bi je čuvao.)
+  czynna  przypuszczający  potencijal I      oznajmujące  przeczące   Наш велики пас је не би чувао.   (Naš veliki pas je ne bi čuvao.)
+  czynna  przypuszczający  potencijal I      pytające     twierdzące  Да ли би је наш велики пас чувао?   (Da li bi je naš veliki pas čuvao?)
+  czynna  przypuszczający  potencijal I      pytające     przeczące   Да ли је наш велики пас не би чувао?   (Da li je naš veliki pas ne bi čuvao?)
+  czynna  przypuszczający  potencijal II     oznajmujące  twierdzące  Наш велики пас би је био чувао.   (Naš veliki pas bi je bio čuvao.)
+  czynna  przypuszczający  potencijal II     oznajmujące  przeczące   Наш велики пас је не би био чувао.   (Naš veliki pas je ne bi bio čuvao.)
+  czynna  przypuszczający  potencijal II     pytające     twierdzące  Да ли би је наш велики пас био чувао?   (Da li bi je naš veliki pas bio čuvao?)
+  czynna  przypuszczający  potencijal II     pytające     przeczące   Да ли је наш велики пас не би био чувао?   (Da li je naš veliki pas ne bi bio čuvao?)
+  bierna  oznajmujący      prezent           oznajmujące  twierdzące  Она је чувана од стране нашег великог пса.   (Ona je čuvana od strane našeg velikog psa.)
+  bierna  oznajmujący      prezent           oznajmujące  przeczące   Она није чувана од стране нашег великог пса.   (Ona nije čuvana od strane našeg velikog psa.)
+  bierna  oznajmujący      prezent           pytające     twierdzące  Да ли је она чувана од стране нашег великог пса?   (Da li je ona čuvana od strane našeg velikog psa?)
+  bierna  oznajmujący      prezent           pytające     przeczące   Да ли она није чувана од стране нашег великог пса?   (Da li ona nije čuvana od strane našeg velikog psa?)
+  bierna  oznajmujący      perfekat          oznajmujące  twierdzące  Она је била чувана од стране нашег великог пса.   (Ona je bila čuvana od strane našeg velikog psa.)
+  bierna  oznajmujący      perfekat          oznajmujące  przeczące   Она није била чувана од стране нашег великог пса.   (Ona nije bila čuvana od strane našeg velikog psa.)
+  bierna  oznajmujący      perfekat          pytające     twierdzące  Да ли је она била чувана од стране нашег великог пса?   (Da li je ona bila čuvana od strane našeg velikog psa?)
+  bierna  oznajmujący      perfekat          pytające     przeczące   Да ли она није била чувана од стране нашег великог пса?   (Da li ona nije bila čuvana od strane našeg velikog psa?)
+  bierna  oznajmujący      aorist            oznajmujące  twierdzące  Она би чувана од стране нашег великог пса.   (Ona bi čuvana od strane našeg velikog psa.)
+  bierna  oznajmujący      aorist            oznajmujące  przeczące   Она не би чувана од стране нашег великог пса.   (Ona ne bi čuvana od strane našeg velikog psa.)
+  bierna  oznajmujący      aorist            pytające     twierdzące  Да ли она би чувана од стране нашег великог пса?   (Da li ona bi čuvana od strane našeg velikog psa?)
+  bierna  oznajmujący      aorist            pytające     przeczące   Да ли она не би чувана од стране нашег великог пса?   (Da li ona ne bi čuvana od strane našeg velikog psa?)
+  bierna  oznajmujący      imperfekat        oznajmujące  twierdzące  Она беше чувана од стране нашег великог пса.   (Ona beše čuvana od strane našeg velikog psa.)
+  bierna  oznajmujący      imperfekat        oznajmujące  przeczące   Она не беше чувана од стране нашег великог пса.   (Ona ne beše čuvana od strane našeg velikog psa.)
+  bierna  oznajmujący      imperfekat        pytające     twierdzące  Да ли она беше чувана од стране нашег великог пса?   (Da li ona beše čuvana od strane našeg velikog psa?)
+  bierna  oznajmujący      imperfekat        pytające     przeczące   Да ли она не беше чувана од стране нашег великог пса?   (Da li ona ne beše čuvana od strane našeg velikog psa?)
+  bierna  oznajmujący      futur I           oznajmujące  twierdzące  Она ће бити чувана од стране нашег великог пса.   (Ona će biti čuvana od strane našeg velikog psa.)
+  bierna  oznajmujący      futur I           oznajmujące  przeczące   Она неће бити чувана од стране нашег великог пса.   (Ona neće biti čuvana od strane našeg velikog psa.)
+  bierna  oznajmujący      futur I           pytające     twierdzące  Да ли ће она бити чувана од стране нашег великог пса?   (Da li će ona biti čuvana od strane našeg velikog psa?)
+  bierna  oznajmujący      futur I           pytające     przeczące   Да ли она неће бити чувана од стране нашег великог пса?   (Da li ona neće biti čuvana od strane našeg velikog psa?)
+  bierna  oznajmujący      futur II          oznajmujące  twierdzące  Ако она буде чувана од стране нашег великог пса…   (Ako ona bude čuvana od strane našeg velikog psa…)
+  bierna  oznajmujący      futur II          oznajmujące  przeczące   Ако она не буде чувана од стране нашег великог пса…   (Ako ona ne bude čuvana od strane našeg velikog psa…)
+  bierna  rozkazujący      imperativ         oznajmujące  twierdzące  Нека она буде чувана од стране нашег великог пса!   (Neka ona bude čuvana od strane našeg velikog psa!)
+  bierna  rozkazujący      imperativ         oznajmujące  przeczące   Нека она не буде чувана од стране нашег великог пса!   (Neka ona ne bude čuvana od strane našeg velikog psa!)
+  bierna  przypuszczający  potencijal I      oznajmujące  twierdzące  Она би била чувана од стране нашег великог пса.   (Ona bi bila čuvana od strane našeg velikog psa.)
+  bierna  przypuszczający  potencijal I      oznajmujące  przeczące   Она не би била чувана од стране нашег великог пса.   (Ona ne bi bila čuvana od strane našeg velikog psa.)
+  bierna  przypuszczający  potencijal I      pytające     twierdzące  Да ли би она била чувана од стране нашег великог пса?   (Da li bi ona bila čuvana od strane našeg velikog psa?)
+  bierna  przypuszczający  potencijal I      pytające     przeczące   Да ли она не би била чувана од стране нашег великог пса?   (Da li ona ne bi bila čuvana od strane našeg velikog psa?)
+
+--- czasownik nieprzechodni, podmiot - fraza rzeczownikowa w liczbie mnogiej: FR(ovaj + mladi + devojka, pl) + trčati  (36 form)
+  czynna  oznajmujący      prezent           oznajmujące  twierdzące  Ове младе девојке трче.   (Ove mlade devojke trče.)
+  czynna  oznajmujący      prezent           oznajmujące  przeczące   Ове младе девојке не трче.   (Ove mlade devojke ne trče.)
+  czynna  oznajmujący      prezent           pytające     twierdzące  Да ли ове младе девојке трче?   (Da li ove mlade devojke trče?)
+  czynna  oznajmujący      prezent           pytające     przeczące   Да ли ове младе девојке не трче?   (Da li ove mlade devojke ne trče?)
+  czynna  oznajmujący      perfekat          oznajmujące  twierdzące  Ове младе девојке су трчале.   (Ove mlade devojke su trčale.)
+  czynna  oznajmujący      perfekat          oznajmujące  przeczące   Ове младе девојке нису трчале.   (Ove mlade devojke nisu trčale.)
+  czynna  oznajmujący      perfekat          pytające     twierdzące  Да ли су ове младе девојке трчале?   (Da li su ove mlade devojke trčale?)
+  czynna  oznajmujący      perfekat          pytające     przeczące   Да ли ове младе девојке нису трчале?   (Da li ove mlade devojke nisu trčale?)
+  czynna  oznajmujący      aorist            oznajmujące  twierdzące  Ове младе девојке трчаше.   (Ove mlade devojke trčaše.)
+  czynna  oznajmujący      aorist            oznajmujące  przeczące   Ове младе девојке не трчаше.   (Ove mlade devojke ne trčaše.)
+  czynna  oznajmujący      aorist            pytające     twierdzące  Да ли ове младе девојке трчаше?   (Da li ove mlade devojke trčaše?)
+  czynna  oznajmujący      aorist            pytające     przeczące   Да ли ове младе девојке не трчаше?   (Da li ove mlade devojke ne trčaše?)
+  czynna  oznajmujący      imperfekat        oznajmujące  twierdzące  Ове младе девојке трчаху.   (Ove mlade devojke trčahu.)
+  czynna  oznajmujący      imperfekat        oznajmujące  przeczące   Ове младе девојке не трчаху.   (Ove mlade devojke ne trčahu.)
+  czynna  oznajmujący      imperfekat        pytające     twierdzące  Да ли ове младе девојке трчаху?   (Da li ove mlade devojke trčahu?)
+  czynna  oznajmujący      imperfekat        pytające     przeczące   Да ли ове младе девојке не трчаху?   (Da li ove mlade devojke ne trčahu?)
+  czynna  oznajmujący      pluskvamperfekat  oznajmujące  twierdzące  Ове младе девојке су биле трчале.   (Ove mlade devojke su bile trčale.)
+  czynna  oznajmujący      pluskvamperfekat  oznajmujące  przeczące   Ове младе девојке нису биле трчале.   (Ove mlade devojke nisu bile trčale.)
+  czynna  oznajmujący      pluskvamperfekat  pytające     twierdzące  Да ли су ове младе девојке биле трчале?   (Da li su ove mlade devojke bile trčale?)
+  czynna  oznajmujący      pluskvamperfekat  pytające     przeczące   Да ли ове младе девојке нису биле трчале?   (Da li ove mlade devojke nisu bile trčale?)
+  czynna  oznajmujący      futur I           oznajmujące  twierdzące  Ове младе девојке ће трчати.   (Ove mlade devojke će trčati.)
+  czynna  oznajmujący      futur I           oznajmujące  przeczące   Ове младе девојке неће трчати.   (Ove mlade devojke neće trčati.)
+  czynna  oznajmujący      futur I           pytające     twierdzące  Да ли ће ове младе девојке трчати?   (Da li će ove mlade devojke trčati?)
+  czynna  oznajmujący      futur I           pytające     przeczące   Да ли ове младе девојке неће трчати?   (Da li ove mlade devojke neće trčati?)
+  czynna  oznajmujący      futur II          oznajmujące  twierdzące  Ако ове младе девојке буду трчале…   (Ako ove mlade devojke budu trčale…)
+  czynna  oznajmujący      futur II          oznajmujące  przeczące   Ако ове младе девојке не буду трчале…   (Ako ove mlade devojke ne budu trčale…)
+  czynna  rozkazujący      imperativ         oznajmujące  twierdzące  Нека ове младе девојке трче!   (Neka ove mlade devojke trče!)
+  czynna  rozkazujący      imperativ         oznajmujące  przeczące   Нека ове младе девојке не трче!   (Neka ove mlade devojke ne trče!)
+  czynna  przypuszczający  potencijal I      oznajmujące  twierdzące  Ове младе девојке би трчале.   (Ove mlade devojke bi trčale.)
+  czynna  przypuszczający  potencijal I      oznajmujące  przeczące   Ове младе девојке не би трчале.   (Ove mlade devojke ne bi trčale.)
+  czynna  przypuszczający  potencijal I      pytające     twierdzące  Да ли би ове младе девојке трчале?   (Da li bi ove mlade devojke trčale?)
+  czynna  przypuszczający  potencijal I      pytające     przeczące   Да ли ове младе девојке не би трчале?   (Da li ove mlade devojke ne bi trčale?)
+  czynna  przypuszczający  potencijal II     oznajmujące  twierdzące  Ове младе девојке би биле трчале.   (Ove mlade devojke bi bile trčale.)
+  czynna  przypuszczający  potencijal II     oznajmujące  przeczące   Ове младе девојке не би биле трчале.   (Ove mlade devojke ne bi bile trčale.)
+  czynna  przypuszczający  potencijal II     pytające     twierdzące  Да ли би ове младе девојке биле трчале?   (Da li bi ove mlade devojke bile trčale?)
+  czynna  przypuszczający  potencijal II     pytające     przeczące   Да ли ове младе девојке не би биле трчале?   (Da li ove mlade devojke ne bi bile trčale?)
+
+--- czasownik zwrotny, podmiot - zaimek: zaimek(vi, 2. os. pl, rodz. f) + smejati se  (36 form)
+  czynna  oznajmujący      prezent           oznajmujące  twierdzące  Ви се смејете.   (Vi se smejete.)
+  czynna  oznajmujący      prezent           oznajmujące  przeczące   Ви се не смејете.   (Vi se ne smejete.)
+  czynna  oznajmujący      prezent           pytające     twierdzące  Да ли се ви смејете?   (Da li se vi smejete?)
+  czynna  oznajmujący      prezent           pytające     przeczące   Да ли се ви не смејете?   (Da li se vi ne smejete?)
+  czynna  oznajmujący      perfekat          oznajmujące  twierdzące  Ви сте се смејале.   (Vi ste se smejale.)
+  czynna  oznajmujący      perfekat          oznajmujące  przeczące   Ви се нисте смејале.   (Vi se niste smejale.)
+  czynna  oznajmujący      perfekat          pytające     twierdzące  Да ли сте се ви смејале?   (Da li ste se vi smejale?)
+  czynna  oznajmujący      perfekat          pytające     przeczące   Да ли се ви нисте смејале?   (Da li se vi niste smejale?)
+  czynna  oznajmujący      aorist            oznajmujące  twierdzące  Ви се смејасте.   (Vi se smejaste.)
+  czynna  oznajmujący      aorist            oznajmujące  przeczące   Ви се не смејасте.   (Vi se ne smejaste.)
+  czynna  oznajmujący      aorist            pytające     twierdzące  Да ли се ви смејасте?   (Da li se vi smejaste?)
+  czynna  oznajmujący      aorist            pytające     przeczące   Да ли се ви не смејасте?   (Da li se vi ne smejaste?)
+  czynna  oznajmujący      imperfekat        oznajmujące  twierdzące  Ви се смејасте.   (Vi se smejaste.)
+  czynna  oznajmujący      imperfekat        oznajmujące  przeczące   Ви се не смејасте.   (Vi se ne smejaste.)
+  czynna  oznajmujący      imperfekat        pytające     twierdzące  Да ли се ви смејасте?   (Da li se vi smejaste?)
+  czynna  oznajmujący      imperfekat        pytające     przeczące   Да ли се ви не смејасте?   (Da li se vi ne smejaste?)
+  czynna  oznajmujący      pluskvamperfekat  oznajmujące  twierdzące  Ви сте се биле смејале.   (Vi ste se bile smejale.)
+  czynna  oznajmujący      pluskvamperfekat  oznajmujące  przeczące   Ви се нисте биле смејале.   (Vi se niste bile smejale.)
+  czynna  oznajmujący      pluskvamperfekat  pytające     twierdzące  Да ли сте се ви биле смејале?   (Da li ste se vi bile smejale?)
+  czynna  oznajmujący      pluskvamperfekat  pytające     przeczące   Да ли се ви нисте биле смејале?   (Da li se vi niste bile smejale?)
+  czynna  oznajmujący      futur I           oznajmujące  twierdzące  Ви ћете се смејати.   (Vi ćete se smejati.)
+  czynna  oznajmujący      futur I           oznajmujące  przeczące   Ви се нећете смејати.   (Vi se nećete smejati.)
+  czynna  oznajmujący      futur I           pytające     twierdzące  Да ли ћете се ви смејати?   (Da li ćete se vi smejati?)
+  czynna  oznajmujący      futur I           pytające     przeczące   Да ли се ви нећете смејати?   (Da li se vi nećete smejati?)
+  czynna  oznajmujący      futur II          oznajmujące  twierdzące  Ако се ви будете смејале…   (Ako se vi budete smejale…)
+  czynna  oznajmujący      futur II          oznajmujące  przeczące   Ако се ви не будете смејале…   (Ako se vi ne budete smejale…)
+  czynna  rozkazujący      imperativ         oznajmujące  twierdzące  Ви се смејте!   (Vi se smejte!)
+  czynna  rozkazujący      imperativ         oznajmujące  przeczące   Ви се не смејте!   (Vi se ne smejte!)
+  czynna  przypuszczający  potencijal I      oznajmujące  twierdzące  Ви бисте се смејале.   (Vi biste se smejale.)
+  czynna  przypuszczający  potencijal I      oznajmujące  przeczące   Ви се не бисте смејале.   (Vi se ne biste smejale.)
+  czynna  przypuszczający  potencijal I      pytające     twierdzące  Да ли бисте се ви смејале?   (Da li biste se vi smejale?)
+  czynna  przypuszczający  potencijal I      pytające     przeczące   Да ли се ви не бисте смејале?   (Da li se vi ne biste smejale?)
+  czynna  przypuszczający  potencijal II     oznajmujące  twierdzące  Ви бисте се биле смејале.   (Vi biste se bile smejale.)
+  czynna  przypuszczający  potencijal II     oznajmujące  przeczące   Ви се не бисте биле смејале.   (Vi se ne biste bile smejale.)
+  czynna  przypuszczający  potencijal II     pytające     twierdzące  Да ли бисте се ви биле смејале?   (Da li biste se vi bile smejale?)
+  czynna  przypuszczający  potencijal II     pytające     przeczące   Да ли се ви не бисте биле смејале?   (Da li se vi ne biste bile smejale?)
+
+==========================================================================================
+LOSOWE ZDANIA (200, ziarno 2024)
+==========================================================================================
+  1. То позориште је било остављено од стране вашег медведа.
+     To pozorište je bilo ostavljeno od strane vašeg medveda.
+     [bierna, oznajmujący, perfekat, oznajmujące, twierdzące]
+  2. Нека обични студент уништи његово тешко огледало!
+     Neka obični student uništi njegovo teško ogledalo!
+     [czynna, rozkazujący, imperativ, oznajmujące, twierdzące]
+  3. Да ли би ваша учитељица бацила ствар?
+     Da li bi vaša učiteljica bacila stvar?
+     [czynna, przypuszczający, potencijal I, pytające, twierdzące]
+  4. Краљеви нису каснили.
+     Kraljevi nisu kasnili.
+     [czynna, oznajmujący, perfekat, oznajmujące, przeczące]
+  5. Њен лепи рибар не нападне једног госта.
+     Njen lepi ribar ne napadne jednog gosta.
+     [czynna, oznajmujący, prezent, oznajmujące, przeczące]
+  6. Да ли је један мали цвет био показан?
+     Da li je jedan mali cvet bio pokazan?
+     [bierna, oznajmujący, perfekat, pytające, twierdzące]
+  7. Ако они буду продати…
+     Ako oni budu prodati…
+     [bierna, oznajmujący, futur II, oznajmujące, twierdzące]
+  8. Мокра мајка их позајми.
+     Mokra majka ih pozajmi.
+     [czynna, oznajmujący, prezent, oznajmujące, twierdzące]
+  9. Да ли је шешир био бачен од стране моје веселе жене?
+     Da li je šešir bio bačen od strane moje vesele žene?
+     [bierna, oznajmujący, perfekat, pytające, twierdzące]
+ 10. Он не би био прао један јефтини нож.
+     On ne bi bio prao jedan jeftini nož.
+     [czynna, przypuszczający, potencijal II, oznajmujące, przeczące]
+ 11. Сваки уморни гост није радио.
+     Svaki umorni gost nije radio.
+     [czynna, oznajmujący, perfekat, oznajmujące, przeczące]
+ 12. Да ли оне учитељице прочиташе његов филм?
+     Da li one učiteljice pročitaše njegov film?
+     [czynna, oznajmujący, aorist, pytające, twierdzące]
+ 13. Ја нисам био љубио њиховог ниског радника.
+     Ja nisam bio ljubio njihovog niskog radnika.
+     [czynna, oznajmujący, pluskvamperfekat, oznajmujące, przeczące]
+ 14. Њен тихи новинар се није умио.
+     Njen tihi novinar se nije umio.
+     [czynna, oznajmujący, perfekat, oznajmujące, przeczące]
+ 15. Нека ваша здрава јаја буду кувана!
+     Neka vaša zdrava jaja budu kuvana!
+     [bierna, rozkazujący, imperativ, oznajmujące, twierdzące]
+ 16. Да ли ће наш опасни војник уништити торбу?
+     Da li će naš opasni vojnik uništiti torbu?
+     [czynna, oznajmujący, futur I, pytające, twierdzące]
+ 17. Његови краљеви би били чували песме.
+     Njegovi kraljevi bi bili čuvali pesme.
+     [czynna, przypuszczający, potencijal II, oznajmujące, twierdzące]
+ 18. Свако јефтино поврће је било скувано.
+     Svako jeftino povrće je bilo skuvano.
+     [bierna, oznajmujący, perfekat, oznajmujące, twierdzące]
+ 19. Да ли је оно ухватило оног младог радника?
+     Da li je ono uhvatilo onog mladog radnika?
+     [czynna, oznajmujący, perfekat, pytające, twierdzące]
+ 20. Они не стоје.
+     Oni ne stoje.
+     [czynna, oznajmujący, prezent, oznajmujące, przeczące]
+ 21. Један ловац ће учити оне вести.
+     Jedan lovac će učiti one vesti.
+     [czynna, oznajmujący, futur I, oznajmujące, twierdzące]
+ 22. Ја не знах танке војнике.
+     Ja ne znah tanke vojnike.
+     [czynna, oznajmujący, imperfekat, oznajmujące, przeczące]
+ 23. Ми покажимо чудног суседа!
+     Mi pokažimo čudnog suseda!
+     [czynna, rozkazujący, imperativ, oznajmujące, twierdzące]
+ 24. Да ли би они храбри дечаци били пекли твој зелени колач?
+     Da li bi oni hrabri dečaci bili pekli tvoj zeleni kolač?
+     [czynna, przypuszczający, potencijal II, pytające, twierdzące]
+ 25. Ти ме победи!
+     Ti me pobedi!
+     [czynna, rozkazujący, imperativ, oznajmujące, twierdzące]
+ 26. Пријатељ би био зарадио новац.
+     Prijatelj bi bio zaradio novac.
+     [czynna, przypuszczający, potencijal II, oznajmujące, twierdzące]
+ 27. Да ли ће нека птица скочити?
+     Da li će neka ptica skočiti?
+     [czynna, oznajmujący, futur I, pytające, twierdzące]
+ 28. Да ли се ја нећу играти?
+     Da li se ja neću igrati?
+     [czynna, oznajmujący, futur I, pytające, przeczące]
+ 29. Љути орао није био ловљен.
+     Ljuti orao nije bio lovljen.
+     [bierna, oznajmujący, perfekat, oznajmujące, przeczące]
+ 30. Сваки велики сељак научи обични закон.
+     Svaki veliki seljak nauči obični zakon.
+     [czynna, oznajmujący, aorist, oznajmujące, twierdzące]
+ 31. Да ли се оне не би биле свађале?
+     Da li se one ne bi bile svađale?
+     [czynna, przypuszczający, potencijal II, pytające, przeczące]
+ 32. Нека је она не продају!
+     Neka je ona ne prodaju!
+     [czynna, rozkazujący, imperativ, oznajmujące, przeczące]
+ 33. Да ли сваки важни лекар сними жедног коња?
+     Da li svaki važni lekar snimi žednog konja?
+     [czynna, oznajmujący, prezent, pytające, twierdzące]
+ 34. Гласни кувар се био одморио.
+     Glasni kuvar se bio odmorio.
+     [czynna, oznajmujący, pluskvamperfekat, oznajmujące, twierdzące]
+ 35. Ти обуче ципелу.
+     Ti obuče cipelu.
+     [czynna, oznajmujący, aorist, oznajmujące, twierdzące]
+ 36. Оне пошаљу твој папир.
+     One pošalju tvoj papir.
+     [czynna, oznajmujący, prezent, oznajmujące, twierdzące]
+ 37. Њен велики пас паде.
+     Njen veliki pas pade.
+     [czynna, oznajmujący, aorist, oznajmujące, twierdzące]
+ 38. Ти ниси видела велики зуб.
+     Ti nisi videla veliki zub.
+     [czynna, oznajmujący, perfekat, oznajmujące, przeczące]
+ 39. Да ли она нису умрла?
+     Da li ona nisu umrla?
+     [czynna, oznajmujący, perfekat, pytające, przeczące]
+ 40. Њен здрави пас би га слушао.
+     Njen zdravi pas bi ga slušao.
+     [czynna, przypuszczający, potencijal I, oznajmujące, twierdzące]
+ 41. Нека сваки лоши аутомобил иде!
+     Neka svaki loši automobil ide!
+     [czynna, rozkazujący, imperativ, oznajmujące, twierdzące]
+ 42. Песма је била свирана.
+     Pesma je bila svirana.
+     [bierna, oznajmujący, perfekat, oznajmujące, twierdzące]
+ 43. Да ли они пецијаху домаће воће?
+     Da li oni pecijahu domaće voće?
+     [czynna, oznajmujący, imperfekat, pytające, twierdzące]
+ 44. Да ли је велики војник прочитао њене округле слике?
+     Da li je veliki vojnik pročitao njene okrugle slike?
+     [czynna, oznajmujący, perfekat, pytające, twierdzące]
+ 45. Медведи би скочили.
+     Medvedi bi skočili.
+     [czynna, przypuszczający, potencijal I, oznajmujące, twierdzące]
+ 46. Жена није живела.
+     Žena nije živela.
+     [czynna, oznajmujący, perfekat, oznajmujące, przeczące]
+ 47. Ми нисмо били платили древну реч.
+     Mi nismo bili platili drevnu reč.
+     [czynna, oznajmujący, pluskvamperfekat, oznajmujące, przeczące]
+ 48. Та велика сестра не спава.
+     Ta velika sestra ne spava.
+     [czynna, oznajmujący, prezent, oznajmujące, przeczące]
+ 49. Орао ће чекати здравог учитеља.
+     Orao će čekati zdravog učitelja.
+     [czynna, oznajmujący, futur I, oznajmujące, twierdzące]
+ 50. Глупи краљеви певаху локалну песму.
+     Glupi kraljevi pevahu lokalnu pesmu.
+     [czynna, oznajmujący, imperfekat, oznajmujące, twierdzące]
+ 51. Ако она не буде спавала…
+     Ako ona ne bude spavala…
+     [czynna, oznajmujący, futur II, oznajmujące, przeczące]
+ 52. Да ли се радници нису вратили?
+     Da li se radnici nisu vratili?
+     [czynna, oznajmujący, perfekat, pytające, przeczące]
+ 53. Њени полицајци не би били побеђени од стране овог ниског оца.
+     Njeni policajci ne bi bili pobeđeni od strane ovog niskog oca.
+     [bierna, przypuszczający, potencijal I, oznajmujące, przeczące]
+ 54. Њена страна мајка се облачаше.
+     Njena strana majka se oblačaše.
+     [czynna, oznajmujący, imperfekat, oznajmujące, twierdzące]
+ 55. Ти људи скину једну хаљину.
+     Ti ljudi skinu jednu haljinu.
+     [czynna, oznajmujący, prezent, oznajmujące, twierdzące]
+ 56. Да ли је округли сир купљен од стране посебног краља?
+     Da li je okrugli sir kupljen od strane posebnog kralja?
+     [bierna, oznajmujący, prezent, pytające, twierdzące]
+ 57. Она не цветаху.
+     Ona ne cvetahu.
+     [czynna, oznajmujący, imperfekat, oznajmujące, przeczące]
+ 58. Да ли његови певачи воле неко меко поврће?
+     Da li njegovi pevači vole neko meko povrće?
+     [czynna, oznajmujący, prezent, pytające, twierdzące]
+ 59. Ја сам била обукла ваш капут.
+     Ja sam bila obukla vaš kaput.
+     [czynna, oznajmujący, pluskvamperfekat, oznajmujące, twierdzące]
+ 60. Један лоши радник се облачио.
+     Jedan loši radnik se oblačio.
+     [czynna, oznajmujący, perfekat, oznajmujące, twierdzące]
+ 61. Нека она не умре!
+     Neka ona ne umre!
+     [czynna, rozkazujący, imperativ, oznajmujące, przeczące]
+ 62. Она су била научила ову занимљиву књигу.
+     Ona su bila naučila ovu zanimljivu knjigu.
+     [czynna, oznajmujący, pluskvamperfekat, oznajmujące, twierdzące]
+ 63. Неке плаве оловке неће бити дате од стране ниских суседа.
+     Neke plave olovke neće biti date od strane niskih suseda.
+     [bierna, oznajmujący, futur I, oznajmujące, przeczące]
+ 64. Ако уморни учитељи буду бацили његов уски капут…
+     Ako umorni učitelji budu bacili njegov uski kaput…
+     [czynna, oznajmujący, futur II, oznajmujące, twierdzące]
+ 65. Писци су је били запалили.
+     Pisci su je bili zapalili.
+     [czynna, oznajmujący, pluskvamperfekat, oznajmujące, twierdzące]
+ 66. Брод неће бити чекан.
+     Brod neće biti čekan.
+     [bierna, oznajmujący, futur I, oznajmujące, przeczące]
+ 67. Наш добри дечак не убије оног тужног човека.
+     Naš dobri dečak ne ubije onog tužnog čoveka.
+     [czynna, oznajmujący, prezent, oznajmujące, przeczące]
+ 68. Он би био летео.
+     On bi bio leteo.
+     [czynna, przypuszczający, potencijal II, oznajmujące, twierdzące]
+ 69. Ми не пошаљемо ону савремену вест.
+     Mi ne pošaljemo onu savremenu vest.
+     [czynna, oznajmujący, prezent, oznajmujące, przeczące]
+ 70. Занимљиви учитељ гледаше сјајног учитеља.
+     Zanimljivi učitelj gledaše sjajnog učitelja.
+     [czynna, oznajmujący, imperfekat, oznajmujące, twierdzące]
+ 71. Твоја лоша крава лајаше.
+     Tvoja loša krava lajaše.
+     [czynna, oznajmujący, imperfekat, oznajmujące, twierdzące]
+ 72. Свака весела сестра је не гради.
+     Svaka vesela sestra je ne gradi.
+     [czynna, oznajmujący, aorist, oznajmujące, przeczące]
+ 73. Нека она забораве мој ружни брод!
+     Neka ona zaborave moj ružni brod!
+     [czynna, rozkazujący, imperativ, oznajmujące, twierdzące]
+ 74. Она кува њено месо.
+     Ona kuva njeno meso.
+     [czynna, oznajmujący, aorist, oznajmujące, twierdzące]
+ 75. Ви саградисте њено црвено позориште.
+     Vi sagradiste njeno crveno pozorište.
+     [czynna, oznajmujący, aorist, oznajmujące, twierdzące]
+ 76. Његови ловци неће купити кости.
+     Njegovi lovci neće kupiti kosti.
+     [czynna, oznajmujący, futur I, oznajmujące, przeczące]
+ 77. Да ли би ови танки дечаци били цртали оне раднике?
+     Da li bi ovi tanki dečaci bili crtali one radnike?
+     [czynna, przypuszczający, potencijal II, pytające, twierdzące]
+ 78. Нека ја нађем чисте зграде!
+     Neka ja nađem čiste zgrade!
+     [czynna, rozkazujący, imperativ, oznajmujące, twierdzące]
+ 79. Њихов возач је био зарадио онај новац.
+     Njihov vozač je bio zaradio onaj novac.
+     [czynna, oznajmujący, pluskvamperfekat, oznajmujące, twierdzące]
+ 80. Један жедни лекар ће пећи оно зелено воће.
+     Jedan žedni lekar će peći ono zeleno voće.
+     [czynna, oznajmujący, futur I, oznajmujące, twierdzące]
+ 81. Ако њен чудни возач не буде знао вест…
+     Ako njen čudni vozač ne bude znao vest…
+     [czynna, oznajmujący, futur II, oznajmujące, przeczące]
+ 82. Он се купао.
+     On se kupao.
+     [czynna, oznajmujący, perfekat, oznajmujące, twierdzące]
+ 83. Студент ће снимити овог жутог зеца.
+     Student će snimiti ovog žutog zeca.
+     [czynna, oznajmujący, futur I, oznajmujące, twierdzące]
+ 84. Ви га не убисте.
+     Vi ga ne ubiste.
+     [czynna, oznajmujący, aorist, oznajmujące, przeczące]
+ 85. Да ли би пријатељ био поправио сваку хладну школу?
+     Da li bi prijatelj bio popravio svaku hladnu školu?
+     [czynna, przypuszczający, potencijal II, pytające, twierdzące]
+ 86. Један здрави писац неће куповати округло поврће.
+     Jedan zdravi pisac neće kupovati okruglo povrće.
+     [czynna, oznajmujący, futur I, oznajmujące, przeczące]
+ 87. Ови кувари га напишу.
+     Ovi kuvari ga napišu.
+     [czynna, oznajmujący, prezent, oznajmujące, twierdzące]
+ 88. Твоји чудни коњи нису били пали.
+     Tvoji čudni konji nisu bili pali.
+     [czynna, oznajmujący, pluskvamperfekat, oznajmujące, przeczące]
+ 89. Ваш лоши рибар чита једну озбиљну слику.
+     Vaš loši ribar čita jednu ozbiljnu sliku.
+     [czynna, oznajmujący, prezent, oznajmujące, twierdzące]
+ 90. Гости неће хранити паметног кувара.
+     Gosti neće hraniti pametnog kuvara.
+     [czynna, oznajmujący, futur I, oznajmujące, przeczące]
+ 91. Та тиха девојка би се смејала.
+     Ta tiha devojka bi se smejala.
+     [czynna, przypuszczający, potencijal I, oznajmujące, twierdzące]
+ 92. Онај плави вук неће пливати.
+     Onaj plavi vuk neće plivati.
+     [czynna, oznajmujący, futur I, oznajmujące, przeczące]
+ 93. Да ли ће их прљави пријатељи сломити?
+     Da li će ih prljavi prijatelji slomiti?
+     [czynna, oznajmujący, futur I, pytające, twierdzące]
+ 94. Људи раде.
+     Ljudi rade.
+     [czynna, oznajmujący, prezent, oznajmujące, twierdzące]
+ 95. Мирна девојка не би била добила овај црни цвет.
+     Mirna devojka ne bi bila dobila ovaj crni cvet.
+     [czynna, przypuszczający, potencijal II, oznajmujące, przeczące]
+ 96. Твоји црни зечеви ће лајати.
+     Tvoji crni zečevi će lajati.
+     [czynna, oznajmujący, futur I, oznajmujące, twierdzące]
+ 97. Лепи сељак би се свађао.
+     Lepi seljak bi se svađao.
+     [czynna, przypuszczający, potencijal I, oznajmujące, twierdzące]
+ 98. Оне покажу човека.
+     One pokažu čoveka.
+     [czynna, oznajmujący, prezent, oznajmujące, twierdzące]
+ 99. Једна лоша мајка га сече.
+     Jedna loša majka ga seče.
+     [czynna, oznajmujący, prezent, oznajmujące, twierdzące]
+100. Да ли би птица пила ову воду?
+     Da li bi ptica pila ovu vodu?
+     [czynna, przypuszczający, potencijal I, pytające, twierdzące]
+101. Ако моји млади новинари не буду плакали…
+     Ako moji mladi novinari ne budu plakali…
+     [czynna, oznajmujący, futur II, oznajmujące, przeczące]
+102. Ако њен стари писац буде снимио њиховог ловца…
+     Ako njen stari pisac bude snimio njihovog lovca…
+     [czynna, oznajmujący, futur II, oznajmujące, twierdzące]
+103. Вук не би ходао.
+     Vuk ne bi hodao.
+     [czynna, przypuszczający, potencijal I, oznajmujące, przeczące]
+104. Ако прљави кувар буде пливао…
+     Ako prljavi kuvar bude plivao…
+     [czynna, oznajmujący, futur II, oznajmujące, twierdzące]
+105. Нека се ја не играм!
+     Neka se ja ne igram!
+     [czynna, rozkazujący, imperativ, oznajmujące, przeczące]
+106. Танки учитељи не би потписали ту савремену вест.
+     Tanki učitelji ne bi potpisali tu savremenu vest.
+     [czynna, przypuszczający, potencijal I, oznajmujące, przeczące]
+107. Нека ја седим!
+     Neka ja sedim!
+     [czynna, rozkazujący, imperativ, oznajmujące, twierdzące]
+108. Да ли је непознати студент био примљен од стране ових храбрих полицајаца?
+     Da li je nepoznati student bio primljen od strane ovih hrabrih policajaca?
+     [bierna, oznajmujący, perfekat, pytające, twierdzące]
+109. Да ли се ми нисмо биле заљубиле?
+     Da li se mi nismo bile zaljubile?
+     [czynna, oznajmujący, pluskvamperfekat, pytające, przeczące]
+110. Ви ћете се заљубити.
+     Vi ćete se zaljubiti.
+     [czynna, oznajmujący, futur I, oznajmujące, twierdzące]
+111. Она није била посетила очеве.
+     Ona nije bila posetila očeve.
+     [czynna, oznajmujący, pluskvamperfekat, oznajmujące, przeczące]
+112. Ви сте је секли.
+     Vi ste je sekli.
+     [czynna, oznajmujący, perfekat, oznajmujące, twierdzące]
+113. Његова риба није била ходала.
+     Njegova riba nije bila hodala.
+     [czynna, oznajmujący, pluskvamperfekat, oznajmujące, przeczące]
+114. Да ли јефтини сир не би био дат од стране сваког дечака?
+     Da li jeftini sir ne bi bio dat od strane svakog dečaka?
+     [bierna, przypuszczający, potencijal I, pytające, przeczące]
+115. Рибар није љубио моју птицу.
+     Ribar nije ljubio moju pticu.
+     [czynna, oznajmujący, perfekat, oznajmujące, przeczące]
+116. Да ли новинари не показаше јабуке?
+     Da li novinari ne pokazaše jabuke?
+     [czynna, oznajmujący, aorist, pytające, przeczące]
+117. Нека ја скувам наш кромпир!
+     Neka ja skuvam naš krompir!
+     [czynna, rozkazujący, imperativ, oznajmujące, twierdzące]
+118. Нека она не отвори моју лепу ствар!
+     Neka ona ne otvori moju lepu stvar!
+     [czynna, rozkazujący, imperativ, oznajmujące, przeczące]
+119. Да ли се ви облачасте?
+     Da li se vi oblačaste?
+     [czynna, oznajmujący, imperfekat, pytające, twierdzące]
+120. Ја сам се био смејао.
+     Ja sam se bio smejao.
+     [czynna, oznajmujący, pluskvamperfekat, oznajmujące, twierdzące]
+121. Да ли писци носе њене лепе цветове?
+     Da li pisci nose njene lepe cvetove?
+     [czynna, oznajmujący, prezent, pytające, twierdzące]
+122. Ти би се била облачила.
+     Ti bi se bila oblačila.
+     [czynna, przypuszczający, potencijal II, oznajmujące, twierdzące]
+123. Ако се ти очеви буду осмехнули…
+     Ako se ti očevi budu osmehnuli…
+     [czynna, oznajmujący, futur II, oznajmujące, twierdzące]
+124. Они људи скоче.
+     Oni ljudi skoče.
+     [czynna, oznajmujący, prezent, oznajmujące, twierdzące]
+125. Ако ми будемо гледале дрвено позориште…
+     Ako mi budemo gledale drveno pozorište…
+     [czynna, oznajmujący, futur II, oznajmujące, twierdzące]
+126. Ви се свађајте!
+     Vi se svađajte!
+     [czynna, rozkazujący, imperativ, oznajmujące, twierdzące]
+127. Ако један велики краљ буде побеђен од стране малог рибара…
+     Ako jedan veliki kralj bude pobeđen od strane malog ribara…
+     [bierna, oznajmujący, futur II, oznajmujące, twierdzące]
+128. Мокри краљ га отвори.
+     Mokri kralj ga otvori.
+     [czynna, oznajmujący, aorist, oznajmujące, twierdzące]
+129. Слаби новинар ће га куповати.
+     Slabi novinar će ga kupovati.
+     [czynna, oznajmujący, futur I, oznajmujące, twierdzące]
+130. Они ће се умити.
+     Oni će se umiti.
+     [czynna, oznajmujący, futur I, oznajmujące, twierdzące]
+131. Прљави војник није пробао једно скупо млеко.
+     Prljavi vojnik nije probao jedno skupo mleko.
+     [czynna, oznajmujący, perfekat, oznajmujące, przeczące]
+132. Да ли би наш студент чекао спорог оца?
+     Da li bi naš student čekao sporog oca?
+     [czynna, przypuszczający, potencijal I, pytające, twierdzące]
+133. Ваш црвени хлеб ће бити куван од стране вашег госта.
+     Vaš crveni hleb će biti kuvan od strane vašeg gosta.
+     [bierna, oznajmujący, futur I, oznajmujące, twierdzące]
+134. Да ли су тихе улице биле очишћене од стране сестре?
+     Da li su tihe ulice bile očišćene od strane sestre?
+     [bierna, oznajmujący, perfekat, pytające, twierdzące]
+135. Ако се оне буду попеле…
+     Ako se one budu popele…
+     [czynna, oznajmujący, futur II, oznajmujące, twierdzące]
+136. Ми отидимо!
+     Mi otidimo!
+     [czynna, rozkazujący, imperativ, oznajmujące, twierdzące]
+137. Тај сусед би платио мој лепи брод.
+     Taj sused bi platio moj lepi brod.
+     [czynna, przypuszczający, potencijal I, oznajmujące, twierdzące]
+138. Онај млади медвед се одмара.
+     Onaj mladi medved se odmara.
+     [czynna, oznajmujący, aorist, oznajmujące, twierdzące]
+139. Ви певајте ову познату песму!
+     Vi pevajte ovu poznatu pesmu!
+     [czynna, rozkazujący, imperativ, oznajmujące, twierdzące]
+140. Да ли ће њихови гладни учитељи попити вашу слабу кафу?
+     Da li će njihovi gladni učitelji popiti vašu slabu kafu?
+     [czynna, oznajmujący, futur I, pytające, twierdzące]
+141. Једно пуно село не би гледано од стране писца.
+     Jedno puno selo ne bi gledano od strane pisca.
+     [bierna, oznajmujący, aorist, oznajmujące, przeczące]
+142. Ви бројте оног уморног сељака!
+     Vi brojte onog umornog seljaka!
+     [czynna, rozkazujący, imperativ, oznajmujące, twierdzące]
+143. Ваш познати новинар би се заљубио.
+     Vaš poznati novinar bi se zaljubio.
+     [czynna, przypuszczający, potencijal I, oznajmujące, twierdzące]
+144. Да ли би се овај гост попео?
+     Da li bi se ovaj gost popeo?
+     [czynna, przypuszczający, potencijal I, pytające, twierdzące]
+145. Нека ја продам топло вино!
+     Neka ja prodam toplo vino!
+     [czynna, rozkazujący, imperativ, oznajmujące, twierdzące]
+146. Њихове јаке девојке би их бациле.
+     Njihove jake devojke bi ih bacile.
+     [czynna, przypuszczający, potencijal I, oznajmujące, twierdzące]
+147. Да ли се ваш храбри човек не би био одмарао?
+     Da li se vaš hrabri čovek ne bi bio odmarao?
+     [czynna, przypuszczający, potencijal II, pytające, przeczące]
+148. Ти би скувао један колач.
+     Ti bi skuvao jedan kolač.
+     [czynna, przypuszczający, potencijal I, oznajmujące, twierdzące]
+149. Ми знасмо оног радника.
+     Mi znasmo onog radnika.
+     [czynna, oznajmujący, aorist, oznajmujące, twierdzące]
+150. Његови пријатељи не ћутаху.
+     Njegovi prijatelji ne ćutahu.
+     [czynna, oznajmujący, imperfekat, oznajmujące, przeczące]
+151. Ви живите.
+     Vi živite.
+     [czynna, oznajmujący, prezent, oznajmujące, twierdzące]
+152. Ми се не бисмо пробудиле.
+     Mi se ne bismo probudile.
+     [czynna, przypuszczający, potencijal I, oznajmujące, przeczące]
+153. Ружне жене би се заљубиле.
+     Ružne žene bi se zaljubile.
+     [czynna, przypuszczający, potencijal I, oznajmujące, twierdzące]
+154. Наши непознати људи нису затворили ваше ножеве.
+     Naši nepoznati ljudi nisu zatvorili vaše noževe.
+     [czynna, oznajmujący, perfekat, oznajmujące, przeczące]
+155. Учитељица покаже обичне папире.
+     Učiteljica pokaže obične papire.
+     [czynna, oznajmujący, prezent, oznajmujące, twierdzące]
+156. Ти их заборави!
+     Ti ih zaboravi!
+     [czynna, rozkazujący, imperativ, oznajmujące, twierdzące]
+157. Нека сјајна учитељица ће се умити.
+     Neka sjajna učiteljica će se umiti.
+     [czynna, oznajmujący, futur I, oznajmujące, twierdzące]
+158. Сваки лепи зец је лежао.
+     Svaki lepi zec je ležao.
+     [czynna, oznajmujący, perfekat, oznajmujące, twierdzące]
+159. Нека се ја не осмехнем!
+     Neka se ja ne osmehnem!
+     [czynna, rozkazujący, imperativ, oznajmujące, przeczące]
+160. Они ће ловити његову домаћу краву.
+     Oni će loviti njegovu domaću kravu.
+     [czynna, oznajmujący, futur I, oznajmujące, twierdzące]
+161. Да ли твој познати војник касни?
+     Da li tvoj poznati vojnik kasni?
+     [czynna, oznajmujący, aorist, pytające, twierdzące]
+162. Њихова мајка ће се шетати.
+     Njihova majka će se šetati.
+     [czynna, oznajmujący, futur I, oznajmujące, twierdzące]
+163. Нека ваши лекари знају девојке!
+     Neka vaši lekari znaju devojke!
+     [czynna, rozkazujący, imperativ, oznajmujące, twierdzące]
+164. Ми се немојмо пробудити!
+     Mi se nemojmo probuditi!
+     [czynna, rozkazujący, imperativ, oznajmujące, przeczące]
+165. Ако древни уговор не буде написан од стране гласног радника…
+     Ako drevni ugovor ne bude napisan od strane glasnog radnika…
+     [bierna, oznajmujący, futur II, oznajmujące, przeczące]
+166. Слика не би била написана од стране малог суседа.
+     Slika ne bi bila napisana od strane malog suseda.
+     [bierna, przypuszczający, potencijal I, oznajmujące, przeczące]
+167. Нека оне оставе њену велику кост!
+     Neka one ostave njenu veliku kost!
+     [czynna, rozkazujący, imperativ, oznajmujące, twierdzące]
+168. Ваш лав се не врати.
+     Vaš lav se ne vrati.
+     [czynna, oznajmujący, prezent, oznajmujące, przeczące]
+169. Они би били свирани.
+     Oni bi bili svirani.
+     [bierna, przypuszczający, potencijal I, oznajmujące, twierdzące]
+170. Оне би посадиле сваки жути цвет.
+     One bi posadile svaki žuti cvet.
+     [czynna, przypuszczający, potencijal I, oznajmujące, twierdzące]
+171. Да ли неки велики лопов не сагради ову зграду?
+     Da li neki veliki lopov ne sagradi ovu zgradu?
+     [czynna, oznajmujący, aorist, pytające, przeczące]
+172. Да ли би твоја мала карта била написана од стране сиромашне девојке?
+     Da li bi tvoja mala karta bila napisana od strane siromašne devojke?
+     [bierna, przypuszczający, potencijal I, pytające, twierdzące]
+173. Ви уништите слатку воду!
+     Vi uništite slatku vodu!
+     [czynna, rozkazujący, imperativ, oznajmujące, twierdzące]
+174. Ви радите!
+     Vi radite!
+     [czynna, rozkazujący, imperativ, oznajmujące, twierdzące]
+175. Нека љути вук живи!
+     Neka ljuti vuk živi!
+     [czynna, rozkazujący, imperativ, oznajmujące, twierdzące]
+176. Ако моја чудна крава не буде љубљена од стране љубазних полицајаца…
+     Ako moja čudna krava ne bude ljubljena od strane ljubaznih policajaca…
+     [bierna, oznajmujący, futur II, oznajmujące, przeczące]
+177. Нека она дођу!
+     Neka ona dođu!
+     [czynna, rozkazujący, imperativ, oznajmujące, twierdzące]
+178. Нека се он не радује!
+     Neka se on ne raduje!
+     [czynna, rozkazujący, imperativ, oznajmujące, przeczące]
+179. Да ли чудни вук чува непознате девојке?
+     Da li čudni vuk čuva nepoznate devojke?
+     [czynna, oznajmujący, prezent, pytające, twierdzące]
+180. Да ли она не учи сваку вредну вест?
+     Da li ona ne uči svaku vrednu vest?
+     [czynna, oznajmujący, aorist, pytające, przeczące]
+181. Њен гладни пас не лајаше.
+     Njen gladni pas ne lajaše.
+     [czynna, oznajmujący, imperfekat, oznajmujące, przeczące]
+182. Она би била позајмила посебни уговор.
+     Ona bi bila pozajmila posebni ugovor.
+     [czynna, przypuszczający, potencijal II, oznajmujące, twierdzące]
+183. Нека медведи иду!
+     Neka medvedi idu!
+     [czynna, rozkazujący, imperativ, oznajmujące, twierdzące]
+184. Да ли ће свеже јело бити кувано од стране једног озбиљног дечака?
+     Da li će sveže jelo biti kuvano od strane jednog ozbiljnog dečaka?
+     [bierna, oznajmujący, futur I, pytające, twierdzące]
+185. Један болесни човек неће спавати.
+     Jedan bolesni čovek neće spavati.
+     [czynna, oznajmujący, futur I, oznajmujące, przeczące]
+186. Нека ја седим!
+     Neka ja sedim!
+     [czynna, rozkazujący, imperativ, oznajmujące, twierdzące]
+187. Ми мрзимо једну тужну рибу!
+     Mi mrzimo jednu tužnu ribu!
+     [czynna, rozkazujący, imperativ, oznajmujące, twierdzące]
+188. Ако његова велика сестра буде прала камен…
+     Ako njegova velika sestra bude prala kamen…
+     [czynna, oznajmujący, futur II, oznajmujące, twierdzące]
+189. Ти немој послати уговор!
+     Ti nemoj poslati ugovor!
+     [czynna, rozkazujący, imperativ, oznajmujące, przeczące]
+190. Ти вас тражи!
+     Ti vas traži!
+     [czynna, rozkazujący, imperativ, oznajmujące, twierdzące]
+191. Глупи медвед је био чекан од стране њихових полицајаца.
+     Glupi medved je bio čekan od strane njihovih policajaca.
+     [bierna, oznajmujący, perfekat, oznajmujące, twierdzące]
+192. Да ли ће његова лепа жена цртати сјајне возаче?
+     Da li će njegova lepa žena crtati sjajne vozače?
+     [czynna, oznajmujący, futur I, pytające, twierdzące]
+193. Ја сам био мржен.
+     Ja sam bio mržen.
+     [bierna, oznajmujący, perfekat, oznajmujące, twierdzące]
+194. Човек побегне.
+     Čovek pobegne.
+     [czynna, oznajmujący, prezent, oznajmujące, twierdzące]
+195. Она не радише.
+     Ona ne radiše.
+     [czynna, oznajmujący, aorist, oznajmujące, przeczące]
+196. Ја нисам био дошао.
+     Ja nisam bio došao.
+     [czynna, oznajmujący, pluskvamperfekat, oznajmujące, przeczące]
+197. Да ли ћемо ми снимити мог тужног пријатеља?
+     Da li ćemo mi snimiti mog tužnog prijatelja?
+     [czynna, oznajmujący, futur I, pytające, twierdzące]
+198. Ти не сеђаше.
+     Ti ne seđaše.
+     [czynna, oznajmujący, imperfekat, oznajmujące, przeczące]
+199. Сиромашни сусед би чекао глупог студента.
+     Siromašni sused bi čekao glupog studenta.
+     [czynna, przypuszczający, potencijal I, oznajmujące, twierdzące]
+200. Да ли су твоји весели возачи запалили моје кости?
+     Da li su tvoji veseli vozači zapalili moje kosti?
+     [czynna, oznajmujący, perfekat, pytające, twierdzące]
+
+==========================================================================================
+PODSUMOWANIE
+==========================================================================================
+Liczba poprawnych kombinacji (czasownik × strona × tryb × czas × typ × polaryzacja): 6236
+Pliki w 'wyniki\lab05': raport.txt, rzeczowniki.csv, czasowniki.csv, przymiotniki.csv, pelna_odmiana.csv, losowe_zdania.csv

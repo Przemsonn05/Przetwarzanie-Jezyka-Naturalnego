@@ -1,6 +1,10 @@
 __pycache__/
 *.pyc
-# postęp parsowania (plik roboczy lab04_parsowanie.py)
-dane/*.postep
+# porcje robocze parsowania (lab04_parsowanie.py, usuwane po zakończeniu)
+dane/*_porcje/
+dane/*.tmp
 # duży plik grafu (14 MB) - generowany przez lab03_wyrazy_zipf_graf.py
 wyniki/lab03/graf_sasiedztwa.gexf
+# pliki robocze pobierania (lab04_pobieranie.py, wznawianie)
+dane/*.czesc
+dane/*.seedy

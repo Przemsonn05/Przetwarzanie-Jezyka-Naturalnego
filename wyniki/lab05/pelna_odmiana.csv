@@ -1,0 +1,197 @@
+﻿czasownik;strona;tryb;czas;typ_zdania;polaryzacja;zdanie_cyrylica;zdanie_lacinka
+pročitati;czynna;oznajmujący;prezent;oznajmujące;twierdzące;Ја прочитам своју нову књигу.;Ja pročitam svoju novu knjigu.
+pročitati;czynna;oznajmujący;prezent;oznajmujące;przeczące;Ја не прочитам своју нову књигу.;Ja ne pročitam svoju novu knjigu.
+pročitati;czynna;oznajmujący;prezent;pytające;twierdzące;Да ли ја прочитам своју нову књигу?;Da li ja pročitam svoju novu knjigu?
+pročitati;czynna;oznajmujący;prezent;pytające;przeczące;Да ли ја не прочитам своју нову књигу?;Da li ja ne pročitam svoju novu knjigu?
+pročitati;czynna;oznajmujący;perfekat;oznajmujące;twierdzące;Ја сам прочитао своју нову књигу.;Ja sam pročitao svoju novu knjigu.
+pročitati;czynna;oznajmujący;perfekat;oznajmujące;przeczące;Ја нисам прочитао своју нову књигу.;Ja nisam pročitao svoju novu knjigu.
+pročitati;czynna;oznajmujący;perfekat;pytające;twierdzące;Да ли сам ја прочитао своју нову књигу?;Da li sam ja pročitao svoju novu knjigu?
+pročitati;czynna;oznajmujący;perfekat;pytające;przeczące;Да ли ја нисам прочитао своју нову књигу?;Da li ja nisam pročitao svoju novu knjigu?
+pročitati;czynna;oznajmujący;aorist;oznajmujące;twierdzące;Ја прочитах своју нову књигу.;Ja pročitah svoju novu knjigu.
+pročitati;czynna;oznajmujący;aorist;oznajmujące;przeczące;Ја не прочитах своју нову књигу.;Ja ne pročitah svoju novu knjigu.
+pročitati;czynna;oznajmujący;aorist;pytające;twierdzące;Да ли ја прочитах своју нову књигу?;Da li ja pročitah svoju novu knjigu?
+pročitati;czynna;oznajmujący;aorist;pytające;przeczące;Да ли ја не прочитах своју нову књигу?;Da li ja ne pročitah svoju novu knjigu?
+pročitati;czynna;oznajmujący;pluskvamperfekat;oznajmujące;twierdzące;Ја сам био прочитао своју нову књигу.;Ja sam bio pročitao svoju novu knjigu.
+pročitati;czynna;oznajmujący;pluskvamperfekat;oznajmujące;przeczące;Ја нисам био прочитао своју нову књигу.;Ja nisam bio pročitao svoju novu knjigu.
+pročitati;czynna;oznajmujący;pluskvamperfekat;pytające;twierdzące;Да ли сам ја био прочитао своју нову књигу?;Da li sam ja bio pročitao svoju novu knjigu?
+pročitati;czynna;oznajmujący;pluskvamperfekat;pytające;przeczące;Да ли ја нисам био прочитао своју нову књигу?;Da li ja nisam bio pročitao svoju novu knjigu?
+pročitati;czynna;oznajmujący;futur I;oznajmujące;twierdzące;Ја ћу прочитати своју нову књигу.;Ja ću pročitati svoju novu knjigu.
+pročitati;czynna;oznajmujący;futur I;oznajmujące;przeczące;Ја нећу прочитати своју нову књигу.;Ja neću pročitati svoju novu knjigu.
+pročitati;czynna;oznajmujący;futur I;pytające;twierdzące;Да ли ћу ја прочитати своју нову књигу?;Da li ću ja pročitati svoju novu knjigu?
+pročitati;czynna;oznajmujący;futur I;pytające;przeczące;Да ли ја нећу прочитати своју нову књигу?;Da li ja neću pročitati svoju novu knjigu?
+pročitati;czynna;oznajmujący;futur II;oznajmujące;twierdzące;Ако ја будем прочитао своју нову књигу…;Ako ja budem pročitao svoju novu knjigu…
+pročitati;czynna;oznajmujący;futur II;oznajmujące;przeczące;Ако ја не будем прочитао своју нову књигу…;Ako ja ne budem pročitao svoju novu knjigu…
+pročitati;czynna;rozkazujący;imperativ;oznajmujące;twierdzące;Нека ја прочитам своју нову књигу!;Neka ja pročitam svoju novu knjigu!
+pročitati;czynna;rozkazujący;imperativ;oznajmujące;przeczące;Нека ја не прочитам своју нову књигу!;Neka ja ne pročitam svoju novu knjigu!
+pročitati;czynna;przypuszczający;potencijal I;oznajmujące;twierdzące;Ја бих прочитао своју нову књигу.;Ja bih pročitao svoju novu knjigu.
+pročitati;czynna;przypuszczający;potencijal I;oznajmujące;przeczące;Ја не бих прочитао своју нову књигу.;Ja ne bih pročitao svoju novu knjigu.
+pročitati;czynna;przypuszczający;potencijal I;pytające;twierdzące;Да ли бих ја прочитао своју нову књигу?;Da li bih ja pročitao svoju novu knjigu?
+pročitati;czynna;przypuszczający;potencijal I;pytające;przeczące;Да ли ја не бих прочитао своју нову књигу?;Da li ja ne bih pročitao svoju novu knjigu?
+pročitati;czynna;przypuszczający;potencijal II;oznajmujące;twierdzące;Ја бих био прочитао своју нову књигу.;Ja bih bio pročitao svoju novu knjigu.
+pročitati;czynna;przypuszczający;potencijal II;oznajmujące;przeczące;Ја не бих био прочитао своју нову књигу.;Ja ne bih bio pročitao svoju novu knjigu.
+pročitati;czynna;przypuszczający;potencijal II;pytające;twierdzące;Да ли бих ја био прочитао своју нову књигу?;Da li bih ja bio pročitao svoju novu knjigu?
+pročitati;czynna;przypuszczający;potencijal II;pytające;przeczące;Да ли ја не бих био прочитао своју нову књигу?;Da li ja ne bih bio pročitao svoju novu knjigu?
+pročitati;bierna;oznajmujący;prezent;oznajmujące;twierdzące;Моја нова књига је прочитана.;Moja nova knjiga je pročitana.
+pročitati;bierna;oznajmujący;prezent;oznajmujące;przeczące;Моја нова књига није прочитана.;Moja nova knjiga nije pročitana.
+pročitati;bierna;oznajmujący;prezent;pytające;twierdzące;Да ли је моја нова књига прочитана?;Da li je moja nova knjiga pročitana?
+pročitati;bierna;oznajmujący;prezent;pytające;przeczące;Да ли моја нова књига није прочитана?;Da li moja nova knjiga nije pročitana?
+pročitati;bierna;oznajmujący;perfekat;oznajmujące;twierdzące;Моја нова књига је била прочитана.;Moja nova knjiga je bila pročitana.
+pročitati;bierna;oznajmujący;perfekat;oznajmujące;przeczące;Моја нова књига није била прочитана.;Moja nova knjiga nije bila pročitana.
+pročitati;bierna;oznajmujący;perfekat;pytające;twierdzące;Да ли је моја нова књига била прочитана?;Da li je moja nova knjiga bila pročitana?
+pročitati;bierna;oznajmujący;perfekat;pytające;przeczące;Да ли моја нова књига није била прочитана?;Da li moja nova knjiga nije bila pročitana?
+pročitati;bierna;oznajmujący;aorist;oznajmujące;twierdzące;Моја нова књига би прочитана.;Moja nova knjiga bi pročitana.
+pročitati;bierna;oznajmujący;aorist;oznajmujące;przeczące;Моја нова књига не би прочитана.;Moja nova knjiga ne bi pročitana.
+pročitati;bierna;oznajmujący;aorist;pytające;twierdzące;Да ли моја нова књига би прочитана?;Da li moja nova knjiga bi pročitana?
+pročitati;bierna;oznajmujący;aorist;pytające;przeczące;Да ли моја нова књига не би прочитана?;Da li moja nova knjiga ne bi pročitana?
+pročitati;bierna;oznajmujący;imperfekat;oznajmujące;twierdzące;Моја нова књига беше прочитана.;Moja nova knjiga beše pročitana.
+pročitati;bierna;oznajmujący;imperfekat;oznajmujące;przeczące;Моја нова књига не беше прочитана.;Moja nova knjiga ne beše pročitana.
+pročitati;bierna;oznajmujący;imperfekat;pytające;twierdzące;Да ли моја нова књига беше прочитана?;Da li moja nova knjiga beše pročitana?
+pročitati;bierna;oznajmujący;imperfekat;pytające;przeczące;Да ли моја нова књига не беше прочитана?;Da li moja nova knjiga ne beše pročitana?
+pročitati;bierna;oznajmujący;futur I;oznajmujące;twierdzące;Моја нова књига ће бити прочитана.;Moja nova knjiga će biti pročitana.
+pročitati;bierna;oznajmujący;futur I;oznajmujące;przeczące;Моја нова књига неће бити прочитана.;Moja nova knjiga neće biti pročitana.
+pročitati;bierna;oznajmujący;futur I;pytające;twierdzące;Да ли ће моја нова књига бити прочитана?;Da li će moja nova knjiga biti pročitana?
+pročitati;bierna;oznajmujący;futur I;pytające;przeczące;Да ли моја нова књига неће бити прочитана?;Da li moja nova knjiga neće biti pročitana?
+pročitati;bierna;oznajmujący;futur II;oznajmujące;twierdzące;Ако моја нова књига буде прочитана…;Ako moja nova knjiga bude pročitana…
+pročitati;bierna;oznajmujący;futur II;oznajmujące;przeczące;Ако моја нова књига не буде прочитана…;Ako moja nova knjiga ne bude pročitana…
+pročitati;bierna;rozkazujący;imperativ;oznajmujące;twierdzące;Нека моја нова књига буде прочитана!;Neka moja nova knjiga bude pročitana!
+pročitati;bierna;rozkazujący;imperativ;oznajmujące;przeczące;Нека моја нова књига не буде прочитана!;Neka moja nova knjiga ne bude pročitana!
+pročitati;bierna;przypuszczający;potencijal I;oznajmujące;twierdzące;Моја нова књига би била прочитана.;Moja nova knjiga bi bila pročitana.
+pročitati;bierna;przypuszczający;potencijal I;oznajmujące;przeczące;Моја нова књига не би била прочитана.;Moja nova knjiga ne bi bila pročitana.
+pročitati;bierna;przypuszczający;potencijal I;pytające;twierdzące;Да ли би моја нова књига била прочитана?;Da li bi moja nova knjiga bila pročitana?
+pročitati;bierna;przypuszczający;potencijal I;pytające;przeczące;Да ли моја нова књига не би била прочитана?;Da li moja nova knjiga ne bi bila pročitana?
+čuvati;czynna;oznajmujący;prezent;oznajmujące;twierdzące;Наш велики пас је чува.;Naš veliki pas je čuva.
+čuvati;czynna;oznajmujący;prezent;oznajmujące;przeczące;Наш велики пас је не чува.;Naš veliki pas je ne čuva.
+čuvati;czynna;oznajmujący;prezent;pytające;twierdzące;Да ли је наш велики пас чува?;Da li je naš veliki pas čuva?
+čuvati;czynna;oznajmujący;prezent;pytające;przeczące;Да ли је наш велики пас не чува?;Da li je naš veliki pas ne čuva?
+čuvati;czynna;oznajmujący;perfekat;oznajmujące;twierdzące;Наш велики пас ју је чувао.;Naš veliki pas ju je čuvao.
+čuvati;czynna;oznajmujący;perfekat;oznajmujące;przeczące;Наш велики пас је није чувао.;Naš veliki pas je nije čuvao.
+čuvati;czynna;oznajmujący;perfekat;pytające;twierdzące;Да ли ју је наш велики пас чувао?;Da li ju je naš veliki pas čuvao?
+čuvati;czynna;oznajmujący;perfekat;pytające;przeczące;Да ли је наш велики пас није чувао?;Da li je naš veliki pas nije čuvao?
+čuvati;czynna;oznajmujący;aorist;oznajmujące;twierdzące;Наш велики пас је чува.;Naš veliki pas je čuva.
+čuvati;czynna;oznajmujący;aorist;oznajmujące;przeczące;Наш велики пас је не чува.;Naš veliki pas je ne čuva.
+čuvati;czynna;oznajmujący;aorist;pytające;twierdzące;Да ли је наш велики пас чува?;Da li je naš veliki pas čuva?
+čuvati;czynna;oznajmujący;aorist;pytające;przeczące;Да ли је наш велики пас не чува?;Da li je naš veliki pas ne čuva?
+čuvati;czynna;oznajmujący;imperfekat;oznajmujące;twierdzące;Наш велики пас је чуваше.;Naš veliki pas je čuvaše.
+čuvati;czynna;oznajmujący;imperfekat;oznajmujące;przeczące;Наш велики пас је не чуваше.;Naš veliki pas je ne čuvaše.
+čuvati;czynna;oznajmujący;imperfekat;pytające;twierdzące;Да ли је наш велики пас чуваше?;Da li je naš veliki pas čuvaše?
+čuvati;czynna;oznajmujący;imperfekat;pytające;przeczące;Да ли је наш велики пас не чуваше?;Da li je naš veliki pas ne čuvaše?
+čuvati;czynna;oznajmujący;pluskvamperfekat;oznajmujące;twierdzące;Наш велики пас ју је био чувао.;Naš veliki pas ju je bio čuvao.
+čuvati;czynna;oznajmujący;pluskvamperfekat;oznajmujące;przeczące;Наш велики пас је није био чувао.;Naš veliki pas je nije bio čuvao.
+čuvati;czynna;oznajmujący;pluskvamperfekat;pytające;twierdzące;Да ли ју је наш велики пас био чувао?;Da li ju je naš veliki pas bio čuvao?
+čuvati;czynna;oznajmujący;pluskvamperfekat;pytające;przeczące;Да ли је наш велики пас није био чувао?;Da li je naš veliki pas nije bio čuvao?
+čuvati;czynna;oznajmujący;futur I;oznajmujące;twierdzące;Наш велики пас ће је чувати.;Naš veliki pas će je čuvati.
+čuvati;czynna;oznajmujący;futur I;oznajmujące;przeczące;Наш велики пас је неће чувати.;Naš veliki pas je neće čuvati.
+čuvati;czynna;oznajmujący;futur I;pytające;twierdzące;Да ли ће је наш велики пас чувати?;Da li će je naš veliki pas čuvati?
+čuvati;czynna;oznajmujący;futur I;pytające;przeczące;Да ли је наш велики пас неће чувати?;Da li je naš veliki pas neće čuvati?
+čuvati;czynna;oznajmujący;futur II;oznajmujące;twierdzące;Ако је наш велики пас буде чувао…;Ako je naš veliki pas bude čuvao…
+čuvati;czynna;oznajmujący;futur II;oznajmujące;przeczące;Ако је наш велики пас не буде чувао…;Ako je naš veliki pas ne bude čuvao…
+čuvati;czynna;rozkazujący;imperativ;oznajmujące;twierdzące;Нека је наш велики пас чува!;Neka je naš veliki pas čuva!
+čuvati;czynna;rozkazujący;imperativ;oznajmujące;przeczące;Нека је наш велики пас не чува!;Neka je naš veliki pas ne čuva!
+čuvati;czynna;przypuszczający;potencijal I;oznajmujące;twierdzące;Наш велики пас би је чувао.;Naš veliki pas bi je čuvao.
+čuvati;czynna;przypuszczający;potencijal I;oznajmujące;przeczące;Наш велики пас је не би чувао.;Naš veliki pas je ne bi čuvao.
+čuvati;czynna;przypuszczający;potencijal I;pytające;twierdzące;Да ли би је наш велики пас чувао?;Da li bi je naš veliki pas čuvao?
+čuvati;czynna;przypuszczający;potencijal I;pytające;przeczące;Да ли је наш велики пас не би чувао?;Da li je naš veliki pas ne bi čuvao?
+čuvati;czynna;przypuszczający;potencijal II;oznajmujące;twierdzące;Наш велики пас би је био чувао.;Naš veliki pas bi je bio čuvao.
+čuvati;czynna;przypuszczający;potencijal II;oznajmujące;przeczące;Наш велики пас је не би био чувао.;Naš veliki pas je ne bi bio čuvao.
+čuvati;czynna;przypuszczający;potencijal II;pytające;twierdzące;Да ли би је наш велики пас био чувао?;Da li bi je naš veliki pas bio čuvao?
+čuvati;czynna;przypuszczający;potencijal II;pytające;przeczące;Да ли је наш велики пас не би био чувао?;Da li je naš veliki pas ne bi bio čuvao?
+čuvati;bierna;oznajmujący;prezent;oznajmujące;twierdzące;Она је чувана од стране нашег великог пса.;Ona je čuvana od strane našeg velikog psa.
+čuvati;bierna;oznajmujący;prezent;oznajmujące;przeczące;Она није чувана од стране нашег великог пса.;Ona nije čuvana od strane našeg velikog psa.
+čuvati;bierna;oznajmujący;prezent;pytające;twierdzące;Да ли је она чувана од стране нашег великог пса?;Da li je ona čuvana od strane našeg velikog psa?
+čuvati;bierna;oznajmujący;prezent;pytające;przeczące;Да ли она није чувана од стране нашег великог пса?;Da li ona nije čuvana od strane našeg velikog psa?
+čuvati;bierna;oznajmujący;perfekat;oznajmujące;twierdzące;Она је била чувана од стране нашег великог пса.;Ona je bila čuvana od strane našeg velikog psa.
+čuvati;bierna;oznajmujący;perfekat;oznajmujące;przeczące;Она није била чувана од стране нашег великог пса.;Ona nije bila čuvana od strane našeg velikog psa.
+čuvati;bierna;oznajmujący;perfekat;pytające;twierdzące;Да ли је она била чувана од стране нашег великог пса?;Da li je ona bila čuvana od strane našeg velikog psa?
+čuvati;bierna;oznajmujący;perfekat;pytające;przeczące;Да ли она није била чувана од стране нашег великог пса?;Da li ona nije bila čuvana od strane našeg velikog psa?
+čuvati;bierna;oznajmujący;aorist;oznajmujące;twierdzące;Она би чувана од стране нашег великог пса.;Ona bi čuvana od strane našeg velikog psa.
+čuvati;bierna;oznajmujący;aorist;oznajmujące;przeczące;Она не би чувана од стране нашег великог пса.;Ona ne bi čuvana od strane našeg velikog psa.
+čuvati;bierna;oznajmujący;aorist;pytające;twierdzące;Да ли она би чувана од стране нашег великог пса?;Da li ona bi čuvana od strane našeg velikog psa?
+čuvati;bierna;oznajmujący;aorist;pytające;przeczące;Да ли она не би чувана од стране нашег великог пса?;Da li ona ne bi čuvana od strane našeg velikog psa?
+čuvati;bierna;oznajmujący;imperfekat;oznajmujące;twierdzące;Она беше чувана од стране нашег великог пса.;Ona beše čuvana od strane našeg velikog psa.
+čuvati;bierna;oznajmujący;imperfekat;oznajmujące;przeczące;Она не беше чувана од стране нашег великог пса.;Ona ne beše čuvana od strane našeg velikog psa.
+čuvati;bierna;oznajmujący;imperfekat;pytające;twierdzące;Да ли она беше чувана од стране нашег великог пса?;Da li ona beše čuvana od strane našeg velikog psa?
+čuvati;bierna;oznajmujący;imperfekat;pytające;przeczące;Да ли она не беше чувана од стране нашег великог пса?;Da li ona ne beše čuvana od strane našeg velikog psa?
+čuvati;bierna;oznajmujący;futur I;oznajmujące;twierdzące;Она ће бити чувана од стране нашег великог пса.;Ona će biti čuvana od strane našeg velikog psa.
+čuvati;bierna;oznajmujący;futur I;oznajmujące;przeczące;Она неће бити чувана од стране нашег великог пса.;Ona neće biti čuvana od strane našeg velikog psa.
+čuvati;bierna;oznajmujący;futur I;pytające;twierdzące;Да ли ће она бити чувана од стране нашег великог пса?;Da li će ona biti čuvana od strane našeg velikog psa?
+čuvati;bierna;oznajmujący;futur I;pytające;przeczące;Да ли она неће бити чувана од стране нашег великог пса?;Da li ona neće biti čuvana od strane našeg velikog psa?
+čuvati;bierna;oznajmujący;futur II;oznajmujące;twierdzące;Ако она буде чувана од стране нашег великог пса…;Ako ona bude čuvana od strane našeg velikog psa…
+čuvati;bierna;oznajmujący;futur II;oznajmujące;przeczące;Ако она не буде чувана од стране нашег великог пса…;Ako ona ne bude čuvana od strane našeg velikog psa…
+čuvati;bierna;rozkazujący;imperativ;oznajmujące;twierdzące;Нека она буде чувана од стране нашег великог пса!;Neka ona bude čuvana od strane našeg velikog psa!
+čuvati;bierna;rozkazujący;imperativ;oznajmujące;przeczące;Нека она не буде чувана од стране нашег великог пса!;Neka ona ne bude čuvana od strane našeg velikog psa!
+čuvati;bierna;przypuszczający;potencijal I;oznajmujące;twierdzące;Она би била чувана од стране нашег великог пса.;Ona bi bila čuvana od strane našeg velikog psa.
+čuvati;bierna;przypuszczający;potencijal I;oznajmujące;przeczące;Она не би била чувана од стране нашег великог пса.;Ona ne bi bila čuvana od strane našeg velikog psa.
+čuvati;bierna;przypuszczający;potencijal I;pytające;twierdzące;Да ли би она била чувана од стране нашег великог пса?;Da li bi ona bila čuvana od strane našeg velikog psa?
+čuvati;bierna;przypuszczający;potencijal I;pytające;przeczące;Да ли она не би била чувана од стране нашег великог пса?;Da li ona ne bi bila čuvana od strane našeg velikog psa?
+trčati;czynna;oznajmujący;prezent;oznajmujące;twierdzące;Ове младе девојке трче.;Ove mlade devojke trče.
+trčati;czynna;oznajmujący;prezent;oznajmujące;przeczące;Ове младе девојке не трче.;Ove mlade devojke ne trče.
+trčati;czynna;oznajmujący;prezent;pytające;twierdzące;Да ли ове младе девојке трче?;Da li ove mlade devojke trče?
+trčati;czynna;oznajmujący;prezent;pytające;przeczące;Да ли ове младе девојке не трче?;Da li ove mlade devojke ne trče?
+trčati;czynna;oznajmujący;perfekat;oznajmujące;twierdzące;Ове младе девојке су трчале.;Ove mlade devojke su trčale.
+trčati;czynna;oznajmujący;perfekat;oznajmujące;przeczące;Ове младе девојке нису трчале.;Ove mlade devojke nisu trčale.
+trčati;czynna;oznajmujący;perfekat;pytające;twierdzące;Да ли су ове младе девојке трчале?;Da li su ove mlade devojke trčale?
+trčati;czynna;oznajmujący;perfekat;pytające;przeczące;Да ли ове младе девојке нису трчале?;Da li ove mlade devojke nisu trčale?
+trčati;czynna;oznajmujący;aorist;oznajmujące;twierdzące;Ове младе девојке трчаше.;Ove mlade devojke trčaše.
+trčati;czynna;oznajmujący;aorist;oznajmujące;przeczące;Ове младе девојке не трчаше.;Ove mlade devojke ne trčaše.
+trčati;czynna;oznajmujący;aorist;pytające;twierdzące;Да ли ове младе девојке трчаше?;Da li ove mlade devojke trčaše?
+trčati;czynna;oznajmujący;aorist;pytające;przeczące;Да ли ове младе девојке не трчаше?;Da li ove mlade devojke ne trčaše?
+trčati;czynna;oznajmujący;imperfekat;oznajmujące;twierdzące;Ове младе девојке трчаху.;Ove mlade devojke trčahu.
+trčati;czynna;oznajmujący;imperfekat;oznajmujące;przeczące;Ове младе девојке не трчаху.;Ove mlade devojke ne trčahu.
+trčati;czynna;oznajmujący;imperfekat;pytające;twierdzące;Да ли ове младе девојке трчаху?;Da li ove mlade devojke trčahu?
+trčati;czynna;oznajmujący;imperfekat;pytające;przeczące;Да ли ове младе девојке не трчаху?;Da li ove mlade devojke ne trčahu?
+trčati;czynna;oznajmujący;pluskvamperfekat;oznajmujące;twierdzące;Ове младе девојке су биле трчале.;Ove mlade devojke su bile trčale.
+trčati;czynna;oznajmujący;pluskvamperfekat;oznajmujące;przeczące;Ове младе девојке нису биле трчале.;Ove mlade devojke nisu bile trčale.
+trčati;czynna;oznajmujący;pluskvamperfekat;pytające;twierdzące;Да ли су ове младе девојке биле трчале?;Da li su ove mlade devojke bile trčale?
+trčati;czynna;oznajmujący;pluskvamperfekat;pytające;przeczące;Да ли ове младе девојке нису биле трчале?;Da li ove mlade devojke nisu bile trčale?
+trčati;czynna;oznajmujący;futur I;oznajmujące;twierdzące;Ове младе девојке ће трчати.;Ove mlade devojke će trčati.
+trčati;czynna;oznajmujący;futur I;oznajmujące;przeczące;Ове младе девојке неће трчати.;Ove mlade devojke neće trčati.
+trčati;czynna;oznajmujący;futur I;pytające;twierdzące;Да ли ће ове младе девојке трчати?;Da li će ove mlade devojke trčati?
+trčati;czynna;oznajmujący;futur I;pytające;przeczące;Да ли ове младе девојке неће трчати?;Da li ove mlade devojke neće trčati?
+trčati;czynna;oznajmujący;futur II;oznajmujące;twierdzące;Ако ове младе девојке буду трчале…;Ako ove mlade devojke budu trčale…
+trčati;czynna;oznajmujący;futur II;oznajmujące;przeczące;Ако ове младе девојке не буду трчале…;Ako ove mlade devojke ne budu trčale…
+trčati;czynna;rozkazujący;imperativ;oznajmujące;twierdzące;Нека ове младе девојке трче!;Neka ove mlade devojke trče!
+trčati;czynna;rozkazujący;imperativ;oznajmujące;przeczące;Нека ове младе девојке не трче!;Neka ove mlade devojke ne trče!
+trčati;czynna;przypuszczający;potencijal I;oznajmujące;twierdzące;Ове младе девојке би трчале.;Ove mlade devojke bi trčale.
+trčati;czynna;przypuszczający;potencijal I;oznajmujące;przeczące;Ове младе девојке не би трчале.;Ove mlade devojke ne bi trčale.
+trčati;czynna;przypuszczający;potencijal I;pytające;twierdzące;Да ли би ове младе девојке трчале?;Da li bi ove mlade devojke trčale?
+trčati;czynna;przypuszczający;potencijal I;pytające;przeczące;Да ли ове младе девојке не би трчале?;Da li ove mlade devojke ne bi trčale?
+trčati;czynna;przypuszczający;potencijal II;oznajmujące;twierdzące;Ове младе девојке би биле трчале.;Ove mlade devojke bi bile trčale.
+trčati;czynna;przypuszczający;potencijal II;oznajmujące;przeczące;Ове младе девојке не би биле трчале.;Ove mlade devojke ne bi bile trčale.
+trčati;czynna;przypuszczający;potencijal II;pytające;twierdzące;Да ли би ове младе девојке биле трчале?;Da li bi ove mlade devojke bile trčale?
+trčati;czynna;przypuszczający;potencijal II;pytające;przeczące;Да ли ове младе девојке не би биле трчале?;Da li ove mlade devojke ne bi bile trčale?
+smejati;czynna;oznajmujący;prezent;oznajmujące;twierdzące;Ви се смејете.;Vi se smejete.
+smejati;czynna;oznajmujący;prezent;oznajmujące;przeczące;Ви се не смејете.;Vi se ne smejete.
+smejati;czynna;oznajmujący;prezent;pytające;twierdzące;Да ли се ви смејете?;Da li se vi smejete?
+smejati;czynna;oznajmujący;prezent;pytające;przeczące;Да ли се ви не смејете?;Da li se vi ne smejete?
+smejati;czynna;oznajmujący;perfekat;oznajmujące;twierdzące;Ви сте се смејале.;Vi ste se smejale.
+smejati;czynna;oznajmujący;perfekat;oznajmujące;przeczące;Ви се нисте смејале.;Vi se niste smejale.
+smejati;czynna;oznajmujący;perfekat;pytające;twierdzące;Да ли сте се ви смејале?;Da li ste se vi smejale?
+smejati;czynna;oznajmujący;perfekat;pytające;przeczące;Да ли се ви нисте смејале?;Da li se vi niste smejale?
+smejati;czynna;oznajmujący;aorist;oznajmujące;twierdzące;Ви се смејасте.;Vi se smejaste.
+smejati;czynna;oznajmujący;aorist;oznajmujące;przeczące;Ви се не смејасте.;Vi se ne smejaste.
+smejati;czynna;oznajmujący;aorist;pytające;twierdzące;Да ли се ви смејасте?;Da li se vi smejaste?
+smejati;czynna;oznajmujący;aorist;pytające;przeczące;Да ли се ви не смејасте?;Da li se vi ne smejaste?
+smejati;czynna;oznajmujący;imperfekat;oznajmujące;twierdzące;Ви се смејасте.;Vi se smejaste.
+smejati;czynna;oznajmujący;imperfekat;oznajmujące;przeczące;Ви се не смејасте.;Vi se ne smejaste.
+smejati;czynna;oznajmujący;imperfekat;pytające;twierdzące;Да ли се ви смејасте?;Da li se vi smejaste?
+smejati;czynna;oznajmujący;imperfekat;pytające;przeczące;Да ли се ви не смејасте?;Da li se vi ne smejaste?
+smejati;czynna;oznajmujący;pluskvamperfekat;oznajmujące;twierdzące;Ви сте се биле смејале.;Vi ste se bile smejale.
+smejati;czynna;oznajmujący;pluskvamperfekat;oznajmujące;przeczące;Ви се нисте биле смејале.;Vi se niste bile smejale.
+smejati;czynna;oznajmujący;pluskvamperfekat;pytające;twierdzące;Да ли сте се ви биле смејале?;Da li ste se vi bile smejale?
+smejati;czynna;oznajmujący;pluskvamperfekat;pytające;przeczące;Да ли се ви нисте биле смејале?;Da li se vi niste bile smejale?
+smejati;czynna;oznajmujący;futur I;oznajmujące;twierdzące;Ви ћете се смејати.;Vi ćete se smejati.
+smejati;czynna;oznajmujący;futur I;oznajmujące;przeczące;Ви се нећете смејати.;Vi se nećete smejati.
+smejati;czynna;oznajmujący;futur I;pytające;twierdzące;Да ли ћете се ви смејати?;Da li ćete se vi smejati?
+smejati;czynna;oznajmujący;futur I;pytające;przeczące;Да ли се ви нећете смејати?;Da li se vi nećete smejati?
+smejati;czynna;oznajmujący;futur II;oznajmujące;twierdzące;Ако се ви будете смејале…;Ako se vi budete smejale…
+smejati;czynna;oznajmujący;futur II;oznajmujące;przeczące;Ако се ви не будете смејале…;Ako se vi ne budete smejale…
+smejati;czynna;rozkazujący;imperativ;oznajmujące;twierdzące;Ви се смејте!;Vi se smejte!
+smejati;czynna;rozkazujący;imperativ;oznajmujące;przeczące;Ви се не смејте!;Vi se ne smejte!
+smejati;czynna;przypuszczający;potencijal I;oznajmujące;twierdzące;Ви бисте се смејале.;Vi biste se smejale.
+smejati;czynna;przypuszczający;potencijal I;oznajmujące;przeczące;Ви се не бисте смејале.;Vi se ne biste smejale.
+smejati;czynna;przypuszczający;potencijal I;pytające;twierdzące;Да ли бисте се ви смејале?;Da li biste se vi smejale?
+smejati;czynna;przypuszczający;potencijal I;pytające;przeczące;Да ли се ви не бисте смејале?;Da li se vi ne biste smejale?
+smejati;czynna;przypuszczający;potencijal II;oznajmujące;twierdzące;Ви бисте се биле смејале.;Vi biste se bile smejale.
+smejati;czynna;przypuszczający;potencijal II;oznajmujące;przeczące;Ви се не бисте биле смејале.;Vi se ne biste bile smejale.
+smejati;czynna;przypuszczający;potencijal II;pytające;twierdzące;Да ли бисте се ви биле смејале?;Da li biste se vi bile smejale?
+smejati;czynna;przypuszczający;potencijal II;pytające;przeczące;Да ли се ви не бисте биле смејале?;Da li se vi ne biste bile smejale?

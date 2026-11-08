@@ -16,6 +16,12 @@ CLEAN_FILE = os.path.join(DATA_DIR, "oczyszczony_serbski.txt")   # korpus po ocz
 ARTICLES_FILE = os.path.join(DATA_DIR, "artykuly.txt")           # lista pobranych artykułów
 PARSED_FILE = os.path.join(DATA_DIR, "korpus_sparsowany.tsv.gz") # korpus po analizie składniowej (lab 4)
 
+# Korpus dodatkowy do analizy semantycznej (sieć Kohonena): ok. 1000 rzeczowników wymaga
+# znacznie większej liczby fraz czasownik-dopełnienie, niż daje korpus podstawowy.
+SEM_RAW_FILE = os.path.join(DATA_DIR, "surowy_semantyka.txt")
+SEM_ARTICLES_FILE = os.path.join(DATA_DIR, "artykuly_semantyka.txt")
+SEM_PARSED_FILE = os.path.join(DATA_DIR, "korpus_sparsowany_semantyka.tsv.gz")
+
 
 def results_dir(name):
     """Zwraca (i w razie potrzeby tworzy) folder na wyniki danego laboratorium, np. wyniki/lab02."""

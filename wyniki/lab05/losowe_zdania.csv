@@ -1,0 +1,201 @@
+﻿lp;zdanie_cyrylica;zdanie_lacinka;strona;tryb;czas;typ_zdania;polaryzacja;czasownik;typ_czasownika;podmiot;dopelnienie
+1;То позориште је било остављено од стране вашег медведа.;To pozorište je bilo ostavljeno od strane vašeg medveda.;bierna;oznajmujący;perfekat;oznajmujące;twierdzące;ostaviti;tr;FR(vaš + medved, sg);FR(taj + pozorište, sg)
+2;Нека обични студент уништи његово тешко огледало!;Neka obični student uništi njegovo teško ogledalo!;czynna;rozkazujący;imperativ;oznajmujące;twierdzące;uništiti;tr;FR(obični + student, sg);FR(njegov + teški + ogledalo, sg)
+3;Да ли би ваша учитељица бацила ствар?;Da li bi vaša učiteljica bacila stvar?;czynna;przypuszczający;potencijal I;pytające;twierdzące;baciti;tr;FR(vaš + učiteljica, sg);FR(stvar, sg)
+4;Краљеви нису каснили.;Kraljevi nisu kasnili.;czynna;oznajmujący;perfekat;oznajmujące;przeczące;kasniti;intr;FR(kralj, pl);
+5;Њен лепи рибар не нападне једног госта.;Njen lepi ribar ne napadne jednog gosta.;czynna;oznajmujący;prezent;oznajmujące;przeczące;napasti;tr;FR(njen + lepi + ribar, sg);FR(jedan + gost, sg)
+6;Да ли је један мали цвет био показан?;Da li je jedan mali cvet bio pokazan?;bierna;oznajmujący;perfekat;pytające;twierdzące;pokazati;tr;zaimek(one, 3. os. pl, rodz. f);FR(jedan + mali + cvet, sg)
+7;Ако они буду продати…;Ako oni budu prodati…;bierna;oznajmujący;futur II;oznajmujące;twierdzące;prodati;tr;zaimek(mi, 1. os. pl, rodz. f);zaimek(oni, 3. os. pl, rodz. m)
+8;Мокра мајка их позајми.;Mokra majka ih pozajmi.;czynna;oznajmujący;prezent;oznajmujące;twierdzące;pozajmiti;tr;FR(mokri + majka, sg);zaimek(ona, 3. os. pl, rodz. n)
+9;Да ли је шешир био бачен од стране моје веселе жене?;Da li je šešir bio bačen od strane moje vesele žene?;bierna;oznajmujący;perfekat;pytające;twierdzące;baciti;tr;FR(moj + veseli + žena, sg);FR(šešir, sg)
+10;Он не би био прао један јефтини нож.;On ne bi bio prao jedan jeftini nož.;czynna;przypuszczający;potencijal II;oznajmujące;przeczące;prati;tr;zaimek(on, 3. os. sg, rodz. m);FR(jedan + jeftini + nož, sg)
+11;Сваки уморни гост није радио.;Svaki umorni gost nije radio.;czynna;oznajmujący;perfekat;oznajmujące;przeczące;raditi;intr;FR(svaki + umorni + gost, sg);
+12;Да ли оне учитељице прочиташе његов филм?;Da li one učiteljice pročitaše njegov film?;czynna;oznajmujący;aorist;pytające;twierdzące;pročitati;tr;FR(onaj + učiteljica, pl);FR(njegov + film, sg)
+13;Ја нисам био љубио њиховог ниског радника.;Ja nisam bio ljubio njihovog niskog radnika.;czynna;oznajmujący;pluskvamperfekat;oznajmujące;przeczące;ljubiti;tr;zaimek(ja, 1. os. sg, rodz. m);FR(njihov + niski + radnik, sg)
+14;Њен тихи новинар се није умио.;Njen tihi novinar se nije umio.;czynna;oznajmujący;perfekat;oznajmujące;przeczące;umiti;refl;FR(njen + tihi + novinar, sg);
+15;Нека ваша здрава јаја буду кувана!;Neka vaša zdrava jaja budu kuvana!;bierna;rozkazujący;imperativ;oznajmujące;twierdzące;kuvati;tr;zaimek(on, 3. os. sg, rodz. m);FR(vaš + zdravi + jaje, pl)
+16;Да ли ће наш опасни војник уништити торбу?;Da li će naš opasni vojnik uništiti torbu?;czynna;oznajmujący;futur I;pytające;twierdzące;uništiti;tr;FR(naš + opasni + vojnik, sg);FR(torba, sg)
+17;Његови краљеви би били чували песме.;Njegovi kraljevi bi bili čuvali pesme.;czynna;przypuszczający;potencijal II;oznajmujące;twierdzące;čuvati;tr;FR(njegov + kralj, pl);FR(pesma, pl)
+18;Свако јефтино поврће је било скувано.;Svako jeftino povrće je bilo skuvano.;bierna;oznajmujący;perfekat;oznajmujące;twierdzące;skuvati;tr;zaimek(ona, 3. os. sg, rodz. f);FR(svaki + jeftini + povrće, sg)
+19;Да ли је оно ухватило оног младог радника?;Da li je ono uhvatilo onog mladog radnika?;czynna;oznajmujący;perfekat;pytające;twierdzące;uhvatiti;tr;zaimek(ono, 3. os. sg, rodz. n);FR(onaj + mladi + radnik, sg)
+20;Они не стоје.;Oni ne stoje.;czynna;oznajmujący;prezent;oznajmujące;przeczące;stajati;intr;zaimek(oni, 3. os. pl, rodz. m);
+21;Један ловац ће учити оне вести.;Jedan lovac će učiti one vesti.;czynna;oznajmujący;futur I;oznajmujące;twierdzące;učiti;tr;FR(jedan + lovac, sg);FR(onaj + vest, pl)
+22;Ја не знах танке војнике.;Ja ne znah tanke vojnike.;czynna;oznajmujący;imperfekat;oznajmujące;przeczące;znati;tr;zaimek(ja, 1. os. sg, rodz. m);FR(tanki + vojnik, pl)
+23;Ми покажимо чудног суседа!;Mi pokažimo čudnog suseda!;czynna;rozkazujący;imperativ;oznajmujące;twierdzące;pokazati;tr;zaimek(mi, 1. os. pl, rodz. m);FR(čudni + sused, sg)
+24;Да ли би они храбри дечаци били пекли твој зелени колач?;Da li bi oni hrabri dečaci bili pekli tvoj zeleni kolač?;czynna;przypuszczający;potencijal II;pytające;twierdzące;peći;tr;FR(onaj + hrabri + dečak, pl);FR(tvoj + zeleni + kolač, sg)
+25;Ти ме победи!;Ti me pobedi!;czynna;rozkazujący;imperativ;oznajmujące;twierdzące;pobediti;tr;zaimek(ti, 2. os. sg, rodz. f);zaimek(ja, 1. os. sg, rodz. f)
+26;Пријатељ би био зарадио новац.;Prijatelj bi bio zaradio novac.;czynna;przypuszczający;potencijal II;oznajmujące;twierdzące;zaraditi;tr;FR(prijatelj, sg);FR(novac, sg)
+27;Да ли ће нека птица скочити?;Da li će neka ptica skočiti?;czynna;oznajmujący;futur I;pytające;twierdzące;skočiti;intr;FR(neki + ptica, sg);
+28;Да ли се ја нећу играти?;Da li se ja neću igrati?;czynna;oznajmujący;futur I;pytające;przeczące;igrati;refl;zaimek(ja, 1. os. sg, rodz. m);
+29;Љути орао није био ловљен.;Ljuti orao nije bio lovljen.;bierna;oznajmujący;perfekat;oznajmujące;przeczące;loviti;tr;zaimek(ona, 3. os. pl, rodz. n);FR(ljuti + orao, sg)
+30;Сваки велики сељак научи обични закон.;Svaki veliki seljak nauči obični zakon.;czynna;oznajmujący;aorist;oznajmujące;twierdzące;naučiti;tr;FR(svaki + veliki + seljak, sg);FR(obični + zakon, sg)
+31;Да ли се оне не би биле свађале?;Da li se one ne bi bile svađale?;czynna;przypuszczający;potencijal II;pytające;przeczące;svađati;refl;zaimek(one, 3. os. pl, rodz. f);
+32;Нека је она не продају!;Neka je ona ne prodaju!;czynna;rozkazujący;imperativ;oznajmujące;przeczące;prodati;tr;zaimek(ona, 3. os. pl, rodz. n);zaimek(ona, 3. os. sg, rodz. f)
+33;Да ли сваки важни лекар сними жедног коња?;Da li svaki važni lekar snimi žednog konja?;czynna;oznajmujący;prezent;pytające;twierdzące;snimiti;tr;FR(svaki + važni + lekar, sg);FR(žedni + konj, sg)
+34;Гласни кувар се био одморио.;Glasni kuvar se bio odmorio.;czynna;oznajmujący;pluskvamperfekat;oznajmujące;twierdzące;odmoriti;refl;FR(glasni + kuvar, sg);
+35;Ти обуче ципелу.;Ti obuče cipelu.;czynna;oznajmujący;aorist;oznajmujące;twierdzące;obući;tr;zaimek(ti, 2. os. sg, rodz. f);FR(cipela, sg)
+36;Оне пошаљу твој папир.;One pošalju tvoj papir.;czynna;oznajmujący;prezent;oznajmujące;twierdzące;poslati;tr;zaimek(one, 3. os. pl, rodz. f);FR(tvoj + papir, sg)
+37;Њен велики пас паде.;Njen veliki pas pade.;czynna;oznajmujący;aorist;oznajmujące;twierdzące;pasti;intr;FR(njen + veliki + pas, sg);
+38;Ти ниси видела велики зуб.;Ti nisi videla veliki zub.;czynna;oznajmujący;perfekat;oznajmujące;przeczące;videti;tr;zaimek(ti, 2. os. sg, rodz. f);FR(veliki + zub, sg)
+39;Да ли она нису умрла?;Da li ona nisu umrla?;czynna;oznajmujący;perfekat;pytające;przeczące;umreti;intr;zaimek(ona, 3. os. pl, rodz. n);
+40;Њен здрави пас би га слушао.;Njen zdravi pas bi ga slušao.;czynna;przypuszczający;potencijal I;oznajmujące;twierdzące;slušati;tr;FR(njen + zdravi + pas, sg);zaimek(on, 3. os. sg, rodz. m)
+41;Нека сваки лоши аутомобил иде!;Neka svaki loši automobil ide!;czynna;rozkazujący;imperativ;oznajmujące;twierdzące;ići;intr;FR(svaki + loši + automobil, sg);
+42;Песма је била свирана.;Pesma je bila svirana.;bierna;oznajmujący;perfekat;oznajmujące;twierdzące;svirati;tr;zaimek(ona, 3. os. pl, rodz. n);FR(pesma, sg)
+43;Да ли они пецијаху домаће воће?;Da li oni pecijahu domaće voće?;czynna;oznajmujący;imperfekat;pytające;twierdzące;peći;tr;zaimek(oni, 3. os. pl, rodz. m);FR(domaći + voće, sg)
+44;Да ли је велики војник прочитао њене округле слике?;Da li je veliki vojnik pročitao njene okrugle slike?;czynna;oznajmujący;perfekat;pytające;twierdzące;pročitati;tr;FR(veliki + vojnik, sg);FR(njen + okrugli + slika, pl)
+45;Медведи би скочили.;Medvedi bi skočili.;czynna;przypuszczający;potencijal I;oznajmujące;twierdzące;skočiti;intr;FR(medved, pl);
+46;Жена није живела.;Žena nije živela.;czynna;oznajmujący;perfekat;oznajmujące;przeczące;živeti;intr;FR(žena, sg);
+47;Ми нисмо били платили древну реч.;Mi nismo bili platili drevnu reč.;czynna;oznajmujący;pluskvamperfekat;oznajmujące;przeczące;platiti;tr;zaimek(mi, 1. os. pl, rodz. m);FR(drevni + reč, sg)
+48;Та велика сестра не спава.;Ta velika sestra ne spava.;czynna;oznajmujący;prezent;oznajmujące;przeczące;spavati;intr;FR(taj + veliki + sestra, sg);
+49;Орао ће чекати здравог учитеља.;Orao će čekati zdravog učitelja.;czynna;oznajmujący;futur I;oznajmujące;twierdzące;čekati;tr;FR(orao, sg);FR(zdravi + učitelj, sg)
+50;Глупи краљеви певаху локалну песму.;Glupi kraljevi pevahu lokalnu pesmu.;czynna;oznajmujący;imperfekat;oznajmujące;twierdzące;pevati;tr;FR(glupi + kralj, pl);FR(lokalni + pesma, sg)
+51;Ако она не буде спавала…;Ako ona ne bude spavala…;czynna;oznajmujący;futur II;oznajmujące;przeczące;spavati;intr;zaimek(ona, 3. os. sg, rodz. f);
+52;Да ли се радници нису вратили?;Da li se radnici nisu vratili?;czynna;oznajmujący;perfekat;pytające;przeczące;vratiti;refl;FR(radnik, pl);
+53;Њени полицајци не би били побеђени од стране овог ниског оца.;Njeni policajci ne bi bili pobeđeni od strane ovog niskog oca.;bierna;przypuszczający;potencijal I;oznajmujące;przeczące;pobediti;tr;FR(ovaj + niski + otac, sg);FR(njen + policajac, pl)
+54;Њена страна мајка се облачаше.;Njena strana majka se oblačaše.;czynna;oznajmujący;imperfekat;oznajmujące;twierdzące;oblačiti;refl;FR(njen + strani + majka, sg);
+55;Ти људи скину једну хаљину.;Ti ljudi skinu jednu haljinu.;czynna;oznajmujący;prezent;oznajmujące;twierdzące;skinuti;tr;FR(taj + čovek, pl);FR(jedan + haljina, sg)
+56;Да ли је округли сир купљен од стране посебног краља?;Da li je okrugli sir kupljen od strane posebnog kralja?;bierna;oznajmujący;prezent;pytające;twierdzące;kupiti;tr;FR(posebni + kralj, sg);FR(okrugli + sir, sg)
+57;Она не цветаху.;Ona ne cvetahu.;czynna;oznajmujący;imperfekat;oznajmujące;przeczące;cvetati;intr;zaimek(ona, 3. os. pl, rodz. n);
+58;Да ли његови певачи воле неко меко поврће?;Da li njegovi pevači vole neko meko povrće?;czynna;oznajmujący;prezent;pytające;twierdzące;voleti;tr;FR(njegov + pevač, pl);FR(neki + meki + povrće, sg)
+59;Ја сам била обукла ваш капут.;Ja sam bila obukla vaš kaput.;czynna;oznajmujący;pluskvamperfekat;oznajmujące;twierdzące;obući;tr;zaimek(ja, 1. os. sg, rodz. f);FR(vaš + kaput, sg)
+60;Један лоши радник се облачио.;Jedan loši radnik se oblačio.;czynna;oznajmujący;perfekat;oznajmujące;twierdzące;oblačiti;refl;FR(jedan + loši + radnik, sg);
+61;Нека она не умре!;Neka ona ne umre!;czynna;rozkazujący;imperativ;oznajmujące;przeczące;umreti;intr;zaimek(ona, 3. os. sg, rodz. f);
+62;Она су била научила ову занимљиву књигу.;Ona su bila naučila ovu zanimljivu knjigu.;czynna;oznajmujący;pluskvamperfekat;oznajmujące;twierdzące;naučiti;tr;zaimek(ona, 3. os. pl, rodz. n);FR(ovaj + zanimljivi + knjiga, sg)
+63;Неке плаве оловке неће бити дате од стране ниских суседа.;Neke plave olovke neće biti date od strane niskih suseda.;bierna;oznajmujący;futur I;oznajmujące;przeczące;dati;tr;FR(niski + sused, pl);FR(neki + plavi + olovka, pl)
+64;Ако уморни учитељи буду бацили његов уски капут…;Ako umorni učitelji budu bacili njegov uski kaput…;czynna;oznajmujący;futur II;oznajmujące;twierdzące;baciti;tr;FR(umorni + učitelj, pl);FR(njegov + uski + kaput, sg)
+65;Писци су је били запалили.;Pisci su je bili zapalili.;czynna;oznajmujący;pluskvamperfekat;oznajmujące;twierdzące;zapaliti;tr;FR(pisac, pl);zaimek(ona, 3. os. sg, rodz. f)
+66;Брод неће бити чекан.;Brod neće biti čekan.;bierna;oznajmujący;futur I;oznajmujące;przeczące;čekati;tr;zaimek(ja, 1. os. sg, rodz. f);FR(brod, sg)
+67;Наш добри дечак не убије оног тужног човека.;Naš dobri dečak ne ubije onog tužnog čoveka.;czynna;oznajmujący;prezent;oznajmujące;przeczące;ubiti;tr;FR(naš + dobri + dečak, sg);FR(onaj + tužni + čovek, sg)
+68;Он би био летео.;On bi bio leteo.;czynna;przypuszczający;potencijal II;oznajmujące;twierdzące;leteti;intr;zaimek(on, 3. os. sg, rodz. m);
+69;Ми не пошаљемо ону савремену вест.;Mi ne pošaljemo onu savremenu vest.;czynna;oznajmujący;prezent;oznajmujące;przeczące;poslati;tr;zaimek(mi, 1. os. pl, rodz. m);FR(onaj + savremeni + vest, sg)
+70;Занимљиви учитељ гледаше сјајног учитеља.;Zanimljivi učitelj gledaše sjajnog učitelja.;czynna;oznajmujący;imperfekat;oznajmujące;twierdzące;gledati;tr;FR(zanimljivi + učitelj, sg);FR(sjajni + učitelj, sg)
+71;Твоја лоша крава лајаше.;Tvoja loša krava lajaše.;czynna;oznajmujący;imperfekat;oznajmujące;twierdzące;lajati;intr;FR(tvoj + loši + krava, sg);
+72;Свака весела сестра је не гради.;Svaka vesela sestra je ne gradi.;czynna;oznajmujący;aorist;oznajmujące;przeczące;graditi;tr;FR(svaki + veseli + sestra, sg);zaimek(ona, 3. os. sg, rodz. f)
+73;Нека она забораве мој ружни брод!;Neka ona zaborave moj ružni brod!;czynna;rozkazujący;imperativ;oznajmujące;twierdzące;zaboraviti;tr;zaimek(ona, 3. os. pl, rodz. n);FR(moj + ružni + brod, sg)
+74;Она кува њено месо.;Ona kuva njeno meso.;czynna;oznajmujący;aorist;oznajmujące;twierdzące;kuvati;tr;zaimek(ona, 3. os. sg, rodz. f);FR(njen + meso, sg)
+75;Ви саградисте њено црвено позориште.;Vi sagradiste njeno crveno pozorište.;czynna;oznajmujący;aorist;oznajmujące;twierdzące;sagraditi;tr;zaimek(vi, 2. os. pl, rodz. m);FR(njen + crveni + pozorište, sg)
+76;Његови ловци неће купити кости.;Njegovi lovci neće kupiti kosti.;czynna;oznajmujący;futur I;oznajmujące;przeczące;kupiti;tr;FR(njegov + lovac, pl);FR(kost, pl)
+77;Да ли би ови танки дечаци били цртали оне раднике?;Da li bi ovi tanki dečaci bili crtali one radnike?;czynna;przypuszczający;potencijal II;pytające;twierdzące;crtati;tr;FR(ovaj + tanki + dečak, pl);FR(onaj + radnik, pl)
+78;Нека ја нађем чисте зграде!;Neka ja nađem čiste zgrade!;czynna;rozkazujący;imperativ;oznajmujące;twierdzące;naći;tr;zaimek(ja, 1. os. sg, rodz. m);FR(čisti + zgrada, pl)
+79;Њихов возач је био зарадио онај новац.;Njihov vozač je bio zaradio onaj novac.;czynna;oznajmujący;pluskvamperfekat;oznajmujące;twierdzące;zaraditi;tr;FR(njihov + vozač, sg);FR(onaj + novac, sg)
+80;Један жедни лекар ће пећи оно зелено воће.;Jedan žedni lekar će peći ono zeleno voće.;czynna;oznajmujący;futur I;oznajmujące;twierdzące;peći;tr;FR(jedan + žedni + lekar, sg);FR(onaj + zeleni + voće, sg)
+81;Ако њен чудни возач не буде знао вест…;Ako njen čudni vozač ne bude znao vest…;czynna;oznajmujący;futur II;oznajmujące;przeczące;znati;tr;FR(njen + čudni + vozač, sg);FR(vest, sg)
+82;Он се купао.;On se kupao.;czynna;oznajmujący;perfekat;oznajmujące;twierdzące;kupati;refl;zaimek(on, 3. os. sg, rodz. m);
+83;Студент ће снимити овог жутог зеца.;Student će snimiti ovog žutog zeca.;czynna;oznajmujący;futur I;oznajmujące;twierdzące;snimiti;tr;FR(student, sg);FR(ovaj + žuti + zec, sg)
+84;Ви га не убисте.;Vi ga ne ubiste.;czynna;oznajmujący;aorist;oznajmujące;przeczące;ubiti;tr;zaimek(vi, 2. os. pl, rodz. f);zaimek(ono, 3. os. sg, rodz. n)
+85;Да ли би пријатељ био поправио сваку хладну школу?;Da li bi prijatelj bio popravio svaku hladnu školu?;czynna;przypuszczający;potencijal II;pytające;twierdzące;popraviti;tr;FR(prijatelj, sg);FR(svaki + hladni + škola, sg)
+86;Један здрави писац неће куповати округло поврће.;Jedan zdravi pisac neće kupovati okruglo povrće.;czynna;oznajmujący;futur I;oznajmujące;przeczące;kupovati;tr;FR(jedan + zdravi + pisac, sg);FR(okrugli + povrće, sg)
+87;Ови кувари га напишу.;Ovi kuvari ga napišu.;czynna;oznajmujący;prezent;oznajmujące;twierdzące;napisati;tr;FR(ovaj + kuvar, pl);zaimek(ono, 3. os. sg, rodz. n)
+88;Твоји чудни коњи нису били пали.;Tvoji čudni konji nisu bili pali.;czynna;oznajmujący;pluskvamperfekat;oznajmujące;przeczące;pasti;intr;FR(tvoj + čudni + konj, pl);
+89;Ваш лоши рибар чита једну озбиљну слику.;Vaš loši ribar čita jednu ozbiljnu sliku.;czynna;oznajmujący;prezent;oznajmujące;twierdzące;čitati;tr;FR(vaš + loši + ribar, sg);FR(jedan + ozbiljni + slika, sg)
+90;Гости неће хранити паметног кувара.;Gosti neće hraniti pametnog kuvara.;czynna;oznajmujący;futur I;oznajmujące;przeczące;hraniti;tr;FR(gost, pl);FR(pametni + kuvar, sg)
+91;Та тиха девојка би се смејала.;Ta tiha devojka bi se smejala.;czynna;przypuszczający;potencijal I;oznajmujące;twierdzące;smejati;refl;FR(taj + tihi + devojka, sg);
+92;Онај плави вук неће пливати.;Onaj plavi vuk neće plivati.;czynna;oznajmujący;futur I;oznajmujące;przeczące;plivati;intr;FR(onaj + plavi + vuk, sg);
+93;Да ли ће их прљави пријатељи сломити?;Da li će ih prljavi prijatelji slomiti?;czynna;oznajmujący;futur I;pytające;twierdzące;slomiti;tr;FR(prljavi + prijatelj, pl);zaimek(ona, 3. os. pl, rodz. n)
+94;Људи раде.;Ljudi rade.;czynna;oznajmujący;prezent;oznajmujące;twierdzące;raditi;intr;FR(čovek, pl);
+95;Мирна девојка не би била добила овај црни цвет.;Mirna devojka ne bi bila dobila ovaj crni cvet.;czynna;przypuszczający;potencijal II;oznajmujące;przeczące;dobiti;tr;FR(mirni + devojka, sg);FR(ovaj + crni + cvet, sg)
+96;Твоји црни зечеви ће лајати.;Tvoji crni zečevi će lajati.;czynna;oznajmujący;futur I;oznajmujące;twierdzące;lajati;intr;FR(tvoj + crni + zec, pl);
+97;Лепи сељак би се свађао.;Lepi seljak bi se svađao.;czynna;przypuszczający;potencijal I;oznajmujące;twierdzące;svađati;refl;FR(lepi + seljak, sg);
+98;Оне покажу човека.;One pokažu čoveka.;czynna;oznajmujący;prezent;oznajmujące;twierdzące;pokazati;tr;zaimek(one, 3. os. pl, rodz. f);FR(čovek, sg)
+99;Једна лоша мајка га сече.;Jedna loša majka ga seče.;czynna;oznajmujący;prezent;oznajmujące;twierdzące;seći;tr;FR(jedan + loši + majka, sg);zaimek(ono, 3. os. sg, rodz. n)
+100;Да ли би птица пила ову воду?;Da li bi ptica pila ovu vodu?;czynna;przypuszczający;potencijal I;pytające;twierdzące;piti;tr;FR(ptica, sg);FR(ovaj + voda, sg)
+101;Ако моји млади новинари не буду плакали…;Ako moji mladi novinari ne budu plakali…;czynna;oznajmujący;futur II;oznajmujące;przeczące;plakati;intr;FR(moj + mladi + novinar, pl);
+102;Ако њен стари писац буде снимио њиховог ловца…;Ako njen stari pisac bude snimio njihovog lovca…;czynna;oznajmujący;futur II;oznajmujące;twierdzące;snimiti;tr;FR(njen + stari + pisac, sg);FR(njihov + lovac, sg)
+103;Вук не би ходао.;Vuk ne bi hodao.;czynna;przypuszczający;potencijal I;oznajmujące;przeczące;hodati;intr;FR(vuk, sg);
+104;Ако прљави кувар буде пливао…;Ako prljavi kuvar bude plivao…;czynna;oznajmujący;futur II;oznajmujące;twierdzące;plivati;intr;FR(prljavi + kuvar, sg);
+105;Нека се ја не играм!;Neka se ja ne igram!;czynna;rozkazujący;imperativ;oznajmujące;przeczące;igrati;refl;zaimek(ja, 1. os. sg, rodz. f);
+106;Танки учитељи не би потписали ту савремену вест.;Tanki učitelji ne bi potpisali tu savremenu vest.;czynna;przypuszczający;potencijal I;oznajmujące;przeczące;potpisati;tr;FR(tanki + učitelj, pl);FR(taj + savremeni + vest, sg)
+107;Нека ја седим!;Neka ja sedim!;czynna;rozkazujący;imperativ;oznajmujące;twierdzące;sedeti;intr;zaimek(ja, 1. os. sg, rodz. f);
+108;Да ли је непознати студент био примљен од стране ових храбрих полицајаца?;Da li je nepoznati student bio primljen od strane ovih hrabrih policajaca?;bierna;oznajmujący;perfekat;pytające;twierdzące;primiti;tr;FR(ovaj + hrabri + policajac, pl);FR(nepoznati + student, sg)
+109;Да ли се ми нисмо биле заљубиле?;Da li se mi nismo bile zaljubile?;czynna;oznajmujący;pluskvamperfekat;pytające;przeczące;zaljubiti;refl;zaimek(mi, 1. os. pl, rodz. f);
+110;Ви ћете се заљубити.;Vi ćete se zaljubiti.;czynna;oznajmujący;futur I;oznajmujące;twierdzące;zaljubiti;refl;zaimek(vi, 2. os. pl, rodz. f);
+111;Она није била посетила очеве.;Ona nije bila posetila očeve.;czynna;oznajmujący;pluskvamperfekat;oznajmujące;przeczące;posetiti;tr;zaimek(ona, 3. os. sg, rodz. f);FR(otac, pl)
+112;Ви сте је секли.;Vi ste je sekli.;czynna;oznajmujący;perfekat;oznajmujące;twierdzące;seći;tr;zaimek(vi, 2. os. pl, rodz. m);zaimek(ona, 3. os. sg, rodz. f)
+113;Његова риба није била ходала.;Njegova riba nije bila hodala.;czynna;oznajmujący;pluskvamperfekat;oznajmujące;przeczące;hodati;intr;FR(njegov + riba, sg);
+114;Да ли јефтини сир не би био дат од стране сваког дечака?;Da li jeftini sir ne bi bio dat od strane svakog dečaka?;bierna;przypuszczający;potencijal I;pytające;przeczące;dati;tr;FR(svaki + dečak, sg);FR(jeftini + sir, sg)
+115;Рибар није љубио моју птицу.;Ribar nije ljubio moju pticu.;czynna;oznajmujący;perfekat;oznajmujące;przeczące;ljubiti;tr;FR(ribar, sg);FR(moj + ptica, sg)
+116;Да ли новинари не показаше јабуке?;Da li novinari ne pokazaše jabuke?;czynna;oznajmujący;aorist;pytające;przeczące;pokazati;tr;FR(novinar, pl);FR(jabuka, pl)
+117;Нека ја скувам наш кромпир!;Neka ja skuvam naš krompir!;czynna;rozkazujący;imperativ;oznajmujące;twierdzące;skuvati;tr;zaimek(ja, 1. os. sg, rodz. m);FR(naš + krompir, sg)
+118;Нека она не отвори моју лепу ствар!;Neka ona ne otvori moju lepu stvar!;czynna;rozkazujący;imperativ;oznajmujące;przeczące;otvoriti;tr;zaimek(ona, 3. os. sg, rodz. f);FR(moj + lepi + stvar, sg)
+119;Да ли се ви облачасте?;Da li se vi oblačaste?;czynna;oznajmujący;imperfekat;pytające;twierdzące;oblačiti;refl;zaimek(vi, 2. os. pl, rodz. m);
+120;Ја сам се био смејао.;Ja sam se bio smejao.;czynna;oznajmujący;pluskvamperfekat;oznajmujące;twierdzące;smejati;refl;zaimek(ja, 1. os. sg, rodz. m);
+121;Да ли писци носе њене лепе цветове?;Da li pisci nose njene lepe cvetove?;czynna;oznajmujący;prezent;pytające;twierdzące;nositi;tr;FR(pisac, pl);FR(njen + lepi + cvet, pl)
+122;Ти би се била облачила.;Ti bi se bila oblačila.;czynna;przypuszczający;potencijal II;oznajmujące;twierdzące;oblačiti;refl;zaimek(ti, 2. os. sg, rodz. f);
+123;Ако се ти очеви буду осмехнули…;Ako se ti očevi budu osmehnuli…;czynna;oznajmujący;futur II;oznajmujące;twierdzące;osmehnuti;refl;FR(taj + otac, pl);
+124;Они људи скоче.;Oni ljudi skoče.;czynna;oznajmujący;prezent;oznajmujące;twierdzące;skočiti;intr;FR(onaj + čovek, pl);
+125;Ако ми будемо гледале дрвено позориште…;Ako mi budemo gledale drveno pozorište…;czynna;oznajmujący;futur II;oznajmujące;twierdzące;gledati;tr;zaimek(mi, 1. os. pl, rodz. f);FR(drveni + pozorište, sg)
+126;Ви се свађајте!;Vi se svađajte!;czynna;rozkazujący;imperativ;oznajmujące;twierdzące;svađati;refl;zaimek(vi, 2. os. pl, rodz. f);
+127;Ако један велики краљ буде побеђен од стране малог рибара…;Ako jedan veliki kralj bude pobeđen od strane malog ribara…;bierna;oznajmujący;futur II;oznajmujące;twierdzące;pobediti;tr;FR(mali + ribar, sg);FR(jedan + veliki + kralj, sg)
+128;Мокри краљ га отвори.;Mokri kralj ga otvori.;czynna;oznajmujący;aorist;oznajmujące;twierdzące;otvoriti;tr;FR(mokri + kralj, sg);zaimek(ono, 3. os. sg, rodz. n)
+129;Слаби новинар ће га куповати.;Slabi novinar će ga kupovati.;czynna;oznajmujący;futur I;oznajmujące;twierdzące;kupovati;tr;FR(slabi + novinar, sg);zaimek(ono, 3. os. sg, rodz. n)
+130;Они ће се умити.;Oni će se umiti.;czynna;oznajmujący;futur I;oznajmujące;twierdzące;umiti;refl;zaimek(oni, 3. os. pl, rodz. m);
+131;Прљави војник није пробао једно скупо млеко.;Prljavi vojnik nije probao jedno skupo mleko.;czynna;oznajmujący;perfekat;oznajmujące;przeczące;probati;tr;FR(prljavi + vojnik, sg);FR(jedan + skupi + mleko, sg)
+132;Да ли би наш студент чекао спорог оца?;Da li bi naš student čekao sporog oca?;czynna;przypuszczający;potencijal I;pytające;twierdzące;čekati;tr;FR(naš + student, sg);FR(spori + otac, sg)
+133;Ваш црвени хлеб ће бити куван од стране вашег госта.;Vaš crveni hleb će biti kuvan od strane vašeg gosta.;bierna;oznajmujący;futur I;oznajmujące;twierdzące;kuvati;tr;FR(vaš + gost, sg);FR(vaš + crveni + hleb, sg)
+134;Да ли су тихе улице биле очишћене од стране сестре?;Da li su tihe ulice bile očišćene od strane sestre?;bierna;oznajmujący;perfekat;pytające;twierdzące;očistiti;tr;FR(sestra, sg);FR(tihi + ulica, pl)
+135;Ако се оне буду попеле…;Ako se one budu popele…;czynna;oznajmujący;futur II;oznajmujące;twierdzące;popeti;refl;zaimek(one, 3. os. pl, rodz. f);
+136;Ми отидимо!;Mi otidimo!;czynna;rozkazujący;imperativ;oznajmujące;twierdzące;otići;intr;zaimek(mi, 1. os. pl, rodz. f);
+137;Тај сусед би платио мој лепи брод.;Taj sused bi platio moj lepi brod.;czynna;przypuszczający;potencijal I;oznajmujące;twierdzące;platiti;tr;FR(taj + sused, sg);FR(moj + lepi + brod, sg)
+138;Онај млади медвед се одмара.;Onaj mladi medved se odmara.;czynna;oznajmujący;aorist;oznajmujące;twierdzące;odmarati;refl;FR(onaj + mladi + medved, sg);
+139;Ви певајте ову познату песму!;Vi pevajte ovu poznatu pesmu!;czynna;rozkazujący;imperativ;oznajmujące;twierdzące;pevati;tr;zaimek(vi, 2. os. pl, rodz. f);FR(ovaj + poznati + pesma, sg)
+140;Да ли ће њихови гладни учитељи попити вашу слабу кафу?;Da li će njihovi gladni učitelji popiti vašu slabu kafu?;czynna;oznajmujący;futur I;pytające;twierdzące;popiti;tr;FR(njihov + gladni + učitelj, pl);FR(vaš + slabi + kafa, sg)
+141;Једно пуно село не би гледано од стране писца.;Jedno puno selo ne bi gledano od strane pisca.;bierna;oznajmujący;aorist;oznajmujące;przeczące;gledati;tr;FR(pisac, sg);FR(jedan + puni + selo, sg)
+142;Ви бројте оног уморног сељака!;Vi brojte onog umornog seljaka!;czynna;rozkazujący;imperativ;oznajmujące;twierdzące;brojati;tr;zaimek(vi, 2. os. pl, rodz. m);FR(onaj + umorni + seljak, sg)
+143;Ваш познати новинар би се заљубио.;Vaš poznati novinar bi se zaljubio.;czynna;przypuszczający;potencijal I;oznajmujące;twierdzące;zaljubiti;refl;FR(vaš + poznati + novinar, sg);
+144;Да ли би се овај гост попео?;Da li bi se ovaj gost popeo?;czynna;przypuszczający;potencijal I;pytające;twierdzące;popeti;refl;FR(ovaj + gost, sg);
+145;Нека ја продам топло вино!;Neka ja prodam toplo vino!;czynna;rozkazujący;imperativ;oznajmujące;twierdzące;prodati;tr;zaimek(ja, 1. os. sg, rodz. m);FR(topli + vino, sg)
+146;Њихове јаке девојке би их бациле.;Njihove jake devojke bi ih bacile.;czynna;przypuszczający;potencijal I;oznajmujące;twierdzące;baciti;tr;FR(njihov + jaki + devojka, pl);zaimek(oni, 3. os. pl, rodz. m)
+147;Да ли се ваш храбри човек не би био одмарао?;Da li se vaš hrabri čovek ne bi bio odmarao?;czynna;przypuszczający;potencijal II;pytające;przeczące;odmarati;refl;FR(vaš + hrabri + čovek, sg);
+148;Ти би скувао један колач.;Ti bi skuvao jedan kolač.;czynna;przypuszczający;potencijal I;oznajmujące;twierdzące;skuvati;tr;zaimek(ti, 2. os. sg, rodz. m);FR(jedan + kolač, sg)
+149;Ми знасмо оног радника.;Mi znasmo onog radnika.;czynna;oznajmujący;aorist;oznajmujące;twierdzące;znati;tr;zaimek(mi, 1. os. pl, rodz. m);FR(onaj + radnik, sg)
+150;Његови пријатељи не ћутаху.;Njegovi prijatelji ne ćutahu.;czynna;oznajmujący;imperfekat;oznajmujące;przeczące;ćutati;intr;FR(njegov + prijatelj, pl);
+151;Ви живите.;Vi živite.;czynna;oznajmujący;prezent;oznajmujące;twierdzące;živeti;intr;zaimek(vi, 2. os. pl, rodz. f);
+152;Ми се не бисмо пробудиле.;Mi se ne bismo probudile.;czynna;przypuszczający;potencijal I;oznajmujące;przeczące;probuditi;refl;zaimek(mi, 1. os. pl, rodz. f);
+153;Ружне жене би се заљубиле.;Ružne žene bi se zaljubile.;czynna;przypuszczający;potencijal I;oznajmujące;twierdzące;zaljubiti;refl;FR(ružni + žena, pl);
+154;Наши непознати људи нису затворили ваше ножеве.;Naši nepoznati ljudi nisu zatvorili vaše noževe.;czynna;oznajmujący;perfekat;oznajmujące;przeczące;zatvoriti;tr;FR(naš + nepoznati + čovek, pl);FR(vaš + nož, pl)
+155;Учитељица покаже обичне папире.;Učiteljica pokaže obične papire.;czynna;oznajmujący;prezent;oznajmujące;twierdzące;pokazati;tr;FR(učiteljica, sg);FR(obični + papir, pl)
+156;Ти их заборави!;Ti ih zaboravi!;czynna;rozkazujący;imperativ;oznajmujące;twierdzące;zaboraviti;tr;zaimek(ti, 2. os. sg, rodz. m);zaimek(one, 3. os. pl, rodz. f)
+157;Нека сјајна учитељица ће се умити.;Neka sjajna učiteljica će se umiti.;czynna;oznajmujący;futur I;oznajmujące;twierdzące;umiti;refl;FR(neki + sjajni + učiteljica, sg);
+158;Сваки лепи зец је лежао.;Svaki lepi zec je ležao.;czynna;oznajmujący;perfekat;oznajmujące;twierdzące;ležati;intr;FR(svaki + lepi + zec, sg);
+159;Нека се ја не осмехнем!;Neka se ja ne osmehnem!;czynna;rozkazujący;imperativ;oznajmujące;przeczące;osmehnuti;refl;zaimek(ja, 1. os. sg, rodz. f);
+160;Они ће ловити његову домаћу краву.;Oni će loviti njegovu domaću kravu.;czynna;oznajmujący;futur I;oznajmujące;twierdzące;loviti;tr;zaimek(oni, 3. os. pl, rodz. m);FR(njegov + domaći + krava, sg)
+161;Да ли твој познати војник касни?;Da li tvoj poznati vojnik kasni?;czynna;oznajmujący;aorist;pytające;twierdzące;kasniti;intr;FR(tvoj + poznati + vojnik, sg);
+162;Њихова мајка ће се шетати.;Njihova majka će se šetati.;czynna;oznajmujący;futur I;oznajmujące;twierdzące;šetati;refl;FR(njihov + majka, sg);
+163;Нека ваши лекари знају девојке!;Neka vaši lekari znaju devojke!;czynna;rozkazujący;imperativ;oznajmujące;twierdzące;znati;tr;FR(vaš + lekar, pl);FR(devojka, pl)
+164;Ми се немојмо пробудити!;Mi se nemojmo probuditi!;czynna;rozkazujący;imperativ;oznajmujące;przeczące;probuditi;refl;zaimek(mi, 1. os. pl, rodz. m);
+165;Ако древни уговор не буде написан од стране гласног радника…;Ako drevni ugovor ne bude napisan od strane glasnog radnika…;bierna;oznajmujący;futur II;oznajmujące;przeczące;napisati;tr;FR(glasni + radnik, sg);FR(drevni + ugovor, sg)
+166;Слика не би била написана од стране малог суседа.;Slika ne bi bila napisana od strane malog suseda.;bierna;przypuszczający;potencijal I;oznajmujące;przeczące;napisati;tr;FR(mali + sused, sg);FR(slika, sg)
+167;Нека оне оставе њену велику кост!;Neka one ostave njenu veliku kost!;czynna;rozkazujący;imperativ;oznajmujące;twierdzące;ostaviti;tr;zaimek(one, 3. os. pl, rodz. f);FR(njen + veliki + kost, sg)
+168;Ваш лав се не врати.;Vaš lav se ne vrati.;czynna;oznajmujący;prezent;oznajmujące;przeczące;vratiti;refl;FR(vaš + lav, sg);
+169;Они би били свирани.;Oni bi bili svirani.;bierna;przypuszczający;potencijal I;oznajmujące;twierdzące;svirati;tr;zaimek(mi, 1. os. pl, rodz. m);zaimek(oni, 3. os. pl, rodz. m)
+170;Оне би посадиле сваки жути цвет.;One bi posadile svaki žuti cvet.;czynna;przypuszczający;potencijal I;oznajmujące;twierdzące;posaditi;tr;zaimek(one, 3. os. pl, rodz. f);FR(svaki + žuti + cvet, sg)
+171;Да ли неки велики лопов не сагради ову зграду?;Da li neki veliki lopov ne sagradi ovu zgradu?;czynna;oznajmujący;aorist;pytające;przeczące;sagraditi;tr;FR(neki + veliki + lopov, sg);FR(ovaj + zgrada, sg)
+172;Да ли би твоја мала карта била написана од стране сиромашне девојке?;Da li bi tvoja mala karta bila napisana od strane siromašne devojke?;bierna;przypuszczający;potencijal I;pytające;twierdzące;napisati;tr;FR(siromašni + devojka, sg);FR(tvoj + mali + karta, sg)
+173;Ви уништите слатку воду!;Vi uništite slatku vodu!;czynna;rozkazujący;imperativ;oznajmujące;twierdzące;uništiti;tr;zaimek(vi, 2. os. pl, rodz. f);FR(slatki + voda, sg)
+174;Ви радите!;Vi radite!;czynna;rozkazujący;imperativ;oznajmujące;twierdzące;raditi;intr;zaimek(vi, 2. os. pl, rodz. f);
+175;Нека љути вук живи!;Neka ljuti vuk živi!;czynna;rozkazujący;imperativ;oznajmujące;twierdzące;živeti;intr;FR(ljuti + vuk, sg);
+176;Ако моја чудна крава не буде љубљена од стране љубазних полицајаца…;Ako moja čudna krava ne bude ljubljena od strane ljubaznih policajaca…;bierna;oznajmujący;futur II;oznajmujące;przeczące;ljubiti;tr;FR(ljubazni + policajac, pl);FR(moj + čudni + krava, sg)
+177;Нека она дођу!;Neka ona dođu!;czynna;rozkazujący;imperativ;oznajmujące;twierdzące;doći;intr;zaimek(ona, 3. os. pl, rodz. n);
+178;Нека се он не радује!;Neka se on ne raduje!;czynna;rozkazujący;imperativ;oznajmujące;przeczące;radovati;refl;zaimek(on, 3. os. sg, rodz. m);
+179;Да ли чудни вук чува непознате девојке?;Da li čudni vuk čuva nepoznate devojke?;czynna;oznajmujący;prezent;pytające;twierdzące;čuvati;tr;FR(čudni + vuk, sg);FR(nepoznati + devojka, pl)
+180;Да ли она не учи сваку вредну вест?;Da li ona ne uči svaku vrednu vest?;czynna;oznajmujący;aorist;pytające;przeczące;učiti;tr;zaimek(ona, 3. os. sg, rodz. f);FR(svaki + vredni + vest, sg)
+181;Њен гладни пас не лајаше.;Njen gladni pas ne lajaše.;czynna;oznajmujący;imperfekat;oznajmujące;przeczące;lajati;intr;FR(njen + gladni + pas, sg);
+182;Она би била позајмила посебни уговор.;Ona bi bila pozajmila posebni ugovor.;czynna;przypuszczający;potencijal II;oznajmujące;twierdzące;pozajmiti;tr;zaimek(ona, 3. os. pl, rodz. n);FR(posebni + ugovor, sg)
+183;Нека медведи иду!;Neka medvedi idu!;czynna;rozkazujący;imperativ;oznajmujące;twierdzące;ići;intr;FR(medved, pl);
+184;Да ли ће свеже јело бити кувано од стране једног озбиљног дечака?;Da li će sveže jelo biti kuvano od strane jednog ozbiljnog dečaka?;bierna;oznajmujący;futur I;pytające;twierdzące;kuvati;tr;FR(jedan + ozbiljni + dečak, sg);FR(sveži + jelo, sg)
+185;Један болесни човек неће спавати.;Jedan bolesni čovek neće spavati.;czynna;oznajmujący;futur I;oznajmujące;przeczące;spavati;intr;FR(jedan + bolesni + čovek, sg);
+186;Нека ја седим!;Neka ja sedim!;czynna;rozkazujący;imperativ;oznajmujące;twierdzące;sedeti;intr;zaimek(ja, 1. os. sg, rodz. m);
+187;Ми мрзимо једну тужну рибу!;Mi mrzimo jednu tužnu ribu!;czynna;rozkazujący;imperativ;oznajmujące;twierdzące;mrzeti;tr;zaimek(mi, 1. os. pl, rodz. f);FR(jedan + tužni + riba, sg)
+188;Ако његова велика сестра буде прала камен…;Ako njegova velika sestra bude prala kamen…;czynna;oznajmujący;futur II;oznajmujące;twierdzące;prati;tr;FR(njegov + veliki + sestra, sg);FR(kamen, sg)
+189;Ти немој послати уговор!;Ti nemoj poslati ugovor!;czynna;rozkazujący;imperativ;oznajmujące;przeczące;poslati;tr;zaimek(ti, 2. os. sg, rodz. m);FR(ugovor, sg)
+190;Ти вас тражи!;Ti vas traži!;czynna;rozkazujący;imperativ;oznajmujące;twierdzące;tražiti;tr;zaimek(ti, 2. os. sg, rodz. m);zaimek(vi, 2. os. pl, rodz. f)
+191;Глупи медвед је био чекан од стране њихових полицајаца.;Glupi medved je bio čekan od strane njihovih policajaca.;bierna;oznajmujący;perfekat;oznajmujące;twierdzące;čekati;tr;FR(njihov + policajac, pl);FR(glupi + medved, sg)
+192;Да ли ће његова лепа жена цртати сјајне возаче?;Da li će njegova lepa žena crtati sjajne vozače?;czynna;oznajmujący;futur I;pytające;twierdzące;crtati;tr;FR(njegov + lepi + žena, sg);FR(sjajni + vozač, pl)
+193;Ја сам био мржен.;Ja sam bio mržen.;bierna;oznajmujący;perfekat;oznajmujące;twierdzące;mrzeti;tr;zaimek(on, 3. os. sg, rodz. m);zaimek(ja, 1. os. sg, rodz. m)
+194;Човек побегне.;Čovek pobegne.;czynna;oznajmujący;prezent;oznajmujące;twierdzące;pobeći;intr;FR(čovek, sg);
+195;Она не радише.;Ona ne radiše.;czynna;oznajmujący;aorist;oznajmujące;przeczące;raditi;intr;zaimek(ona, 3. os. pl, rodz. n);
+196;Ја нисам био дошао.;Ja nisam bio došao.;czynna;oznajmujący;pluskvamperfekat;oznajmujące;przeczące;doći;intr;zaimek(ja, 1. os. sg, rodz. m);
+197;Да ли ћемо ми снимити мог тужног пријатеља?;Da li ćemo mi snimiti mog tužnog prijatelja?;czynna;oznajmujący;futur I;pytające;twierdzące;snimiti;tr;zaimek(mi, 1. os. pl, rodz. m);FR(moj + tužni + prijatelj, sg)
+198;Ти не сеђаше.;Ti ne seđaše.;czynna;oznajmujący;imperfekat;oznajmujące;przeczące;sedeti;intr;zaimek(ti, 2. os. sg, rodz. f);
+199;Сиромашни сусед би чекао глупог студента.;Siromašni sused bi čekao glupog studenta.;czynna;przypuszczający;potencijal I;oznajmujące;twierdzące;čekati;tr;FR(siromašni + sused, sg);FR(glupi + student, sg)
+200;Да ли су твоји весели возачи запалили моје кости?;Da li su tvoji veseli vozači zapalili moje kosti?;czynna;oznajmujący;perfekat;pytające;twierdzące;zapaliti;tr;FR(tvoj + veseli + vozač, pl);FR(moj + kost, pl)

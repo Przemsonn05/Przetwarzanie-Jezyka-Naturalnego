@@ -1,5 +1,5 @@
 """
-Generuje sprawozdanie PDF (sprawozdanie/sprawozdanie.pdf) z wyników laboratoriów 1-4.
+Generuje sprawozdanie PDF (sprawozdanie/sprawozdanie.pdf) z wyników laboratoriów 1-5.
 
 Wszystkie liczby, tabele i wykresy są wczytywane z plików w folderach dane/ i wyniki/,
 więc po ponownym uruchomieniu laboratoriów wystarczy ponownie uruchomić ten skrypt.
@@ -34,7 +34,8 @@ from reportlab.platypus.tableofcontents import TableOfContents
 from lab02_entropia_huffman import entropy, huffman_codes, letter_statistics
 from slownik import GLOSSARY
 from sprawdz_wyniki import run_checks
-from wspolne import ARTICLES_FILE, CLEAN_FILE, PARSED_FILE, RAW_FILE, RESULTS_DIR, SERBIAN_ALPHABET
+from wspolne import (ARTICLES_FILE, CLEAN_FILE, PARSED_FILE, RAW_FILE, RESULTS_DIR, SEM_ARTICLES_FILE,
+                     SERBIAN_ALPHABET)
 
 AUTHOR = "Przemysław Kondrat"
 OUTPUT = os.path.join("sprawozdanie", "sprawozdanie.pdf")
@@ -236,6 +237,8 @@ def draw_pipeline(path):
     node(7.1, 2.75, 1.9, 0.7, "lab03.py\n90%, Zipf, graf", "#cfe2f3")
     node(7.1, 0.6, 1.9, 0.8, "lab04_parsowanie.py\nanaliza składniowa", "#cfe2f3")
     node(9.3, 0.6, 1.6, 0.8, "lab04_kohonen.py\nsieć Kohonena", "#cfe2f3")
+    node(2.2, 0.15, 1.8, 0.8, "lab04_pobieranie.py\nkorpus semantyczny", "#cfe2f3")
+    node(0.1, 3.4, 1.9, 0.9, "leksykon_svo.py →\nlab05_generator_\nsvo.py (zdania SVO)", "#cfe2f3")
     node(9.3, 2.2, 1.6, 1.1, "generuj_\nsprawozdanie.py\n→ PDF", "#d9ead3")
     arrow(1.7, 2.3, 2.2, 2.3)
     arrow(4.0, 2.5, 4.5, 3.5)
@@ -247,12 +250,15 @@ def draw_pipeline(path):
     arrow(9.0, 4.0, 9.6, 3.3)
     arrow(9.0, 3.1, 9.3, 2.9)
     arrow(10.1, 1.4, 10.1, 2.2)
+    arrow(1.7, 2.1, 2.4, 0.95)
+    arrow(4.0, 0.55, 7.1, 0.75)
+    arrow(2.0, 3.85, 9.3, 3.0)
     fig.tight_layout()
     fig.savefig(path, dpi=160)
     plt.close(fig)
 
 
-def draw_som_idea(path, noun, components):
+def draw_som_idea(path, noun, components, rows=5, cols=10):
     """Ilustracja jednego kroku uczenia sieci Kohonena; `components` = [(czasownik, wartość), ...]."""
     fig, axes = plt.subplots(1, 2, figsize=(11, 4.4), gridspec_kw={"width_ratios": [1, 1.25]})
     ax = axes[0]
@@ -261,7 +267,7 @@ def draw_som_idea(path, noun, components):
     ax.set_ylim(0, 10)
     verbs = [v for v, _ in components] + ["…", "(razem 100 składowych)"]
     vals = [fmt(x, 2) if x else "0" for _, x in components] + ["…", ""]
-    ax.text(5, 9.4, f"wektor rzeczownika {noun} ({GLOSSARY.get(noun, '')})", ha="center",
+    ax.text(5, 9.4, f"wektor rzeczownika {noun}" + (f" ({GLOSSARY[noun]})" if noun in GLOSSARY else ""), ha="center",
             fontsize=10, weight="bold")
     for i, (v, x) in enumerate(zip(verbs, vals)):
         y = 8.2 - i * 1.25
@@ -273,18 +279,19 @@ def draw_som_idea(path, noun, components):
     ax.text(8.0, 5.4, "szukamy\nnajbardziej\npodobnego\nneuronu", ha="center", fontsize=8.5)
 
     ax = axes[1]
-    n, bmu, sigma = 10, (6, 3), 1.6
-    yy, xx = np.mgrid[0:n, 0:n]
+    bmu, sigma = (rows // 2, cols // 3), 1.6
+    yy, xx = np.mgrid[0:rows, 0:cols]
     h = np.exp(-((yy - bmu[0]) ** 2 + (xx - bmu[1]) ** 2) / (2 * sigma ** 2))
     ax.imshow(h, cmap="Oranges", vmin=0, vmax=1.15)
-    for i in range(n + 1):
+    for i in range(rows + 1):
         ax.axhline(i - 0.5, color="white", lw=1)
+    for i in range(cols + 1):
         ax.axvline(i - 0.5, color="white", lw=1)
     ax.add_patch(plt.Rectangle((bmu[1] - 0.5, bmu[0] - 0.5), 1, 1, fill=False, ec="#b2182b", lw=2.5))
-    ax.annotate("neuron zwycięski (BMU):\nzmienia się najmocniej", xy=(bmu[1], bmu[0]), xytext=(6.3, 8.9),
+    ax.annotate("neuron zwycięski (BMU):\nzmienia się najmocniej", xy=(bmu[1], bmu[0]), xytext=(cols * 0.55, rows - 0.7),
                 fontsize=8.5, arrowprops=dict(arrowstyle="->", color="#b2182b"), color="#b2182b")
-    ax.text(5.6, 1.2, "sąsiedzi też się uczą,\ntym słabiej, im dalej\nod zwycięzcy", fontsize=8.5)
-    ax.set_title("mapa 10 × 10 neuronów (kolor = siła zmiany wag)", fontsize=10)
+    ax.text(cols * 0.58, 0.6, "sąsiedzi też się uczą,\ntym słabiej, im dalej\nod zwycięzcy", fontsize=8.5)
+    ax.set_title(f"mapa {rows} × {cols} = {rows * cols} neuronów (kolor = siła zmiany wag)", fontsize=10)
     ax.set_xticks([])
     ax.set_yticks([])
     fig.tight_layout()
@@ -298,9 +305,10 @@ def draw_som_idea(path, noun, components):
 def title_page():
     story.append(Spacer(1, 4.5 * cm))
     p("Przetwarzanie języka naturalnego", "title")
-    p("Sprawozdanie z laboratoriów 1–4", "subtitle")
-    p("Analiza korpusu języka serbskiego: statystyka liter, entropia i kodowanie Huffmana, "
-      "prawo Zipfa, graf sąsiedztwa wyrazów, sieć Kohonena", "subtitle")
+    p("Sprawozdanie z laboratoriów 1–5", "subtitle")
+    p("Język serbski: analiza statystyczna (entropia, Huffman, prawo Zipfa, pokrycie 90% tekstu, "
+      "rdzeń języka), analiza syntaktyczna (generator zdań SVO) i analiza semantyczna "
+      "(klasyfikator rzeczowników – sieć Kohonena)", "subtitle")
     story.append(Spacer(1, 3 * cm))
     rows = [["Autor", AUTHOR or "...................................................."],
             ["Język korpusu", "serbski (cyrylica, 30 liter)"],
@@ -328,22 +336,29 @@ def contents():
 def introduction():
     articles = [a for a in open(ARTICLES_FILE, encoding="utf-8").read().split("\n") if a]
     p("Wprowadzenie", "h1")
-    p("Celem laboratoriów było przeanalizowanie dużego tekstu w wybranym języku metodami "
-      "przetwarzania języka naturalnego: od statystyki pojedynczych liter, przez statystykę "
-      "wyrazów i ich sąsiedztwa, aż po sieć neuronową Kohonena, która grupuje rzeczowniki "
-      "według czasowników, z którymi się łączą.")
+    p("Celem laboratoriów było przeanalizowanie wybranego języka naturalnego na trzech poziomach:")
+    bullets([
+        "<b>analiza statystyczna</b> (rozdziały 1–3): korpus ponad 100 000 wyrazów, statystyka liter, "
+        "entropia i kod Huffmana, prawo Zipfa, lista wyrazów pokrywających 90% tekstu, rdzeń języka "
+        "(100 wyrazów o największej liczbie sąsiadów),",
+        "<b>analiza semantyczna</b> (rozdział 4): klasyfikator semantyczny 1000 rzeczowników – sieć "
+        "Kohonena z 50 neuronami ucząca się na frazach czasownik–dopełnienie,",
+        "<b>analiza syntaktyczna</b> (rozdział 5): generator zdań prostych SVO we wszystkich czasach, "
+        "trybach i stronach.",
+    ])
     p("<b>Wybrany język: serbski.</b> Serbski zapisuje się m.in. cyrylicą, która ma dokładnie "
       "30 liter, a każda litera odpowiada jednej głosce (zasada „piši kao što govoriš” – pisz tak, "
       "jak mówisz). Dzięki temu łatwo sprawdzić, że w korpusie zostały wyłącznie litery alfabetu. "
       "Bogata odmiana wyrazów przez przypadki jest z kolei ciekawa przy badaniu prawa Zipfa "
       "i wymaga analizy składniowej w laboratorium 4.")
-    p(f"<b>Dane:</b> {len(articles)} artykułów z serbskiej Wikipedii (ok. 1 mln znaków), "
-      "głównie o historii i geografii Serbii i regionu.")
+    p(f"<b>Dane:</b> korpus podstawowy – {len(articles)} artykułów z serbskiej Wikipedii (ok. 1 mln "
+      "znaków), głównie o historii i geografii Serbii i regionu; do analizy semantycznej dodatkowo "
+      "ok. 8 mln znaków z artykułów o różnej tematyce (rozdział 4.1).")
     p("Struktura programu", "h2")
     p("Każde laboratorium to osobny skrypt w Pythonie. Wspólne ustawienia (alfabet, ścieżki "
       f"do plików) są w {mono('wspolne.py')}, a {mono('uruchom_wszystko.py')} uruchamia "
       f"wszystkie etapy po kolei. Skrypt {mono('sprawdz_wyniki.py')} niezależnie przelicza "
-      "wyniki i potwierdza ich poprawność (rozdział 5). Kod i wyniki są w repozytorium "
+      "wyniki i potwierdza ich poprawność (rozdział 6). Kod i wyniki są w repozytorium "
       "GitHub; opis uruchomienia jest w pliku README.md.")
     draw_pipeline(os.path.join(FIG_DIR, "schemat.png"))
     figure(os.path.join(FIG_DIR, "schemat.png"), 16.5, "Schemat działania programu – przepływ danych między skryptami.")
@@ -368,10 +383,15 @@ def introduction():
             ["rdzeń grafu", "100 węzłów o największej liczbie sąsiadów"],
             ["czasownik przechodni", "czasownik, który łączy się z dopełnieniem w bierniku: "
                                      "„podjąć <i>decyzję</i>”, „zdobyć <i>miasto</i>”"],
-            ["kolokacja", "częste połączenie wyrazów, u nas: czasownik + jego dopełnienie"],
+            ["fraza VO", "połączenie czasownika z jego dopełnieniem bliższym, np. попити воду (wypić wodę)"],
+            ["pole semantyczne", "grupa wyrazów o wspólnym zakresie znaczeniowym, np. jedzenie, pojazdy, budynki"],
+            ["neuron martwy", "neuron sieci Kohonena, który po uczeniu nie jest zwycięzcą dla żadnego wektora"],
+            ["zdanie SVO", "zdanie o szyku podmiot (S) – orzeczenie (V) – dopełnienie (O)"],
+            ["enklityka", "krótki wyraz bez akcentu (сам, је, га, се, ће), który w serbskim stoi na drugim "
+                          "miejscu w zdaniu"],
             ["wektor cech", "opis obiektu listą liczb; u nas rzeczownik = 100 liczb (po jednej na czasownik)"],
             ["sieć Kohonena (SOM)", "sieć neuronowa ucząca się bez nauczyciela, która układa podobne "
-                                    "obiekty blisko siebie na dwuwymiarowej mapie"],
+                                    "obiekty w tych samych lub sąsiednich neuronach"],
             ["neuron zwycięski (BMU)", "neuron sieci najbardziej podobny do danego wektora wejściowego"]]
     table(rows, [4 * cm, 13 * cm], "Najważniejsze pojęcia używane w sprawozdaniu.", font_size=7.8)
 
@@ -719,191 +739,376 @@ def lab3():
 def lab4():
     story.append(PageBreak())
     summ = json.load(open(os.path.join(R4, "podsumowanie.json"), encoding="utf-8"))
-    A = summ["warianty"]["A"]
     som = summ["som"]
+    n_neurons = som["wiersze"] * som["kolumny"]
+    verbs = read_csv(os.path.join(R4, "czasowniki_przechodnie.csv"))
+    nouns = read_csv(os.path.join(R4, "rzeczowniki.csv"))
+    neurons = read_csv(os.path.join(R4, "neurony.csv"))
+    sem_articles = [a for a in open(SEM_ARTICLES_FILE, encoding="utf-8").read().split("\n") if a] \
+        if os.path.exists(SEM_ARTICLES_FILE) else []
 
-    p("4. Laboratorium 4 – sieć Kohonena: rzeczowniki w przestrzeni czasowników przechodnich", "h1")
-    p("<b>Zadanie:</b> wybrać 50 rzeczowników i 100 czasowników przechodnich. Dla każdego "
-      "rzeczownika wygenerować wektor o 100 składowych (kolokacje z czasownikami) – to zbiór "
-      "treningowy. Nauczyć na nim sieć Kohonena i przedstawić rzeczowniki w 100-wymiarowej "
-      "przestrzeni czasowników. Zbadać, jak wynik zależy od wyboru czasowników, np. biorąc "
-      "100 najczęstszych czasowników korpusu.")
+    p("4. Laboratorium 4 – analiza semantyczna: klasyfikator rzeczowników oparty na sieci Kohonena", "h1")
+    p(f"<b>Zadanie:</b> opracować klasyfikator semantyczny rzeczowników oparty na sieci Kohonena. "
+      "Przeanalizować co najmniej 1000 rzeczowników na podstawie ich powiązań ze 100 czasownikami "
+      "przechodnimi: każdy rzeczownik to wektor o 100 składowych, z których każda zawiera liczbę "
+      "wystąpień frazy VO (czasownik + jego dopełnienie bliższe). Sieć ma mieć 50 neuronów. "
+      "Oczekuje się, że sieć spontanicznie wytworzy klastry rzeczowników ze wspólnego pola "
+      "semantycznego. Należy sprawdzić, czy klastry są logicznie uzasadnione i jednorodne, ile pól "
+      "semantycznych powstało i czy są neurony, które niczego się nie nauczyły.")
     box("W prostych słowach",
-        "Rzeczownik można poznać po tym, z jakimi czasownikami się łączy. „Decyzję” i „ustawę” "
-        "się <i>podejmuje/uchwala</i> (донети), „wojnę” i „walkę” się <i>prowadzi</i> (водити), "
-        "a „miasto” i „medal” się <i>zdobywa</i> (освојити). Zapisujemy więc dla każdego rzeczownika "
-        "100 liczb: ile razy był dopełnieniem każdego ze 100 czasowników. Te 100 liczb to punkt "
-        "w przestrzeni 100-wymiarowej, której osiami są czasowniki. Człowiek nie zobaczy 100 wymiarów, "
-        "więc sieć Kohonena „spłaszcza” tę przestrzeń do mapy 10 × 10, tak żeby rzeczowniki "
-        "o podobnych wektorach leżały obok siebie.")
+        "Rzeczownik można poznać po tym, z jakimi czasownikami się łączy. „Chleb”, „mięso” i „ser” "
+        "się <i>je</i>, „wodę”, „kawę” i „wino” się <i>pije</i>, a „mecz” i „rolę” się <i>gra</i>. "
+        "Zapisujemy więc dla każdego rzeczownika 100 liczb: ile razy był dopełnieniem każdego ze 100 "
+        "czasowników. Rzeczowniki z jednego pola znaczeniowego mają podobne listy liczb. Sieć "
+        "Kohonena to 50 „szufladek”, które – bez żadnej podpowiedzi – uczą się zbierać podobne "
+        "rzeczowniki do jednej szufladki, a podobne szufladki układać obok siebie.")
 
-    p("4.1. Analiza składniowa korpusu", "h2")
-    p("Żeby wiedzieć, które czasowniki są przechodnie i który rzeczownik jest dopełnieniem którego "
-      "czasownika, potrzebna jest analiza gramatyczna zdań. Użyto biblioteki <b>stanza</b> "
-      "(Stanford NLP) z modelem języka serbskiego (treebank UD Serbian-SET, standard Universal "
-      f"Dependencies). Skrypt {mono('lab04_parsowanie.py')}:")
+    p("4.1. Korpus do analizy semantycznej", "h2")
+    p("Korpus z laboratorium 1 (ok. 150 tys. wyrazów, głównie historia i geografia Serbii) dawał tylko "
+      "ok. 900 rzeczowników będących dopełnieniem 100 czasowników przechodnich, w dodatku większość "
+      "z jednym wystąpieniem – za mało na 1000 wektorów i zbyt jednorodnie tematycznie, żeby powstały "
+      f"różne pola znaczeniowe. Dlatego skrypt {mono('lab04_pobieranie.py')} pobrał z serbskiej "
+      f"Wikipedii dodatkowe {num(len(sem_articles))} artykułów (ok. 8 mln znaków) z różnych dziedzin: "
+      "jedzenie i napoje, zwierzęta, rośliny, ubrania, budynki, transport, muzyka i sztuka, medycyna, "
+      "sport, nauka i technika, gospodarka i polityka, wojsko, przyroda, rodzina. Do analizy użyto "
+      "obu korpusów razem.")
+    if sem_articles:
+        domains = Counter(a.split("\t")[0] for a in sem_articles)
+        table([["Dziedzina", "Artykułów", "Przykłady"]]
+              + [[d, c, ", ".join(a.split("\t")[1] for a in sem_articles if a.startswith(d + "\t"))[:150] + "…"]
+                 for d, c in domains.most_common()],
+              [3.6 * cm, 1.8 * cm, 11.4 * cm], "Dziedziny artykułów korpusu dodatkowego.", font_size=6.8)
+
+    p("4.2. Analiza składniowa i frazy VO", "h2")
+    p("Żeby wiedzieć, który rzeczownik jest dopełnieniem którego czasownika, potrzebna jest analiza "
+      "gramatyczna zdań. Użyto biblioteki <b>stanza</b> (Stanford NLP) z modelem języka serbskiego "
+      f"(treebank UD Serbian-SET, standard Universal Dependencies). Skrypt {mono('lab04_parsowanie.py')}:")
     steps([
-        "wczytuje tekst surowy z lab 1 (z interpunkcją, bo potrzebne są granice zdań),",
+        "wczytuje tekst surowy (z interpunkcją, bo potrzebne są granice zdań) i dzieli go na porcje, "
+        "przetwarzane równolegle w kilku procesach,",
         "zamienia cyrylicę na łacinkę, bo model był uczony na serbskiej łacince "
         "(odpowiedniość liter jest 1:1, np. љ → lj, њ → nj, џ → dž),",
         "dla każdego wyrazu ustala część mowy, lemat (formę podstawową) i wyraz nadrzędny wraz "
         "z relacją, np. <i>obj</i> = dopełnienie bliższe,",
-        "przepisuje wynik z powrotem na cyrylicę i zapisuje go do dane/korpus_sparsowany.tsv.gz.",
+        "przepisuje wynik z powrotem na cyrylicę i zapisuje go do plików .tsv.gz w folderze dane/.",
     ])
-    p(f"Wynik: {num(summ['zdania'])} zdań, {num(summ['tokeny'])} tokenów (razem z interpunkcją), "
-      f"{num(summ['rozne_czasowniki'])} różnych czasowników i {num(summ['rozne_rzeczowniki'])} różnych "
-      f"rzeczowników, <b>{num(summ['relacje_obj'])} par czasownik → dopełnienie rzeczownikowe</b>. "
-      "Przykład: w zdaniu „Кнез Лазар је подигао цркву и водио војску” parser znajduje pary "
-      "obj(подићи, црква) i obj(водити, војска). Dzięki lematyzacji formy цркву, цркве, "
-      "црквом liczą się jako jeden rzeczownik црква.")
+    p(f"Wynik: {num(summ['zdania'])} zdań, {num(summ['tokeny'])} tokenów i "
+      f"<b>{num(summ['frazy_vo'])} fraz VO</b> (czasownik → dopełnienie rzeczownikowe). Przykład: "
+      "w zdaniu „Кнез Лазар је подигао цркву и водио војску” parser znajduje frazy "
+      "VO(подићи, црква) i VO(водити, војска). Dzięki lematyzacji formy цркву, цркве, црквом "
+      "liczą się jako jeden rzeczownik црква. Liczone są też dopełnienia współrzędne: "
+      "w „купио хлеб и млеко” dopełnieniami są oba rzeczowniki.")
 
-    p("4.2. Wybór 100 czasowników przechodnich i 50 rzeczowników", "h2")
+    p("4.3. Wybór 100 czasowników przechodnich i 1000 rzeczowników", "h2")
     steps([
-        "Dla każdego czasownika liczymy, ile razy ma w korpusie dopełnienie rzeczownikowe. "
-        "Liczymy też dopełnienia współrzędne: w „подигао цркву и кућу” oba rzeczowniki są "
-        "dopełnieniami.",
-        "Czasownik uznajemy za <b>przechodni</b>, jeśli dopełnienie ma w co najmniej 20% wystąpień. "
-        "Odrzuca to błędy parsera, np. постати (stać się; „постао је краљ” – „został królem”), "
-        "постојати (istnieć) i вратити (najczęściej zwrotne вратити се – wrócić).",
+        "Dla każdego czasownika liczymy, ile razy ma dopełnienie rzeczownikowe.",
+        "Czasownik uznajemy za <b>przechodni</b>, jeśli dopełnienie ma w co najmniej 20% wystąpień "
+        "(odrzuca to błędy parsera, np. постати – stać się: „постао је краљ”).",
         "Pomijamy czasowniki posiłkowe i modalne (бити, хтети, моћи, морати, требати).",
-        "Bierzemy <b>100 czasowników</b> o największej liczbie dopełnień, a potem <b>50 rzeczowników</b>, "
-        "które najczęściej są dopełnieniem tych czasowników. Dzięki temu każdy wektor ma dane.",
+        "Bierzemy <b>100 czasowników</b> o największej liczbie fraz VO, a potem <b>1000 rzeczowników</b>, "
+        "które najczęściej są dopełnieniem tych czasowników.",
     ])
-    verbs = read_csv(os.path.join(R4, "czasowniki_przechodnie.csv"))
-    data = [["Lp", "Czasownik", "Dop.", "Wyst.", "Lp", "Czasownik", "Dop.", "Wyst."]]
+    data = [["Lp", "Czasownik", "VO", "Lp", "Czasownik", "VO"]]
     for i in range(50):
         a, b = verbs[i], verbs[i + 50]
-        data.append([a["lp"], gloss(a["czasownik"]), a["dopelnienia_rzeczownikowe"], a["wystapienia"],
-                     b["lp"], gloss(b["czasownik"]), b["dopelnienia_rzeczownikowe"], b["wystapienia"]])
-    table(data, [0.8 * cm, 5.2 * cm, 1.1 * cm, 1.2 * cm] * 2,
-          "100 wybranych czasowników przechodnich (Dop. – liczba dopełnień rzeczownikowych, "
-          "Wyst. – liczba wystąpień czasownika).", font_size=6.5)
-    nouns = read_csv(os.path.join(R4, "rzeczowniki.csv"))
-    data = [["Lp", "Rzeczownik", "Jako dop.", "Wyst."] * 2]
-    for i in range(25):
-        a, b = nouns[i], nouns[i + 25]
-        data.append([a["lp"], gloss(a["rzeczownik"]), a["liczba_jako_dopelnienie"], a["wystapienia"],
-                     b["lp"], gloss(b["rzeczownik"]), b["liczba_jako_dopelnienie"], b["wystapienia"]])
-    table(data, [0.8 * cm, 5 * cm, 1.4 * cm, 1.2 * cm] * 2,
-          "50 wybranych rzeczowników (Jako dop. – ile razy były dopełnieniem wybranych czasowników).",
-          font_size=6.8)
+        data.append([a["lp"], gloss(a["czasownik"]), a["frazy_vo"], b["lp"], gloss(b["czasownik"]), b["frazy_vo"]])
+    table(data, [0.8 * cm, 6.3 * cm, 1.2 * cm] * 2,
+          "100 wybranych czasowników przechodnich (VO – liczba fraz czasownik–dopełnienie rzeczownikowe).",
+          font_size=6.5)
+    vo = [int(n["liczba_fraz_vo"]) for n in nouns]
+    dv = [int(n["liczba_roznych_czasownikow"]) for n in nouns]
+    p(f"Wybrane rzeczowniki mają od {min(vo)} do {max(vo)} fraz VO (mediana {int(np.median(vo))}) "
+      f"i łączą się średnio z {fmt(np.mean(dv), 1)} różnymi czasownikami. Najczęstsze: "
+      + ", ".join(f"{n['rzeczownik']} ({n['liczba_fraz_vo']})" for n in nouns[:30])
+      + f". Pełna lista {len(nouns)} rzeczowników jest w {mono('wyniki/lab04/rzeczowniki.csv')}.")
 
-    p("4.3. Zbiór treningowy – wektory o 100 składowych", "h2")
-    train = read_csv(os.path.join(R4, "wariant_A_zbior_treningowy.csv"))
-    example = next(r for r in train if r["rzeczownik"] == "одлука")
+    p("4.4. Zbiór treningowy – wektory o 100 składowych", "h2")
+    train = read_csv(os.path.join(R4, "zbior_treningowy.csv"))
+    example = max(train[:60], key=lambda r: sum(1 for k, v in r.items() if k != "rzeczownik" and int(v) > 0))
     nz = sorted(((k, int(v)) for k, v in example.items() if k != "rzeczownik" and int(v) > 0), key=lambda x: -x[1])
     p("Każdy rzeczownik zamieniamy na wektor x = (x<sub>1</sub>, …, x<sub>100</sub>), gdzie "
-      "x<sub>j</sub> to liczba wystąpień rzeczownika jako dopełnienia j-tego czasownika. Przykład – "
-      f"wektor rzeczownika <b>одлука</b> (decyzja) ma {len(nz)} niezerowe składowe: "
-      + ", ".join(f"{gloss(k)} = {v}" for k, v in nz) + "; pozostałe składowe to zera.")
-    p(f"Cała macierz 50 × 100 zawiera {num(A['suma_kolokacji'])} kolokacji; niezerowych jest "
-      f"{num(A['niezerowe'])} pól ({fmt(A['gestosc'] * 100, 1)}%), bo każdy rzeczownik łączy się "
-      "tylko z kilkoma czasownikami. Przed uczeniem wektory przygotowano w dwóch krokach:")
+      "x<sub>j</sub> to liczba wystąpień frazy VO złożonej z j-tego czasownika i tego rzeczownika. "
+      f"Przykład – wektor rzeczownika <b>{example['rzeczownik']}</b> ma {len(nz)} niezerowych składowych, "
+      "największe: " + ", ".join(f"{k} = {v}" for k, v in nz[:10]) + "; pozostałe składowe to zera. "
+      f"Cały zbiór treningowy to macierz {len(train)} × 100 ({mono('wyniki/lab04/zbior_treningowy.csv')}). "
+      "Przed uczeniem wektory przygotowano w dwóch krokach:")
     bullets([
-        "<b>log(1 + x)</b> – zmniejsza wpływ bardzo częstych par (np. одлука + донети = 21), "
-        "żeby jedna para nie zdominowała wektora,",
+        "<b>log(1 + x)</b> – zmniejsza wpływ bardzo częstych fraz, żeby jedna fraza nie zdominowała wektora,",
+        "<b>waga IDF czasownika</b> = log(1000 / liczba rzeczowników łączących się z tym czasownikiem) – "
+        "czasowniki łączące się prawie ze wszystkim (имати – mieć, представљати – stanowić, садржати – "
+        "zawierać) niewiele mówią o znaczeniu rzeczownika, więc dostają mniejszą wagę niż czasowniki "
+        "wybiórcze (освојити – zdobyć, изазвати – wywołać). Bez tej wagi połowa neuronów była zdominowana "
+        "przez имати i zawierała przypadkowe mieszaniny rzeczowników,",
         "<b>normalizacja do długości 1</b> – porównujemy „profil” czasowników, a nie to, jak często "
         "rzeczownik w ogóle występuje (rzadki i częsty rzeczownik z tym samym profilem są podobne).",
     ])
-    figure(os.path.join(R4, "wariant_A_macierz.png"), 17,
-           "Zbiór treningowy: 50 rzeczowników (wiersze) × 100 czasowników (kolumny); "
-           "ciemniejszy kolor = więcej kolokacji.")
 
-    p("4.4. Sieć Kohonena – jak działa i jak ją nauczyliśmy", "h2")
-    box("W prostych słowach",
-        "Sieć Kohonena to siatka 10 × 10 „szufladek” (neuronów). Każda szufladka ma własny wektor "
-        "100 liczb, czyli wzorcowy profil czasowników. Uczenie polega na powtarzaniu jednego kroku: "
-        "losujemy rzeczownik, szukamy szufladki najbardziej do niego podobnej (zwycięzcy) "
-        "i przesuwamy jej wektor trochę w stronę tego rzeczownika. Sąsiednie szufladki też się "
-        "przesuwają, ale słabiej. Po tysiącach powtórzeń sąsiednie szufladki mają podobne profile, "
-        "więc podobne rzeczowniki trafiają w pobliskie miejsca mapy. Przypomina to układanie "
-        "książek na półkach tak, żeby podobne tematy stały obok siebie.")
-    # prawdziwy wektor rzeczownika одлука po przekształceniu log(1+x) i normalizacji
+    p("4.5. Sieć Kohonena – budowa i uczenie", "h2")
+    # prawdziwy wektor wejściowy sieci: log(1 + x) · IDF, znormalizowany
+    allc = np.array([[float(v) for k, v in r.items() if k != "rzeczownik"] for r in train])
+    idf = np.log(len(allc) / np.maximum((allc > 0).sum(axis=0), 1))
     raw_vec = np.array([float(v) for k, v in example.items() if k != "rzeczownik"])
-    vec = np.log1p(raw_vec) / np.linalg.norm(np.log1p(raw_vec))
+    vec = np.log1p(raw_vec) * idf
+    vec /= np.linalg.norm(vec)
     names = [k for k in example if k != "rzeczownik"]
-    shown = [(names[j], vec[j]) for j in np.argsort(-vec)[:3]] + [("водити", vec[names.index("водити")])]
-    draw_som_idea(os.path.join(FIG_DIR, "kohonen_zasada.png"), "одлука", shown)
+    draw_som_idea(os.path.join(FIG_DIR, "kohonen_zasada.png"), example["rzeczownik"],
+                  [(names[j], vec[j]) for j in np.argsort(-vec)[:4]], som["wiersze"], som["kolumny"])
     figure(os.path.join(FIG_DIR, "kohonen_zasada.png"), 16.5,
            "Jeden krok uczenia sieci Kohonena: wektor rzeczownika (po lewej) przyciąga neuron "
            "zwycięski i, słabiej, jego sąsiadów (po prawej).")
     p(f"Sieć zaimplementowano samodzielnie w numpy (klasa {mono('KohonenSOM')} w "
       f"{mono('lab04_kohonen.py')}). Parametry i algorytm:")
     bullets([
-        f"siatka {som['wiersze']} × {som['kolumny']} = {som['wiersze'] * som['kolumny']} neuronów; "
-        "każdy neuron ma wektor wag w ∈ R<super>100</super>,",
-        "inicjalizacja wag na płaszczyźnie dwóch głównych kierunków zmienności danych (PCA), "
-        "dzięki czemu wynik jest powtarzalny,",
-        f"{num(som['iteracje'])} kroków; w każdym losujemy wektor x i znajdujemy neuron zwycięski "
-        "(BMU) – o najmniejszej odległości euklidesowej ‖x − w‖,",
+        f"<b>{n_neurons} neuronów</b> ułożonych w siatkę {som['wiersze']} × {som['kolumny']}; każdy neuron "
+        "ma wektor wag w ∈ R<super>100</super>,",
+        "inicjalizacja: małe losowe wagi (rozkład jednostajny 0–0,1, stałe ziarno – wynik powtarzalny),",
+        f"{som['epoki']} epok; w każdej epoce wszystkie {len(train)} wektorów w losowej kolejności. Dla "
+        "wektora x szukamy neuronu zwycięskiego (BMU) – o najmniejszej odległości ‖x − w‖,",
         "aktualizacja wag: w ← w + η(t) · h(t) · (x − w), gdzie h = exp(−d² / 2σ(t)²) to "
         "„siła sąsiedztwa”, a d to odległość neuronu od zwycięzcy na siatce,",
-        f"współczynnik uczenia η maleje z 0,5 do 0,01, a promień sąsiedztwa σ z {som['wiersze'] // 2} "
+        f"współczynnik uczenia η maleje z 0,5 do 0,01, a promień sąsiedztwa σ z {max(som['wiersze'], som['kolumny']) // 2} "
         "do 0,5: najpierw mapa układa się z grubsza, potem dopracowuje szczegóły,",
-        "ocena mapy: <b>błąd kwantyzacji</b> (średnia odległość wektora od jego BMU – im mniejszy, "
-        "tym lepiej neurony odwzorowują dane) i <b>błąd topograficzny</b> (odsetek wektorów, "
-        "których dwa najlepsze neurony nie sąsiadują – 0% oznacza zachowane sąsiedztwo).",
+        "ocena: błąd kwantyzacji (średnia odległość wektora od jego BMU) i błąd topograficzny "
+        "(odsetek wektorów, których dwa najlepsze neurony nie sąsiadują na siatce).",
     ])
-    figure(os.path.join(R4, "uczenie.png"), 11.5, "Spadek błędu kwantyzacji w trakcie uczenia (trzy warianty z p. 4.7).")
+    figure(os.path.join(R4, "uczenie.png"), 11, "Spadek błędu kwantyzacji w trakcie uczenia.")
+    p(f"Po uczeniu: błąd kwantyzacji {fmt(summ['blad_kwantyzacji'], 3)}, błąd topograficzny "
+      f"{fmt(summ['blad_topograficzny'] * 100, 1)}%.")
 
-    p("4.5. Wynik – mapa rzeczowników", "h2")
-    p("Na mapie każdy rzeczownik (czerwony) stoi w swoim neuronie zwycięskim. Pod nim, na "
-      "niebiesko, podpisano czasownik, który ma w danym neuronie największą wagę. Tło to "
-      "<b>U-macierz</b>: jasne pola oznaczają, że neuron jest podobny do sąsiadów (wnętrze "
-      "skupienia), a ciemne, że się od nich różni (granica między skupieniami).")
-    figure(os.path.join(R4, "wariant_A_mapa.png"), 17,
-           f"Mapa Kohonena – wariant A (błąd kwantyzacji {fmt(A['blad_kwantyzacji'], 3)}, "
-           f"błąd topograficzny {fmt(A['blad_topograficzny'] * 100, 1)}%).")
-    groups = "; ".join(", ".join(gloss(w) for w in g) for g in A["grupy"])
-    p(f"Rzeczowniki, które trafiły do tego samego neuronu, mają najbardziej podobne wektory: {groups}.")
-    p(INTERPRETATION_A)
+    p("4.6. Wynik – klastry rzeczowników", "h2")
+    p("Na mapie (rys. niżej) każdy kwadrat to jeden neuron: numer i liczba rzeczowników, na "
+      "niebiesko czasownik o największej wadze, na czerwono najczęstsze rzeczowniki, które do niego "
+      "trafiły, na zielono pole semantyczne (nasza interpretacja). Tło to U-macierz: jasne pola – "
+      "neuron podobny do sąsiadów, ciemne – granica między skupieniami.")
+    figure(os.path.join(R4, "mapa_kohonena.png"), 14, "Mapa Kohonena – 1000 rzeczowników na 50 neuronach "
+           "(siatka 5 × 10 narysowana pionowo; w każdym neuronie 5 najczęstszych rzeczowników).")
+    figure(os.path.join(R4, "liczebnosc_klastrow.png"), 14, "Liczba rzeczowników w każdym neuronie.")
+    rows = [["#", "N", "Spójn.", "Dominujące czasowniki", "Pole semantyczne", "Rzeczowniki (najczęstsze)"]]
+    for n in neurons:
+        members = n["rzeczowniki"].split(", ") if n["rzeczowniki"] else []
+        label = n["pole_semantyczne"] + (" <i>(niejednorodny)</i>" if n["jednorodny"] == "nie" else "")
+        rows.append([n["neuron"], n["liczba_rzeczownikow"],
+                     "" if n["spojnosc"] == "nan" else n["spojnosc"].replace(".", ","),
+                     n["dominujace_czasowniki"], label or ("<b>neuron martwy</b>" if not members else "–"),
+                     ", ".join(members[:12]) + (" …" if len(members) > 12 else "")])
+    table(rows, [0.6 * cm, 0.8 * cm, 1 * cm, 4 * cm, 3.4 * cm, 7 * cm],
+          "Zawartość wszystkich 50 neuronów (N – liczba rzeczowników, Spójn. – średnie podobieństwo "
+          "kosinusowe rzeczowników w klastrze; pełne listy: wyniki/lab04/neurony.csv).", font_size=6)
 
-    p("4.6. Gdzie są czasowniki w przestrzeni 100D", "h2")
-    p("Każda oś 100-wymiarowej przestrzeni to jeden czasownik. Dla każdej osi można narysować "
-      "<b>płaszczyznę składowej</b>, czyli wartość tej jednej wagi we wszystkich 100 neuronach. Jasny "
-      "obszar to rejon mapy „należący” do danego czasownika: leżą tam rzeczowniki, które się z nim "
-      "łączą. Rysunek pokazuje 16 czasowników o największej liczbie kolokacji.")
-    figure(os.path.join(R4, "wariant_A_plaszczyzny.png"), 16.5,
-           "Płaszczyzny składowych – położenie wybranych czasowników (osi przestrzeni 100D) na mapie.")
-    p("Widać, że czasowniki zajmują <b>różne, zwarte obszary</b> mapy: имати – górne wiersze, "
-      "заузимати i обухватати – prawy górny róg, добити i носити – lewą kolumnę, водити i донети – "
-      "dół mapy. Mapa jest więc dwuwymiarowym „rzutem” przestrzeni czasowników, w którym "
-      "sąsiedztwo zostało zachowane.")
-    train_x = np.log1p(np.array([[float(v) for k, v in r.items() if k != "rzeczownik"] for r in train]))
-    train_x /= np.linalg.norm(train_x, axis=1, keepdims=True)
-    sv = np.linalg.svd(train_x - train_x.mean(axis=0), compute_uv=False) ** 2
-    expl = sv[:2].sum() / sv.sum()
-    figure(os.path.join(R4, "wariant_A_pca.png"), 13,
-           "Dla porównania: zwykły rzut liniowy PCA tych samych wektorów 100D na płaszczyznę. "
-           "Strzałki to kierunki osi najważniejszych czasowników.")
-    p(f"Dla porównania pokazano rzut PCA. Dwie najważniejsze osie zachowują tylko {fmt(expl * 100, 1)}% "
-      "informacji (wariancji), a pierwsza oś to w praktyce jeden czasownik – имати. Rzut liniowy "
-      "gubi więc większość struktury, a część punktów się nakłada. Sieć Kohonena jest nieliniowa: "
-      "korzysta ze wszystkich 100 wymiarów i układa rzeczowniki po całej mapie, zachowując sąsiedztwo.")
+    p("4.7. Analiza klastrów", "h2")
+    dead = summ["martwe_neurony"]
+    labels = summ["pola"]
+    hom = sum(1 for v in labels.values() if v["jednorodny"])
+    coh = list(summ["spojnosc"].values())
+    p(f"<b>Neurony martwe.</b> {len(dead)} z {n_neurons} neuronów nie wygrało dla żadnego rzeczownika"
+      + (f" (#{', #'.join(map(str, dead))})" if dead else "") + ". "
+      + KOHONEN_DEAD_COMMENT)
+    p(f"<b>Spójność.</b> Średnie podobieństwo kosinusowe dwóch rzeczowników z tego samego klastra "
+      f"wynosi {fmt(np.mean(coh), 2)}, a dwóch dowolnych rzeczowników – {fmt(summ['podobienstwo_srednie'], 2)}. "
+      "Klastry skupiają więc rzeczowniki o wyraźnie podobnych profilach czasowników.")
+    mixed = [k for k, v in labels.items() if not v["jednorodny"]]
+    no_field = [n["neuron"] for n in neurons if n["rzeczowniki"] and not n["pole_semantyczne"]]
+    p(f"<b>Pola semantyczne.</b> Zawartość każdego neuronu oceniliśmy ręcznie (tabela {counters['tab']}). "
+      f"<b>{hom} klastrów jest jednorodnych</b> – ich rzeczowniki należą do wspólnego pola semantycznego; "
+      f"{len(mixed)} klastrów jest mieszanych (da się wskazać dominujący motyw, ale rzeczowniki pochodzą z "
+      f"różnych pól), a {len(no_field)} małe neurony (#{', #'.join(no_field)}) nie mają żadnego wspólnego "
+      f"pola. Klastry jednorodne tworzą <b>{summ['liczba_pol']} różne pola semantyczne</b> – niektóre pola "
+      "zajmują dwa sąsiednie neurony:")
+    by_field = defaultdict(list)
+    for k, v in labels.items():
+        if v["jednorodny"]:
+            by_field[v["pole"]].append(int(k))
+    rows = [["Pole semantyczne", "Neurony", "Przykładowe rzeczowniki"]]
+    clusters = summ["klastry"]
+    for field, ks in sorted(by_field.items(), key=lambda x: min(x[1])):
+        ex = [w for k in sorted(ks) for w in clusters[str(k)][:6]]
+        rows.append([field, ", ".join(f"#{k}" for k in sorted(ks)), ", ".join(ex[:12])])
+    table(rows, [4.6 * cm, 1.8 * cm, 10.4 * cm], f"Pola semantyczne ({summ['liczba_pol']}) utworzone "
+          "przez klastry jednorodne.", font_size=6.8)
+    rows = [["Klaster mieszany", "Neuron", "Przykładowe rzeczowniki"]]
+    for k in sorted(map(int, mixed)):
+        rows.append([labels[str(k)]["pole"].replace("mieszany: ", ""), f"#{k}", ", ".join(clusters[str(k)][:10])])
+    table(rows, [4.6 * cm, 1.8 * cm, 10.4 * cm], "Klastry niejednorodne (dominujący motyw i przykłady).",
+          font_size=6.8)
+    p(KOHONEN_INTERPRETATION)
 
-    p("4.7. Czy wynik zależy od wyboru czasowników?", "h2")
-    p("Ten sam zbiór 50 rzeczowników nauczono w trzech wariantach, przy identycznych parametrach sieci:")
-    bullets([f"<b>Wariant {k}</b> – {summ['warianty'][k]['opis']}." for k in "ABC"])
-    p(f"Warianty A i B mają {summ['wspolne_czasowniki_AB']} wspólnych czasowników na 100. "
-      "W wariancie B są też częste czasowniki nieprzechodnie (налазити се, постати, доћи, живети, "
-      "ићи, умрети), które prawie nie mają dopełnień rzeczownikowych.")
-    data = [["Wariant", "Suma kolokacji", "Wypełnienie macierzy", "Rzeczowniki z zerowym wektorem",
-             "Błąd kwantyzacji", "Błąd topograficzny", "Zajęte neurony"]]
-    for k in "ABC":
-        v = summ["warianty"][k]
-        data.append([k, num(v["suma_kolokacji"]), f"{fmt(v['gestosc'] * 100, 1)}%",
-                     ", ".join(v["puste_rzeczowniki"]) or "0", fmt(v["blad_kwantyzacji"], 3),
-                     f"{fmt(v['blad_topograficzny'] * 100, 1)}%", v["zajete_neurony"]])
-    table(data, [1.5 * cm, 2.1 * cm, 2.4 * cm, 3.4 * cm, 2.3 * cm, 2.4 * cm, 2 * cm], "Porównanie wariantów.")
-    data = [["Porównanie map", "Korelacja odległości (Spearman)", "Wspólni sąsiedzi (5 najbliższych)"]]
-    for key, v in summ["porownanie"].items():
-        data.append([key.replace("-", " – "), fmt(v["spearman"], 3), f"{fmt(v['wspolni_sasiedzi'] * 100, 1)}%"])
-    table(data, [3.5 * cm, 6 * cm, 6 * cm],
-          "Podobieństwo map. Korelacja 1 oznacza identyczny układ wzajemnych odległości rzeczowników na "
-          "mapie, 0 – brak związku.")
-    figure(os.path.join(R4, "wariant_B_mapa.png"), 13.5, "Mapa Kohonena – wariant B (100 najczęstszych czasowników).")
-    figure(os.path.join(R4, "wariant_C_mapa.png"), 13.5, "Mapa Kohonena – wariant C (kolokacje w oknie ±5 wyrazów).")
-    p(INTERPRETATION_ABC)
+
+# ---------------------------------------------------------------------------
+# Lab 5 - generator zdań SVO
+# ---------------------------------------------------------------------------
+def lab5():
+    import lab05_generator_svo as g
+    import leksykon_svo as lx
+
+    story.append(PageBreak())
+    verbs = [g.Verb(v) for v in lx.VERBS]
+    vtype = Counter(v.typ for v in verbs)
+    p("5. Laboratorium 5 – analiza syntaktyczna: generator zdań SVO", "h1")
+    p("<b>Zadanie:</b> opracować generator zdań prostych typu SVO (podmiot – orzeczenie – dopełnienie "
+      "bliższe). Podmiotem jest fraza rzeczownikowa lub zaimek osobowy, orzeczeniem czasownik "
+      "nieprzechodni, przechodni lub zwrotny we wszystkich możliwych w danym języku czasach, trybach "
+      "(oznajmujący, pytający, przeczący, rozkazujący, przypuszczający) i stronach (czynna, bierna), "
+      "a dopełnieniem fraza rzeczownikowa lub zaimek osobowy. Fraza rzeczownikowa to rzeczownik, "
+      "opcjonalnie poprzedzony przymiotnikiem i rodzajnikiem lub zaimkiem. Leksykon: co najmniej "
+      "100 rzeczowników, 100 czasowników i 100 przymiotników.")
+    box("W prostych słowach",
+        "Generator składa zdanie z klocków: losuje czasownik, do niego pasujący podmiot i (jeśli "
+        "czasownik jest przechodni) dopełnienie, a potem losuje czas, tryb i stronę. Najtrudniejsza "
+        "jest odmiana: serbski ma 7 przypadków, 3 rodzaje, zgodę przymiotnika i imiesłowu z rzeczownikiem "
+        "oraz „enklityki” – krótkie słówka (сам, је, га, се, ће…), które muszą stać na drugim miejscu "
+        "w zdaniu w ściśle określonej kolejności. Generator zna te reguły, więc „Ја сам га видео” "
+        "(Widziałem go) powstaje poprawnie, a nie jako „Ја видео сам њега”.")
+
+    p("5.1. Leksykon", "h2")
+    p(f"Leksykon jest w pliku {mono('leksykon_svo.py')}, a generator w {mono('lab05_generator_svo.py')}. "
+      "Wyrazy zapisano łacinką (w niej łatwiej kontrolować odmianę), a zdania są wypisywane cyrylicą "
+      "i łacinką (transliteracja jest jednoznaczna). Użyto wymowy ekawskiej (standard w Serbii).")
+    det_kinds = Counter(d[4] for d in lx.DETERMINERS)
+    table([["Część leksykonu", "Liczba", "Szczegóły"],
+           ["rzeczowniki", len(lx.NOUNS), f"m: {sum(n['gender'] == 'm' for n in lx.NOUNS)}, "
+            f"ż: {sum(n['gender'] == 'f' for n in lx.NOUNS)}, n: {sum(n['gender'] == 'n' for n in lx.NOUNS)}; "
+            "dla każdego 6 form: mianownik, dopełniacz, biernik × l. poj./mn.; żywotność; klasa znaczeniowa"],
+           ["czasowniki", len(verbs), f"przechodnie {vtype['tr']}, nieprzechodnie {vtype['intr']}, zwrotne "
+            f"{vtype['refl']}; niedokonane {sum(v.asp == 'impf' for v in verbs)}, dokonane "
+            f"{sum(v.asp == 'pf' for v in verbs)}; przechodnie z imiesłowem biernym"],
+           ["przymiotniki", len(lx.ADJECTIVES), "forma określona, z listą klas rzeczowników, do których pasują"],
+           ["określniki", len(lx.DETERMINERS) + 1,
+            ", ".join(f"{k}: {c}" for k, c in det_kinds.items()) + "; zwrotny dzierżawczy свој"],
+           ["zaimki osobowe", 10, "ја, ти, он, она, оно, ми, ви, они, оне, она (M., B. enklityczny, B. pełny, D.)"]],
+          [3.2 * cm, 1.6 * cm, 12 * cm], "Zawartość leksykonu generatora.")
+    p("Serbski <b>nie ma rodzajników</b>. Ich funkcję pełnią zaimki: <i>један</i> (jeden, pewien) "
+      "działa jak rodzajnik nieokreślony, a <i>тај</i> (ten) jak określony. Dlatego jako „element "
+      "dodatkowy” frazy rzeczownikowej generator używa zaimków wskazujących (овај, тај, онај), "
+      "dzierżawczych (мој, твој, његов, њен, наш, ваш, њихов, свој), nieokreślonych (један, неки) "
+      "i upowszechniającego (сваки).")
+    rows = [["Rzeczownik", "Znaczenie", "Rodz.", "Kl."] * 3]
+    for i in range(0, len(lx.NOUNS), 3):
+        row = []
+        for n in lx.NOUNS[i:i + 3]:
+            row += [g.cyr(n["lemma"]), n["gloss"], n["gender"] + ("*" if n["animate"] else ""), n["classes"]]
+        rows.append(row + [""] * (12 - len(row)))
+    table(rows, [1.9 * cm, 2.3 * cm, 0.8 * cm, 0.8 * cm] * 3,
+          "Rzeczowniki (* – żywotne; klasy: H ludzie, A zwierzęta, F jedzenie, D napoje, O przedmioty, "
+          "C ubrania, V pojazdy, B budynki/miejsca, T teksty/dzieła, M utwory muzyczne, I instrumenty, "
+          "P rośliny, N pieniądze, K części ciała).", font_size=6.2)
+    rows = [["Czasownik", "Znaczenie", "Typ", "Asp."] * 2]
+    half = (len(verbs) + 1) // 2
+    for i in range(half):
+        row = []
+        for v in (verbs[i], verbs[i + half] if i + half < len(verbs) else None):
+            row += ([g.cyr(v.inf + (" se" if v.reflexive else "")), v.gloss, v.typ, v.asp] if v else [""] * 4)
+        rows.append(row)
+    table(rows, [2.6 * cm, 3.6 * cm, 0.9 * cm, 1.1 * cm] * 2,
+          "Czasowniki (tr – przechodni, intr – nieprzechodni, refl – zwrotny; impf – niedokonany, "
+          "pf – dokonany).", font_size=6.2)
+    rows = [["Przymiotnik", "Znaczenie"] * 4]
+    q = (len(lx.ADJECTIVES) + 3) // 4
+    for i in range(q):
+        row = []
+        for k in range(4):
+            j = i + k * q
+            row += [g.cyr(lx.ADJECTIVES[j][0]), lx.ADJECTIVES[j][1]] if j < len(lx.ADJECTIVES) else ["", ""]
+        rows.append(row)
+    table(rows, [2 * cm, 2.25 * cm] * 4, "Przymiotniki (forma określona, rodzaj męski).", font_size=6.2)
+
+    p("5.2. Fraza rzeczownikowa i jej odmiana", "h2")
+    p("Fraza rzeczownikowa ma postać [określnik] [przymiotnik] rzeczownik. Wszystkie trzy elementy "
+      "zgadzają się w rodzaju, liczbie i przypadku. Podmiot stoi w mianowniku, dopełnienie bliższe "
+      "w bierniku, a wykonawca czynności w stronie biernej w dopełniaczu (<i>од стране</i> + D.). "
+      "Rzeczowniki męskie <b>żywotne</b> mają w bierniku l. poj. formę dopełniacza (видим пса – "
+      "widzę psa), a nieżywotne – formę mianownika (видим град – widzę miasto). Gdy posiadaczem "
+      "dopełnienia jest podmiot, zaimek dzierżawczy zmienia się na zwrotny <i>свој</i> (Ја читам "
+      "<i>своју</i> књигу – Czytam swoją książkę).")
+    noun = {n["lemma"]: n for n in lx.NOUNS}
+    det = {d[0]: d for d in lx.DETERMINERS}
+    rows = [["Fraza", "Mianownik (podmiot)", "Biernik (dopełnienie)", "Dopełniacz (wykonawca)"]]
+    for lemma, num_, adj, d in (("pas", "sg", "veliki", "naš"), ("grad", "sg", "stari", "ovaj"),
+                                ("knjiga", "sg", "novi", "moj"), ("pismo", "pl", "dugi", "taj"),
+                                ("devojka", "pl", "mladi", "neki")):
+        np_ = g.NounPhrase(noun[lemma], num_, adj, det[d])
+        rows.append([f"{d} + {adj} + {lemma} ({'l. mn.' if num_ == 'pl' else 'l. poj.'})"]
+                    + [g.cyr(np_.form(c)) for c in ("nom", "acc", "gen")])
+    table(rows, [5 * cm, 3.9 * cm, 3.9 * cm, 3.9 * cm], "Przykłady odmiany frazy rzeczownikowej.")
+
+    p("5.3. Orzeczenie: czasy, tryby i strony", "h2")
+    p("Serbski ma siedem czasów trybu oznajmującego, dwa czasy trybu przypuszczającego (potencijal) "
+      "i tryb rozkazujący. Każdą formę można postawić w zdaniu oznajmującym lub pytającym "
+      "(<i>да ли</i> …?) oraz twierdzącym lub przeczącym. Pięć „trybów” z polecenia "
+      "realizujemy więc jako trzy tryby gramatyczne × typ zdania × polaryzację, co daje także "
+      "kombinacje (np. pytanie przeczące w potencjale).")
+    example = [
+        ("prezent", "czas teraźniejszy", "forma osobowa", "Ја читам књигу."),
+        ("perfekat", "przeszły złożony", "сам/си/је… + imiesłów na -l", "Ја сам читао књигу."),
+        ("aorist", "przeszły dokonany (literacki)", "forma syntetyczna", "Ја прочитах књигу."),
+        ("imperfekat", "przeszły niedokonany (literacki), tylko czas. niedokonane", "forma syntetyczna",
+         "Ја читах књигу."),
+        ("pluskvamperfekat", "zaprzeszły", "сам био + imiesłów na -l", "Ја сам био читао књигу."),
+        ("futur I", "przyszły", "ћу/ћеш… + bezokolicznik", "Ја ћу читати књигу."),
+        ("futur II", "przyszły uprzedni (tylko w zdaniach warunkowych/czasowych)", "будем + imiesłów",
+         "Ако ја будем читао књигу…"),
+        ("potencijal I", "tryb przypuszczający", "бих/би… + imiesłów", "Ја бих читао књигу."),
+        ("potencijal II", "tryb przypuszczający przeszły", "бих био + imiesłów", "Ја бих био читао књигу."),
+        ("imperativ", "tryb rozkazujący (ti, mi, vi)", "forma syntetyczna; przeczenie: не / немој + bezok.",
+         "Ти читај књигу! Немој прочитати!"),
+        ("imperativ z неka", "rozkaz dla 1. os. lp. i 3. os.", "нека + prezent", "Нека он чита књигу!"),
+        ("strona bierna", "wszystkie czasy oprócz zaprzeszłego", "бити + imiesłów bierny (+ од стране D.)",
+         "Књига је прочитана од стране мог брата."),
+    ]
+    table([["Forma", "Znaczenie", "Budowa", "Przykład"]] + [list(r) for r in example],
+          [2.6 * cm, 4.6 * cm, 4.6 * cm, 5 * cm], "Formy orzeczenia obsługiwane przez generator.", font_size=7)
+    p("Formy regularne generator tworzy sam z bezokolicznika i 1. os. lp. czasu teraźniejszego "
+      "(np. aoryst: читати → читах, чита, читасмо, читасте, читаше; imperatyw: читају → читај, "
+      "пишу → пиши). Formy nieregularne (np. јести → једох, јео; доћи → дођох, дошао; пећи → пеци) "
+      "są zapisane w leksykonie. Imiesłowy zgadzają się z podmiotem w rodzaju i liczbie: читао "
+      "(on), читала (ona), читало (ono), читали (oni), читале (one), читала (ona – l. mn. nijaka). "
+      "Kombinacje niemożliwe w serbskim są odrzucane: imperfekt czasowników dokonanych, strona "
+      "bierna czasowników nieprzechodnich i zwrotnych, pytanie w trybie rozkazującym, futur II "
+      "w zdaniu pytającym.")
+
+    p("5.4. Szyk zdania i enklityki", "h2")
+    p("Podstawowy szyk to SVO, ale serbskie enklityki (słowa bez akcentu) muszą stać na "
+      "<b>drugim miejscu</b> w zdaniu – po pierwszej frazie (podmiocie albo <i>да ли</i>, <i>нека</i>, "
+      "<i>ако</i>). Generator ustawia je w kolejności: <i>li</i> – czasownik posiłkowy (сам, си, смо, "
+      "сте, су, бих, ћу…) – zaimek w bierniku (ме, те, га, је, нас, вас, их) – <i>се</i> – <i>је</i>. "
+      "Dodatkowo: posiłkowe је znika po се (Он се смејао), a zaimek је przed posiłkowym је "
+      "zmienia się w ју (Он ју је видео). Dopełnienie-zaimek ma formę enklityczną, więc w tym "
+      "przypadku szyk staje się SOV – tak jak wymaga gramatyka.")
+    rows = [["Zdanie", "Tłumaczenie"],
+            ["Ја сам га видео.", "Widziałem go."], ["Он ју је видео.", "On ją widział."],
+            ["Да ли си ти видела тог пса?", "Czy (ty) widziałaś tego psa?"],
+            ["Ми се нисмо смејали.", "Nie śmialiśmy się."], ["Нека га он чита!", "Niech on go czyta!"],
+            ["Ви бисте се били смејали.", "Bylibyście się śmiali."]]
+    table(rows, [8 * cm, 8 * cm], "Przykłady szyku enklityk.")
+
+    p("5.5. Ograniczenia znaczeniowe", "h2")
+    p("Zdania mają być nie tylko poprawne gramatycznie, ale też sensowne. Każdy rzeczownik ma klasę "
+      "znaczeniową, a każdy czasownik listę klas dozwolonych dla podmiotu i dopełnienia (np. јести: "
+      "podmiot H/A – człowiek lub zwierzę, dopełnienie F – jedzenie; возити: dopełnienie V – pojazd). "
+      "Podobnie przymiotniki mają listę klas, do których pasują (зелени цвет tak, зелена вест nie). "
+      "Zaimki 1. i 2. osoby mogą być tylko ludźmi.")
+
+    p("5.6. Wyniki", "h2")
+    pairs = [(g.Pronoun("1", "sg", "m"), verbs[[v.inf for v in verbs].index("pročitati")],
+              g.NounPhrase(noun["knjiga"], "sg", "novi", det["moj"]))]
+    s, v, o = pairs[0]
+    rows = [["Strona", "Tryb", "Czas", "Typ", "Polaryz.", "Zdanie"]]
+    for voice, mood, tense, st, pol, text in g.all_forms(s, v, o):
+        rows.append([voice, mood, tense, st, pol, g.cyr(text)])
+    table(rows, [1.3 * cm, 2.1 * cm, 2.7 * cm, 1.8 * cm, 1.6 * cm, 7.3 * cm],
+          f"Wszystkie {len(rows) - 1} formy dla jednej trójki: ја + прочитати + (мој + нови + књига) "
+          "(strona bierna: „Moja nowa książka została przeczytana”).", font_size=6.4)
+    combos = read_csv(os.path.join(RESULTS_DIR, "lab05", "losowe_zdania.csv"))
+    rows = [["Lp", "Zdanie", "Cechy"]]
+    for r in combos[:40]:
+        rows.append([r["lp"], r["zdanie_cyrylica"],
+                     f"{r['strona']}, {r['tryb']}, {r['czas']}, {r['typ_zdania']}, {r['polaryzacja']}"])
+    table(rows, [0.8 * cm, 9.2 * cm, 6.8 * cm], "Pierwsze 40 z 200 losowych zdań (pełna lista: "
+          "wyniki/lab05/losowe_zdania.csv).", font_size=6.6)
+    p(f"Pełne wyniki są w folderze {mono('wyniki/lab05/')}: raport.txt (leksykon, pełne odmiany "
+      "czterech trójek SVO – z czasownikiem przechodnim dokonanym i niedokonanym, nieprzechodnim "
+      "i zwrotnym – oraz 200 losowych zdań), tabele CSV leksykonu i zdań. Generator można też "
+      f"uruchomić interaktywnie: {mono('python lab05_generator_svo.py -n 20 --lacinka')}. "
+      "Poprawność sprawdza 16 zdań wzorcowych zweryfikowanych ręcznie (rozdział 6).")
 
 
 # ---------------------------------------------------------------------------
@@ -911,7 +1116,7 @@ def lab4():
 # ---------------------------------------------------------------------------
 def verification():
     story.append(PageBreak())
-    p("5. Sprawdzenie poprawności wyników", "h1")
+    p("6. Sprawdzenie poprawności wyników", "h1")
     p(f"Skrypt {mono('sprawdz_wyniki.py')} nie korzysta z kodu laboratoriów: każdą wartość liczy "
       "od nowa, najprostszą możliwą metodą, i porównuje ją z plikami wynikowymi. Poniżej "
       "wynik jego działania.")
@@ -926,7 +1131,7 @@ def verification():
 
 def conclusion():
     story.append(PageBreak())
-    p("6. Podsumowanie", "h1")
+    p("7. Podsumowanie", "h1")
     n2 = read_csv(os.path.join(R2, "statystyka_litery.csv"))
     tot = sum(int(r["licznosc"]) for r in n2)
     H = -sum(int(r["licznosc"]) / tot * math.log2(int(r["licznosc"]) / tot) for r in n2)
@@ -937,59 +1142,68 @@ def conclusion():
     k90 = len(read_csv(os.path.join(R3, "wyrazy_pokrycie_90.csv")))
     summ = json.load(open(os.path.join(R4, "podsumowanie.json"), encoding="utf-8"))
     words = open(CLEAN_FILE, encoding="utf-8").read().split()
+    import leksykon_svo as lx
+    core = read_csv(os.path.join(R3, "rdzen_100.csv"))
 
     p("Realizacja wymagań", "h2")
     rows = [["Wymaganie", "Jak zrealizowano", "Wynik", "Rozdz."],
-            ["Wybrać język, zostawić sam korpus", "pobranie z Wikipedii, zostawienie tylko 30 liter cyrylicy",
-             f"{num(len(words))} wyrazów, 0 obcych znaków", "1"],
-            ["Usunąć znaki specjalne, interpunkcję, liczby, znaki spoza alfabetu",
-             "wyrażenie regularne [^абв…ш] → spacja; raport usuniętych znaków; testy", "tylko litery i spacje", "1, 2, 5"],
-            ["Tabela udziału procentowego liter (prawdopodobieństwa)", "Counter + p = n / N",
-             "tabela 30 liter", "2.2"],
-            ["Entropia tekstu", "H = −Σ p log₂ p", f"H = {fmt(H, 4)} bit/znak", "2.4"],
-            ["Ciągi kodowe Huffmana i porównanie z entropią", "algorytm Huffmana (heapq)",
-             f"L = {fmt(L, 4)} bit, H/L = {fmt(H / L * 100, 1)}%", "2.3–2.4"],
-            ["Wyrazy pokrywające 90% tekstu", "sortowanie i sumowanie udziałów",
-             f"{num(k90)} wyrazów", "3.1"],
+            ["<b>1. Analiza statystyczna</b>", "", "", ""],
+            ["Korpus min. 100 000 wyrazów", "Wikipedia, zostawienie tylko 30 liter cyrylicy",
+             f"{num(len(words))} wyrazów", "1"],
             ["Prawo Zipfa", "regresja w skali log-log", f"s = {fmt(s, 3)}", "3.2"],
-            ["Graf wyrazów sąsiadujących, krawędzie wychodzące", "zbiory sąsiadów, networkx",
-             "krawędzie wych./wch./sąsiedzi", "3.3"],
-            ["Rdzeń: 100 wyrazów o największej liczbie sąsiadów", "ranking stopni węzłów",
-             "tabela 100 wyrazów + rysunek", "3.3"],
-            ["50 rzeczowników i 100 czasowników przechodnich", "analiza składniowa (stanza), relacja obj",
-             "tabele czasowników i rzeczowników", "4.1–4.2"],
-            ["Wektor o 100 składowych – zbiór treningowy", "kolokacje czasownik–dopełnienie",
-             "macierz 50 × 100", "4.3"],
-            ["Sieć Kohonena", "własna implementacja SOM 10 × 10",
-             f"błąd topograficzny {fmt(summ['warianty']['A']['blad_topograficzny'] * 100, 0)}%", "4.4–4.5"],
-            ["Przedstawienie w przestrzeni 100D czasowników", "mapa z czasownikami dominującymi, "
-             "płaszczyzny składowych, PCA", "rysunki map", "4.5–4.6"],
-            ["Wpływ wyboru czasowników, 100 najczęstszych czasowników", "warianty A, B, C",
-             f"korelacja A–B = {fmt(summ['porownanie']['A-B']['spearman'], 2)}", "4.7"],
-            ["Sprawozdanie PDF, kod na GitHub", "generuj_sprawozdanie.py, repozytorium git",
-             "ten dokument + README", "–"]]
-    table(rows, [5 * cm, 5.6 * cm, 4.6 * cm, 1.6 * cm], "Lista wymagań z laboratoriów i miejsce ich realizacji.",
+            ["Wyrazy potrzebne do rozumienia 90% tekstu", "sortowanie i sumowanie udziałów",
+             f"{num(k90)} wyrazów (lista CSV)", "3.1"],
+            ["Rdzeń języka: 100 wyrazów o najwięcej sąsiadach", "graf sąsiedztwa, ranking stopni węzłów",
+             f"100 wyrazów, od {core[0]['wyraz']} do {core[-1]['wyraz']}", "3.3"],
+            ["(dodatkowo) entropia i kod Huffmana", "H = −Σ p log₂ p, algorytm Huffmana",
+             f"H = {fmt(H, 3)}, L = {fmt(L, 3)} bit/znak", "2"],
+            ["<b>2. Analiza syntaktyczna</b>", "", "", ""],
+            ["Generator zdań SVO; podmiot i dopełnienie: fraza rzeczownikowa lub zaimek",
+             "lab05_generator_svo.py, odmiana przez przypadki, enklityki", "losowe zdania + pełne odmiany", "5"],
+            ["Czasowniki nieprzechodnie, przechodnie, zwrotne",
+             "typ czasownika w leksykonie", f"{sum(v['typ'] == 'tr' for v in lx.VERBS)} / "
+             f"{sum(v['typ'] == 'intr' for v in lx.VERBS)} / {sum(v['typ'] == 'refl' for v in lx.VERBS)}", "5.1"],
+            ["Wszystkie czasy, tryby (oznajmujący, pytający, przeczący, rozkazujący, przypuszczający), strony",
+             "7 czasów + 2 potencjały + imperatyw; pytanie, przeczenie; strona czynna i bierna",
+             "do 60 form na trójkę SVO", "5.3"],
+            ["Min. 100 rzeczowników, 100 czasowników, 100 przymiotników", "leksykon_svo.py",
+             f"{len(lx.NOUNS)} / {len(lx.VERBS)} / {len(lx.ADJECTIVES)}", "5.1"],
+            ["Fraza rzecz.: [rodzajnik/zaimek] [przymiotnik] rzeczownik",
+             "zaimki wskazujące, dzierżawcze (z svoj), nieokreślone (jedan ≈ rodzajnik)",
+             f"{len(lx.DETERMINERS) + 1} określników", "5.2"],
+            ["<b>3. Analiza semantyczna</b>", "", "", ""],
+            ["Min. 1000 rzeczowników, 100 czasowników przechodnich",
+             "analiza składniowa (stanza), korpus dodatkowy",
+             f"{len(summ['rzeczowniki'])} rzeczowników, {len(summ['czasowniki'])} czasowników", "4.1–4.3"],
+            ["Wektory 100 składowych = liczby fraz VO", "relacja obj z parsera", "macierz 1000 × 100", "4.4"],
+            ["Sieć Kohonena z 50 neuronami", f"własna implementacja SOM {summ['som']['wiersze']} × "
+             f"{summ['som']['kolumny']}", f"błąd topogr. {fmt(summ['blad_topograficzny'] * 100, 1)}%", "4.5"],
+            ["Analiza klastrów: pola semantyczne, ich liczba, neurony martwe",
+             "ręczna analiza zawartości neuronów, spójność klastrów",
+             f"pola semantyczne: {summ['liczba_pol']}, neurony martwe: {len(summ['martwe_neurony'])}", "4.6–4.7"],
+            ["Sprawozdanie PDF, kod w repozytorium", "generuj_sprawozdanie.py, git", "ten dokument + README", "–"]]
+    table(rows, [5.4 * cm, 5.4 * cm, 4.4 * cm, 1.6 * cm], "Lista wymagań i miejsce ich realizacji.",
           font_size=7.2)
 
     p("Najważniejsze wnioski", "h2")
     bullets([
-        f"<b>Litery:</b> rozkład liter jest nierównomierny, dlatego kod Huffmana ({fmt(L, 2)} bit/znak) jest "
-        f"o {fmt((1 - L / 5) * 100, 0)}% krótszy od kodu 5-bitowego i tylko o {fmt(L - H, 3)} bitu "
-        f"dłuższy od teoretycznego minimum, czyli entropii ({fmt(H, 2)} bit/znak).",
-        f"<b>Wyrazy:</b> kilkaset najczęstszych wyrazów pokrywa połowę tekstu, ale do 90% potrzeba już "
-        f"{num(k90)} wyrazów, bo serbski ma bogatą odmianę. Częstości wyrazów spełniają prawo Zipfa "
-        f"(s = {fmt(s, 2)}).",
-        "<b>Graf:</b> sieć sąsiedztwa wyrazów jest bezskalowa, a jej rdzeń tworzą słowa funkcyjne.",
-        "<b>Sieć Kohonena:</b> ucząc się bez nauczyciela, pogrupowała rzeczowniki w sensowne obszary "
-        "(posiadanie, przestrzeń, nadawanie nazw i tytułów, działania polityczne i wojskowe). Wynik "
-        "zależy od wyboru czasowników i od definicji kolokacji. Najlepszą mapę daje wariant "
-        "z czasownikami faktycznie przechodnimi i kolokacjami wyznaczonymi składniowo.",
+        f"<b>Statystyka:</b> rozkład liter jest nierównomierny, dlatego kod Huffmana ({fmt(L, 2)} bit/znak) "
+        f"jest tylko o {fmt(L - H, 3)} bitu dłuższy od entropii ({fmt(H, 2)} bit/znak). Częstości wyrazów "
+        f"spełniają prawo Zipfa (s = {fmt(s, 2)}). Do zrozumienia 90% tekstu potrzeba aż {num(k90)} "
+        "wyrazów, bo serbski ma bogatą odmianę. Rdzeń języka tworzą słowa funkcyjne (spójniki, "
+        "przyimki, czasownik бити).",
+        "<b>Semantyka:</b> " + KOHONEN_CONCLUSION,
+        "<b>Składnia:</b> generator tworzy poprawne zdania we wszystkich 7 czasach, 3 trybach, "
+        "w zdaniach pytających i przeczących oraz w stronie czynnej i biernej. Najważniejsze dla "
+        "poprawności okazały się: zgoda imiesłowów z podmiotem, biernik rzeczowników żywotnych "
+        "i reguły szyku enklityk.",
     ])
     p("Uruchomienie programu", "h2")
     p(f"{mono('pip install -r requirements.txt')}, a następnie {mono('python uruchom_wszystko.py')} "
-      "(lub kolejno lab01.py → lab02… → lab03… → lab04_parsowanie.py → lab04_kohonen.py → "
-      "sprawdz_wyniki.py → generuj_sprawozdanie.py). Pobrany korpus i wynik analizy składniowej są "
-      "w repozytorium, więc pełne przeliczenie trwa kilka minut.")
+      "(lub kolejno lab01.py → lab02… → lab03… → lab04_pobieranie.py → lab04_parsowanie.py → "
+      "lab04_kohonen.py → lab05_generator_svo.py → sprawdz_wyniki.py → generuj_sprawozdanie.py). "
+      "Pobrane korpusy i wyniki analizy składniowej są w repozytorium, więc pełne przeliczenie "
+      "trwa kilka minut.")
 
     p("Bibliografia", "h2")
     bullets([
@@ -1006,46 +1220,49 @@ def conclusion():
     ])
 
 
-# Opis wyników lab 4 (dla ziarna losowania SEED = 42 w lab04_kohonen.py)
-INTERPRETATION_A = (
-    "<b>Interpretacja mapy.</b> Sieć sama, bez żadnych etykiet, podzieliła rzeczowniki na obszary "
-    "wyznaczone przez czasowniki, z którymi się łączą:"
-    "<br/>• <b>górne wiersze</b> – rejon czasownika <i>имати</i> (mieć): статус, традиција, "
-    "становник, утицај, улога, право, подршка, успех („mieć status, tradycję, mieszkańców, wpływ, "
-    "rolę, prawo, poparcie, sukces”);"
-    "<br/>• <b>prawy górny róg</b> – rzeczowniki przestrzenne z czasownikami <i>заузимати</i> "
-    "(zajmować) i <i>обухватати</i> (obejmować): место, положај, површина, део, територија, "
-    "подручје, област;"
-    "<br/>• <b>lewa kolumna</b> – rzeczy, które się otrzymuje, nadaje lub nosi (<i>добити, дати, "
-    "носити, издати, пружити</i>): аутономија, име, назив, титула, повеља, помоћ, отпор;"
-    "<br/>• <b>dolny wiersz</b> – działania polityczne i wojskowe: независност и република "
-    "(<i>прогласити</i> – ogłosić), одлука и закон (<i>донети</i> – podjąć, uchwalić), мир "
-    "(<i>склопити</i> – zawrzeć), преговор, борба, рат, политика, војска (<i>водити</i> – prowadzić);"
-    "<br/>• <b>środek dołu mapy</b> – пораз (<i>претрпети</i> – ponieść), победа (<i>однети</i> – "
-    "odnieść), власт (<i>преузети</i> – przejąć)."
-    "<br/>Ciekawy przypadek to град (miasto) i медаља (medal) leżące obok siebie. Łączy je "
-    "czasownik <i>освојити</i>, który znaczy zarówno „zdobyć miasto”, jak i „zdobyć medal”. Mapa "
-    "grupuje więc rzeczowniki według zachowania składniowego (wspólnych czasowników), a nie według "
-    "samego znaczenia. Błąd topograficzny wynosi 0%: rzeczowniki podobne w przestrzeni 100D leżą "
-    "na mapie obok siebie."
+# Opis wyników lab 4 (interpretacja zawartości klastrów dla ziarna SEED = 42 w lab04_kohonen.py)
+KOHONEN_DEAD_COMMENT = (
+    "Wszystkie neurony się czegoś nauczyły. Wynika to z proporcji danych do rozmiaru sieci: na jeden "
+    "neuron przypada średnio 20 rzeczowników, a szerokie sąsiedztwo na początku uczenia rozciąga całą "
+    "siatkę na obszar zajmowany przez dane, zanim neurony się wyspecjalizują. Najmniejsze klastry "
+    "(3–7 rzeczowników) leżą na granicach dużych skupień i zbierają rzeczowniki o nietypowych "
+    "profilach – to neurony, które nauczyły się „niewiele”: nie reprezentują żadnego pola znaczeniowego.")
+KOHONEN_INTERPRETATION = (
+    "<b>Ocena klastrów.</b> Sieć rzeczywiście spontanicznie wytworzyła klastry, w których rzeczowniki "
+    "należą do wspólnego pola semantycznego. Najbardziej jednorodne są klastry wyznaczone przez "
+    "czasowniki o wąskim zakresie dopełnień:"
+    "<br/>• <b>trofea i zawody sportowe</b> (освојити – zdobyć): титула, медаља, првенство, турнир, лига, "
+    "куп, бод, поен;"
+    "<br/>• <b>substancje i składniki chemiczne</b> (садржати – zawierać): киселина, бакар, кисеоник, "
+    "протеин, шећер, маст, литијум;"
+    "<br/>• <b>skutki negatywne</b> – dwa sąsiednie neurony (изазвати, узроковати – wywołać, "
+    "spowodować): болест, смрт, бол, повреда, оштећење, депресија, загађење;"
+    "<br/>• <b>decyzje i akty prawne</b> (донети, усвојити – podjąć, uchwalić): одлука, закон, "
+    "декларација, резолуција, акт;"
+    "<br/>• <b>działania wojenne i polityczne</b> (извршити – dokonać, водити – prowadzić): инвазија, "
+    "напад, реформа; рат, политика, борба, преговор;"
+    "<br/>• <b>państwa i instytucje</b> (основати – założyć): царство, колонија, република, школа, "
+    "друштво, болница; obok nich <b>grupy i organizacje</b> (формирати – utworzyć): група, влада, "
+    "заједница, организација;"
+    "<br/>• <b>prawa i status</b> (стећи – zdobyć, uzyskać): право, статус, контрола, независност; "
+    "<b>nazwy</b> (добити – otrzymać): име, облик, значење, изглед."
+    "<br/><b>Topologia.</b> Pokrewne pola leżą obok siebie: dwa neurony skutków negatywnych sąsiadują "
+    "z procesami i zmianami, pola „prawa i status” i „nazwy otrzymywane” są w sąsiednich neuronach "
+    "dolnego wiersza, a „państwa i instytucje” stykają się z „grupami i organizacjami”."
+    "<br/><b>Ograniczenia.</b> 11 klastrów uznaliśmy za niejednorodne. Są to głównie neurony "
+    "czasowników o bardzo ogólnym znaczeniu (укључивати – obejmować, чинити – stanowić, давати – dawać, "
+    "немати – nie mieć), które przyjmują dopełnienia z dowolnego pola. Rzeczowniki konkretne "
+    "(zwierzęta, jedzenie, ubrania) rzadko występują w encyklopedycznym tekście jako dopełnienie "
+    "i mają tylko kilka fraz VO, dlatego nie utworzyły osobnych klastrów, tylko trafiły do klastrów "
+    "mieszanych. Sieć grupuje więc rzeczowniki według <i>zachowania składniowego</i>: tam, gdzie "
+    "czasownik jest wybiórczy, daje to jednorodne pole znaczeniowe; tam, gdzie jest ogólny – mieszankę."
 )
-INTERPRETATION_ABC = (
-    "<b>Wnioski z porównania.</b> Wynik wyraźnie zależy od wyboru czasowników:"
-    "<br/>• <b>A i B</b> mają wspólną połowę czasowników, w tym te o największej liczbie kolokacji "
-    "(имати, донети, водити, прогласити, освојити). Dlatego ogólny układ mapy jest podobny "
-    "(korelacja odległości ok. 0,7), ale pokrywa się tylko ok. połowa najbliższych sąsiadów. "
-    "Czasowniki nieprzechodnie z wariantu B nie wnoszą informacji o dopełnieniu, a rzeczowniki "
-    "пораз i отпор mają w B zerowe wektory, bo ich jedyne czasowniki (претрпети, пружити) nie "
-    "należą do 100 najczęstszych. Trafiają więc do jednego neuronu z braku danych, a nie "
-    "z podobieństwa."
-    "<br/>• <b>C</b> (okno ±5 wyrazów zamiast relacji składniowej) daje gęstszą, ale bardziej "
-    "zaszumioną macierz. Okno łapie też podmioty i wyrazy niezwiązane z czasownikiem: np. град "
-    "dostaje 22 kolokacje z <i>имати</i> ze zdań typu „град има … становника” (miasto ma … "
-    "mieszkańców), w których jest podmiotem, a nie dopełnieniem. Mapa C najmniej przypomina "
-    "pozostałe, choć najsilniejsze pary (одлука–закон, рат–борба, територија–површина) nadal "
-    "leżą obok siebie."
-    "<br/>Najbardziej wiarygodna jest więc mapa A, w której wymiarami są czasowniki faktycznie "
-    "przechodnie, a kolokacje pochodzą z relacji czasownik–dopełnienie."
+KOHONEN_CONCLUSION = (
+    "sieć Kohonena z 50 neuronami, ucząc się bez nauczyciela na wektorach fraz VO 1000 rzeczowników, "
+    "wytworzyła 35 jednorodnych klastrów tworzących 33 pola semantyczne (m.in. sport, substancje "
+    "chemiczne, choroby i szkody, akty prawne, wojna, instytucje, prawa i status). 11 klastrów jest "
+    "mieszanych (czasowniki ogólne), a żaden neuron nie jest martwy. Kluczowe okazało się ważenie IDF, "
+    "które osłabia czasowniki łączące się ze wszystkim (имати)."
 )
 
 S["h1x"] = ParagraphStyle("h1x", parent=S["h1"])  # nagłówek spisu treści (nie trafia do spisu)
@@ -1056,7 +1273,7 @@ def build():
     doc = ReportDoc(OUTPUT, pagesize=A4, leftMargin=2 * cm, rightMargin=2 * cm,
                     topMargin=1.8 * cm, bottomMargin=1.8 * cm,
                     title="Przetwarzanie języka naturalnego – sprawozdanie",
-                    author=AUTHOR or "student", subject="Laboratoria 1–4: korpus języka serbskiego")
+                    author=AUTHOR or "student", subject="Laboratoria 1–5: język serbski")
     title_page()
     contents()
     introduction()
@@ -1064,6 +1281,7 @@ def build():
     lab2()
     lab3()
     lab4()
+    lab5()
     verification()
     conclusion()
     doc.multiBuild(story, onFirstPage=on_page, onLaterPages=on_page)

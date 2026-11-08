@@ -1,0 +1,474 @@
+jedzenie i napoje	Храна
+jedzenie i napoje	Хлеб
+jedzenie i napoje	Сир
+jedzenie i napoje	Месо
+jedzenie i napoje	Млеко
+jedzenie i napoje	Вино
+jedzenie i napoje	Пиво
+jedzenie i napoje	Кафа
+jedzenie i napoje	Чај
+jedzenie i napoje	Шећер
+jedzenie i napoje	Со
+jedzenie i napoje	Јаје
+jedzenie i napoje	Мед
+jedzenie i napoje	Поврће
+jedzenie i napoje	Кромпир
+jedzenie i napoje	Пшеница
+jedzenie i napoje	Кукуруз
+jedzenie i napoje	Пиринач
+jedzenie i napoje	Јабука
+jedzenie i napoje	Грожђе
+jedzenie i napoje	Парадајз
+jedzenie i napoje	Чоколада
+jedzenie i napoje	Српска кухиња
+jedzenie i napoje	Кување
+jedzenie i napoje	Италијанска кухиња
+jedzenie i napoje	Пица
+jedzenie i napoje	Супа
+zwierzęta	Пас
+zwierzęta	Мачка
+zwierzęta	Домаћи коњ
+zwierzęta	Козе
+zwierzęta	Свиња
+zwierzęta	Кокошка
+zwierzęta	Вук
+zwierzęta	Медведи (породица)
+zwierzęta	Лисица
+zwierzęta	Јелени
+zwierzęta	Зец
+zwierzęta	Лав
+zwierzęta	Тигар
+zwierzęta	Орао
+zwierzęta	Птице
+zwierzęta	Рибе
+zwierzęta	Змије
+zwierzęta	Пчеле
+zwierzęta	Мрави
+zwierzęta	Инсекти
+zwierzęta	Сисари
+zwierzęta	Ајкуле
+zwierzęta	Сточарство
+zwierzęta	Лов
+rośliny	Биљке
+rośliny	Дрво
+rośliny	Шума
+rośliny	Храст
+rośliny	Цвет
+rośliny	Ружа
+rośliny	Траве
+rośliny	Пољопривреда
+rośliny	Врт
+rośliny	Семе
+rośliny	Лист
+rośliny	Гљиве
+rośliny	Ратарство
+ubrania i przedmioty	Одећа
+ubrania i przedmioty	Шешир
+ubrania i przedmioty	Накит
+ubrania i przedmioty	Злато
+ubrania i przedmioty	Сребро
+ubrania i przedmioty	Намештај
+ubrania i przedmioty	Сат
+ubrania i przedmioty	Текстил
+ubrania i przedmioty	Вуна
+ubrania i przedmioty	Свила
+budynki i miasto	Кућа
+budynki i miasto	Мост
+budynki i miasto	Тврђава
+budynki i miasto	Џамија
+budynki i miasto	Архитектура
+budynki i miasto	Пут
+budynki i miasto	Улица
+budynki i miasto	Град
+budynki i miasto	Село
+budynki i miasto	Школа
+budynki i miasto	Болница
+budynki i miasto	Позориште
+budynki i miasto	Музеј
+budynki i miasto	Библиотека
+budynki i miasto	Стадион
+budynki i miasto	Лука
+transport	Аутомобил
+transport	Аутобус
+transport	Воз
+transport	Железница
+transport	Авион
+transport	Брод
+transport	Бицикл
+transport	Мотоцикл
+transport	Камион
+transport	Трамвај
+transport	Метро
+transport	Подморница
+transport	Хеликоптер
+transport	Ракета
+transport	Саобраћај
+muzyka i sztuka	Музика
+muzyka i sztuka	Гитара
+muzyka i sztuka	Клавир
+muzyka i sztuka	Виолина
+muzyka i sztuka	Бубањ
+muzyka i sztuka	Опера
+muzyka i sztuka	Песма
+muzyka i sztuka	Оркестар
+muzyka i sztuka	Рок
+muzyka i sztuka	Џез
+muzyka i sztuka	Сликарство
+muzyka i sztuka	Филм
+muzyka i sztuka	Фотографија
+muzyka i sztuka	Плес
+muzyka i sztuka	Позоришна представа
+muzyka i sztuka	Роман
+muzyka i sztuka	Поезија
+muzyka i sztuka	Књига
+muzyka i sztuka	Новине
+muzyka i sztuka	Телевизија
+muzyka i sztuka	Радио
+medycyna i ciało	Медицина
+medycyna i ciało	Болест
+medycyna i ciało	Лек
+medycyna i ciało	Срце
+medycyna i ciało	Мозак
+medycyna i ciało	Крв
+medycyna i ciało	Кост
+medycyna i ciało	Кожа
+medycyna i ciało	Око
+medycyna i ciało	Грип
+medycyna i ciało	Рак (болест)
+medycyna i ciało	Вакцина
+medycyna i ciało	Антибиотик
+medycyna i ciało	Хирургија
+medycyna i ciało	Шећерна болест
+medycyna i ciało	Пандемија ковида 19
+medycyna i ciało	Здравље
+sport	Спорт
+sport	Фудбал
+sport	Кошарка
+sport	Одбојка
+sport	Рукомет
+sport	Тенис
+sport	Ватерполо
+sport	Пливање
+sport	Атлетика
+sport	Шах
+sport	Бокс
+sport	Скијање
+sport	Светско првенство у фудбалу
+sport	Новак Ђоковић
+sport	Фудбалска репрезентација Србије
+sport	Олимпијске игре
+nauka i technika	Рачунар
+nauka i technika	Телефон
+nauka i technika	Мобилни телефон
+nauka i technika	Интернет
+nauka i technika	Софтвер
+nauka i technika	Електрична енергија
+nauka i technika	Машина
+nauka i technika	Робот
+nauka i technika	Нафта
+nauka i technika	Угаљ
+nauka i technika	Гвожђе
+nauka i technika	Бакар
+nauka i technika	Челик
+nauka i technika	Пластика
+nauka i technika	Стакло
+nauka i technika	Вода
+nauka i technika	Ватра
+nauka i technika	Светлост
+nauka i technika	Звук
+nauka i technika	Магнетизам
+nauka i technika	Хемијски елемент
+nauka i technika	Математика
+nauka i technika	Географија
+gospodarka i polityka	Новац
+gospodarka i polityka	Банка
+gospodarka i polityka	Привреда
+gospodarka i polityka	Трговина
+gospodarka i polityka	Порез
+gospodarka i polityka	Евро
+gospodarka i polityka	Фабрика
+gospodarka i polityka	Индустрија
+gospodarka i polityka	Рударство
+gospodarka i polityka	Устав
+gospodarka i polityka	Скупштина
+gospodarka i polityka	Избори
+gospodarka i polityka	Демократија
+gospodarka i polityka	Суд
+gospodarka i polityka	Полиција
+gospodarka i polityka	Уједињене нације
+gospodarka i polityka	НАТО
+gospodarka i polityka	Европска унија
+wojsko	Војска
+wojsko	Оружје
+wojsko	Пушка
+wojsko	Топ
+wojsko	Тенк
+wojsko	Ратна морнарица
+wojsko	Ратно ваздухопловство
+wojsko	Битка
+wojsko	Мач
+wojsko	Штит
+wojsko	Барут
+wojsko	Бомба
+wojsko	Стогодишњи рат
+wojsko	Наполеонови ратови
+przyroda i geografia	Река
+przyroda i geografia	Језеро
+przyroda i geografia	Море
+przyroda i geografia	Океан
+przyroda i geografia	Планина
+przyroda i geografia	Острво
+przyroda i geografia	Пустиња
+przyroda i geografia	Клима
+przyroda i geografia	Киша
+przyroda i geografia	Снег
+przyroda i geografia	Ветар
+przyroda i geografia	Земљотрес
+przyroda i geografia	Вулкан
+przyroda i geografia	Песак
+przyroda i geografia	Сунце
+rodzina i życie	Породица
+rodzina i życie	Брак
+rodzina i życie	Дете
+rodzina i życie	Мајка
+rodzina i życie	Отац
+rodzina i życie	Образовање
+rodzina i życie	Учитељ
+rodzina i życie	Запослење
+rodzina i życie	Божић
+rodzina i życie	Ускрс
+rodzina i życie	Венчање
+rodzina i życie	Игра
+rodzina i życie	Играчка
+muzyka i sztuka	Уметничка фотографија
+muzyka i sztuka	Бронза
+muzyka i sztuka	Уметност
+muzyka i sztuka	Кустос
+muzyka i sztuka	Кип слободе
+muzyka i sztuka	Фиренца
+muzyka i sztuka	Графика
+muzyka i sztuka	Естетика
+muzyka i sztuka	Колаж
+muzyka i sztuka	Коњица
+muzyka i sztuka	Улична уметност
+muzyka i sztuka	Гранит
+transport	Веслање (спорт)
+transport	Књига постања
+transport	Стабло
+transport	Пумпа
+transport	Гасна турбина
+transport	Чамац
+transport	Нова Гвинеја
+transport	Сплав
+transport	Рибарски брод
+transport	Средоземно море
+transport	Kontejnerski brod
+transport	Hvar
+sport	Санкање
+sport	Одбојка на песку
+sport	Чехословачка
+sport	Хокеј на леду
+sport	Хокеј на трави
+sport	НБА
+sport	Уметничко клизање
+sport	Други светски рат
+sport	Лопта
+sport	Међународни олимпијски комитет
+sport	Surfovanje
+sport	Голман
+jedzenie i napoje	Кикирики
+jedzenie i napoje	Камила
+jedzenie i napoje	Фосфор
+jedzenie i napoje	Водени биво
+jedzenie i napoje	Целер
+jedzenie i napoje	Тона
+jedzenie i napoje	Магнезијум
+jedzenie i napoje	Лактоза
+jedzenie i napoje	Згрушавање крви
+jedzenie i napoje	Египат
+jedzenie i napoje	Златарски сир
+jedzenie i napoje	Новорођенче
+medycyna i ciało	Oftalmologija
+medycyna i ciało	Молекул
+medycyna i ciało	Глауком
+medycyna i ciało	Мрежњача
+medycyna i ciało	Ларва
+medycyna i ciało	Боја очију
+medycyna i ciało	Латински језик
+medycyna i ciało	Епителско ткиво
+medycyna i ciało	Ћелија (биологија)
+medycyna i ciało	Живац
+medycyna i ciało	Глиста
+medycyna i ciało	Крокодили
+gospodarka i polityka	Међународни односи
+gospodarka i polityka	Javna politika
+gospodarka i polityka	Држава
+gospodarka i polityka	Бирократија
+gospodarka i polityka	Скупштина САП Косова
+gospodarka i polityka	Стара Грчка
+gospodarka i polityka	Атина
+gospodarka i polityka	Политички систем
+gospodarka i polityka	Предсједнички систем
+gospodarka i polityka	Федерација
+gospodarka i polityka	Политичка филозофија
+gospodarka i polityka	Историја
+rodzina i życie	Литургија
+rodzina i życie	Руска Империја
+rodzina i życie	Српски народни календар
+rodzina i życie	Српскословенски језик
+rodzina i życie	Хришћани
+rodzina i życie	Уједињено Краљевство
+rodzina i życie	Грегоријански календар
+rodzina i życie	Бела кућа
+rodzina i życie	Данска
+rodzina i życie	Стари завет
+rodzina i życie	Исусово васкрсење
+rodzina i życie	Јохан Себастијан Бах
+zwierzęta	Иран
+zwierzęta	Калцијум
+zwierzęta	Индијски потконтинент
+zwierzęta	Врста (биологија)
+zwierzęta	Луцерка
+zwierzęta	Крило
+zwierzęta	Желудац
+zwierzęta	Сигурност
+zwierzęta	Коринт
+zwierzęta	Википодаци
+budynki i miasto	Motorni benzin
+budynki i miasto	Ракови
+budynki i miasto	Holding
+budynki i miasto	Заједница
+budynki i miasto	Petrolej
+budynki i miasto	Ilegalna trgovina droge
+budynki i miasto	Национализација
+budynki i miasto	Бетон
+jedzenie i napoje	Алкалоид
+jedzenie i napoje	Психичка зависност изазвана психоактивним супстанцама
+jedzenie i napoje	Швајцарска
+jedzenie i napoje	Француска енциклопедија
+jedzenie i napoje	Џул
+jedzenie i napoje	Чоколадно млеко
+jedzenie i napoje	Кристифор Колумбо
+jedzenie i napoje	Наркоманија
+jedzenie i napoje	Зависност од лекова
+jedzenie i napoje	Ернан Кортес
+jedzenie i napoje	Килограм
+jedzenie i napoje	Карло V, цар Светог римског царства
+gospodarka i polityka	Француска
+gospodarka i polityka	Велики Новгород
+gospodarka i polityka	Филаделфија
+gospodarka i polityka	Венецуела
+gospodarka i polityka	Хенри I
+gospodarka i polityka	Закон (право)
+gospodarka i polityka	Света Гора
+gospodarka i polityka	Канада
+gospodarka i polityka	Устав Републике Србије
+gospodarka i polityka	Мауријско царство
+gospodarka i polityka	Владавина права
+gospodarka i polityka	Кијевска Русија
+muzyka i sztuka	Хорнобестел-Закс систем
+muzyka i sztuka	Забавна музика
+muzyka i sztuka	Simfonija
+muzyka i sztuka	Сергеј Рахмањинов
+muzyka i sztuka	Стилови у музици
+muzyka i sztuka	Удараљке
+muzyka i sztuka	Харфа
+muzyka i sztuka	Тон
+muzyka i sztuka	Класична музика
+muzyka i sztuka	Беч
+muzyka i sztuka	Импровизација (музика)
+muzyka i sztuka	Жица
+zwierzęta	Пролеће
+zwierzęta	Атлантски лосос
+zwierzęta	Слух
+zwierzęta	Перајари
+zwierzęta	Карбон (периода)
+zwierzęta	Суша
+zwierzęta	Тријас
+zwierzęta	Трудноћа
+gospodarka i polityka	Романика
+gospodarka i polityka	Сан Марино
+gospodarka i polityka	Северна Америка
+gospodarka i polityka	Мадрид
+gospodarka i polityka	Европски савет
+muzyka i sztuka	Контаминација
+muzyka i sztuka	Li de Forest
+muzyka i sztuka	Батерија
+muzyka i sztuka	Nejonizujuće zračenje
+muzyka i sztuka	Povrtarstvo
+muzyka i sztuka	Литијум
+muzyka i sztuka	Vozilo
+muzyka i sztuka	Прибор за јело
+muzyka i sztuka	Kaučuk
+muzyka i sztuka	Obrada metala
+muzyka i sztuka	Мастило
+muzyka i sztuka	Маслина
+rośliny	Скривеносеменице
+rośliny	Кулинарство
+rośliny	Перм (периода)
+rośliny	Бошњаци
+rośliny	Кафечајница
+rośliny	Санџак
+rośliny	Силур
+rośliny	Јура
+gospodarka i polityka	Масакр у Сребреници
+gospodarka i polityka	Анвар ел Садат
+gospodarka i polityka	Етничко чишћење
+gospodarka i polityka	Драгољуб Ојданић
+gospodarka i polityka	Логор Мањача
+gospodarka i polityka	Високи комесаријат Уједињених нација за избеглице
+gospodarka i polityka	Ели Визел
+gospodarka i polityka	Џорџ В. Буш
+gospodarka i polityka	Генерални секретар Уједињених нација
+gospodarka i polityka	Мартин Лутер Кинг
+gospodarka i polityka	Бон
+gospodarka i polityka	Курт Валдхајм
+sport	Фудбалска репрезентација Аустрије
+sport	Дарам
+sport	Фудбалска репрезентација Марока
+sport	Фудбалска репрезентација Чешке
+sport	Сједињене Америчке Државе
+sport	Фудбалска репрезентација Југославије
+sport	Фудбалска репрезентација Шведске
+sport	Њемачка
+sport	Фудбалска репрезентација Пољске
+przyroda i geografia	Хемија
+przyroda i geografia	Планктон
+przyroda i geografia	Циклон
+przyroda i geografia	Морски сисари
+przyroda i geografia	Боја
+przyroda i geografia	Тасманово море
+przyroda i geografia	Континентални праг
+przyroda i geografia	Атлантски океан
+przyroda i geografia	Водена пара
+przyroda i geografia	Јапанско море
+przyroda i geografia	Манастир
+przyroda i geografia	Амундсеново море
+budynki i miasto	Животиње
+budynki i miasto	Месопотамија
+budynki i miasto	Занат
+budynki i miasto	Религија
+budynki i miasto	Измир
+budynki i miasto	Предграђе
+budynki i miasto	Вавилон
+budynki i miasto	Еуфрат
+budynki i miasto	Вавилонска кула
+budynki i miasto	Свето римско царство
+budynki i miasto	Монголија
+budynki i miasto	Северна Македонија
+nauka i technika	Теорија релативности
+nauka i technika	Питагорина теорема
+nauka i technika	Теорија друштвеног избора
+nauka i technika	Писање
+nauka i technika	Algebarska teorija brojeva
+nauka i technika	Функција (математика)
+nauka i technika	Цео број
+nauka i technika	Векторски простор
+nauka i technika	Теорија комплексности
+nauka i technika	Координатни систем
+nauka i technika	Карл Фридрих Гаус
+nauka i technika	Теорија израчунљивости
+ubrania i przedmioty	Прометијум
+ubrania i przedmioty	Тантал
+ubrania i przedmioty	Папир
+ubrania i przedmioty	Радон

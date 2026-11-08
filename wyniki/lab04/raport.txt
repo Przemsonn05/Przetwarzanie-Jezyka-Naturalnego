@@ -2,176 +2,433 @@
 ==========================================================================================
 ANALIZA KORPUSU
 ==========================================================================================
-Zdania: 7949, tokeny: 178663
-Różne czasowniki: 1679, różne rzeczowniki: 5203
-Relacje czasownik -> dopełnienie rzeczownikowe: 3890
-Odrzucone jako nieprzechodnie (dopełnienie w < 20% wystąpień): постати (13%), постојати (6%), вратити (18%)
+Pliki: dane\korpus_sparsowany.tsv.gz, dane\korpus_sparsowany_semantyka.tsv.gz
+Zdania: 74066, tokeny: 1526987
+Różne czasowniki: 6156
+Frazy VO (czasownik -> dopełnienie rzeczownikowe): 37243, różnych par: 26852
+Odrzucone (posiłkowe/modalne lub dopełnienie w < 20% wystąpień): постати (12%), називати (17%), постојати (5%), разликовати (14%), моћи (3%)
 
 ==========================================================================================
 WYBRANE CZASOWNIKI PRZECHODNIE (100)
 ==========================================================================================
- Lp | czasownik      | obj-rzecz. | obj-wszyst. | wystąpienia | przechodniość
-  1 | имати          |        364 |         337 |         393 |         0.858
-  2 | чинити         |        100 |         115 |         142 |         0.810
-  3 | представљати   |         99 |          94 |          99 |         0.949
-  4 | добити         |         79 |          78 |          98 |         0.796
-  5 | освојити       |         58 |          83 |          95 |         0.874
-  6 | обухватати     |         52 |          46 |          46 |         1.000
-  7 | донети         |         47 |          47 |          51 |         0.922
-  8 | послати        |         41 |          46 |          57 |         0.807
-  9 | дати           |         37 |          45 |          51 |         0.882
- 10 | прихватити     |         31 |          36 |          41 |         0.878
- 11 | заузимати      |         30 |          33 |          43 |         0.767
- 12 | признати       |         28 |          39 |          42 |         0.929
- 13 | водити         |         27 |          32 |          49 |         0.653
- 14 | преузети       |         27 |          27 |          30 |         0.900
- 15 | прогласити     |         27 |          32 |          44 |         0.727
- 16 | наставити      |         26 |          24 |          47 |         0.511
- 17 | оставити       |         26 |          32 |          42 |         0.762
- 18 | повратити      |         24 |          22 |          23 |         0.957
- 19 | заузети        |         24 |          41 |          57 |         0.719
- 20 | стећи          |         23 |          24 |          27 |         0.889
- 21 | формирати      |         23 |          25 |          38 |         0.658
- 22 | извршити       |         23 |          24 |          25 |         0.960
- 23 | носити         |         22 |          23 |          25 |         0.920
- 24 | користити      |         22 |          23 |          43 |         0.535
- 25 | доносити       |         22 |          14 |          17 |         0.824
- 26 | основати       |         21 |          31 |          34 |         0.912
- 27 | изгубити       |         21 |          20 |          25 |         0.800
- 28 | подићи         |         21 |          23 |          28 |         0.821
- 29 | вршити         |         21 |          21 |          24 |         0.875
- 30 | давати         |         20 |          23 |          21 |         1.000
-  ... (pełna lista w czasowniki_przechodnie.csv)
+ Lp | czasownik        | frazy VO | wystąpienia | przechodniość
+  1 | имати            |     4450 |        4630 |         0.895
+  2 | укључивати       |      966 |         545 |         0.910
+  3 | користити        |      834 |        2446 |         0.336
+  4 | представљати     |      757 |         818 |         0.907
+  5 | садржати         |      700 |         687 |         0.854
+  6 | чинити           |      618 |         936 |         0.743
+  7 | обухватати       |      562 |         422 |         0.889
+  8 | добити           |      427 |         611 |         0.696
+  9 | дати             |      334 |         434 |         0.776
+ 10 | немати           |      316 |         454 |         0.676
+ 11 | освојити         |      282 |         406 |         0.847
+ 12 | носити           |      254 |         329 |         0.784
+ 13 | давати           |      246 |         285 |         0.818
+ 14 | формирати        |      224 |         385 |         0.571
+ 15 | добијати         |      207 |         421 |         0.444
+ 16 | омогућавати      |      198 |         298 |         0.594
+ 17 | захтевати        |      198 |         221 |         0.778
+ 18 | донети           |      193 |         226 |         0.854
+ 19 | изазвати         |      193 |         179 |         0.899
+ 20 | стварати         |      192 |         324 |         0.599
+ 21 | пружати          |      178 |         229 |         0.747
+ 22 | створити         |      168 |         221 |         0.796
+ 23 | изазивати        |      168 |         151 |         0.881
+ 24 | развити          |      163 |         412 |         0.430
+ 25 | водити           |      159 |         398 |         0.445
+ 26 | значити          |      158 |         399 |         0.353
+ 27 | означавати       |      146 |         217 |         0.618
+ 28 | узроковати       |      143 |         158 |         0.816
+ 29 | поседовати       |      135 |         162 |         0.809
+ 30 | вршити           |      133 |         248 |         0.512
+ 31 | омогућити        |      133 |         203 |         0.576
+ 32 | доносити         |      131 |         144 |         0.799
+ 33 | основати         |      127 |         187 |         0.909
+ 34 | направити        |      126 |         193 |         0.731
+ 35 | стећи            |      118 |         122 |         0.943
+ 36 | тражити          |      115 |         166 |         0.645
+ 37 | остварити        |      115 |         168 |         0.708
+ 38 | преузети         |      115 |         149 |         0.832
+ 39 | производити      |      113 |         256 |         0.473
+ 40 | одређивати       |      111 |         174 |         0.546
+ 41 | заузимати        |      110 |         149 |         0.799
+ 42 | извршити         |      110 |         129 |         0.845
+ 43 | изгубити         |      110 |         204 |         0.515
+ 44 | пратити          |      109 |         186 |         0.699
+ 45 | показивати       |      109 |         251 |         0.410
+ 46 | подразумевати    |      108 |         133 |         0.639
+ 47 | играти           |      106 |         362 |         0.301
+ 48 | повећавати       |      105 |         216 |         0.435
+ 49 | постићи          |      104 |         171 |         0.678
+ 50 | одржавати        |      102 |         281 |         0.356
+ 51 | обављати         |      101 |         176 |         0.608
+ 52 | подржавати       |      100 |         115 |         0.922
+ 53 | произвести       |       99 |         123 |         0.764
+ 54 | мењати           |       99 |         250 |         0.372
+ 55 | увести           |       98 |         136 |         0.801
+ 56 | обезбеђивати     |       97 |          87 |         0.828
+ 57 | повећати         |       93 |         152 |         0.513
+ 58 | смањивати        |       92 |         171 |         0.462
+ 59 | дефинисати       |       92 |         197 |         0.457
+ 60 | прихватити       |       90 |         134 |         0.791
+ 61 | повезивати       |       90 |         173 |         0.647
+ 62 | успоставити      |       89 |         119 |         0.807
+ 63 | организовати     |       89 |         152 |         0.651
+ 64 | заузети          |       87 |         150 |         0.827
+ 65 | послати          |       86 |         118 |         0.839
+ 66 | нудити           |       84 |          84 |         0.881
+ 67 | открити          |       83 |         190 |         0.500
+ 68 | покривати        |       82 |          93 |         0.828
+ 69 | доживети         |       82 |          98 |         0.827
+ 70 | обезбедити       |       82 |          92 |         0.815
+ 71 | делити           |       81 |         318 |         0.280
+ 72 | задржати         |       81 |         143 |         0.601
+ 73 | правити          |       81 |         178 |         0.427
+ 74 | држати           |       80 |         193 |         0.497
+ 75 | покренути        |       80 |         103 |         0.786
+ 76 | одиграти         |       79 |         155 |         0.529
+ 77 | поставити        |       78 |         134 |         0.694
+ 78 | градити          |       78 |         170 |         0.506
+ 79 | контролисати     |       78 |          95 |         0.779
+ 80 | видети           |       78 |         280 |         0.321
+ 81 | усвојити         |       77 |          97 |         0.856
+ 82 | објавити         |       76 |         121 |         0.711
+ 83 | написати         |       75 |         169 |         0.645
+ 84 | оставити         |       74 |         125 |         0.688
+ 85 | описивати        |       74 |         134 |         0.537
+ 86 | спречавати       |       74 |          84 |         0.786
+ 87 | штитити          |       73 |          89 |         0.753
+ 88 | започети         |       72 |         144 |         0.507
+ 89 | наћи             |       72 |         274 |         0.255
+ 90 | пружити          |       71 |          78 |         0.846
+ 91 | регулисати       |       71 |          72 |         0.792
+ 92 | одражавати       |       71 |          88 |         0.693
+ 93 | преносити        |       71 |         182 |         0.401
+ 94 | следити          |       70 |         170 |         0.435
+ 95 | износити         |       69 |         267 |         0.337
+ 96 | напустити        |       69 |         112 |         0.884
+ 97 | описати          |       69 |         113 |         0.743
+ 98 | приказивати      |       68 |          95 |         0.674
+ 99 | проширити        |       67 |         203 |         0.355
+100 | губити           |       67 |         103 |         0.660
 
 ==========================================================================================
-WYBRANE RZECZOWNIKI (50)
+WYBRANE RZECZOWNIKI (1000)
 ==========================================================================================
- Lp | rzeczownik     | jako dopełnienie | wystąpienia
-  1 | власт          |               43 |         340
-  2 | део            |               35 |         453
-  3 | име            |               34 |         172
-  4 | град           |               34 |         686
-  5 | држава         |               27 |         459
-  6 | титула         |               26 |          84
-  7 | одлука         |               26 |         111
-  8 | право          |               23 |          96
-  9 | медаља         |               23 |          36
- 10 | независност    |               21 |          84
- 11 | становник      |               21 |         136
- 12 | територија     |               18 |         236
- 13 | статус         |               18 |          44
- 14 | назив          |               17 |          98
- 15 | улога          |               17 |          31
- 16 | већина         |               16 |          78
- 17 | место          |               16 |         126
- 18 | област         |               15 |         206
- 19 | победа         |               15 |          52
- 20 | утицај         |               15 |          68
- 21 | земља          |               14 |         286
- 22 | аутономија     |               14 |          36
- 23 | војска         |               13 |         240
- 24 | традиција      |               13 |          42
- 25 | подручје       |               13 |         196
- 26 | подршка        |               12 |          34
- 27 | повеља         |               12 |          54
- 28 | помоћ          |               11 |          76
- 29 | функција       |               11 |          22
- 30 | манастир       |               11 |          78
- 31 | рат            |               10 |         385
- 32 | живот          |               10 |         105
- 33 | мир            |               10 |          60
- 34 | црква          |               10 |         190
- 35 | борба          |                9 |         101
- 36 | закон          |                9 |          89
- 37 | успех          |                9 |          22
- 38 | резултат       |                9 |          45
- 39 | син            |                9 |         150
- 40 | положај        |                9 |          63
- 41 | република      |                9 |         310
- 42 | површина       |                9 |          57
- 43 | скупштина      |                9 |         137
- 44 | политика       |                9 |          62
- 45 | култура        |                8 |         117
- 46 | пораз          |                8 |          38
- 47 | отпор          |                8 |          43
- 48 | граница        |                8 |         120
- 49 | преговор       |                8 |          49
- 50 | услов          |                8 |          31
+Liczba fraz VO na rzeczownik: od 4 do 280, mediana 8
+Liczba różnych czasowników na rzeczownik: mediana 5, średnio 6.9
+Wypełnienie macierzy 1000 × 100: 6.9% niezerowych składowych
+Pierwsze 40: улога (280), део (189), право (138), број (138), утицај (136), име (133), систем (121), место (114), облик (106), функција (92), врста (92), способност (91), површина (86), титула (83), власт (76), назив (73), количина (71), група (69), могућност (66), одлука (66), вредност (65), медаља (65), структура (63), држава (61), подршка (61), однос (60), веза (58), значај (57), већина (56), статус (56), време (55), територија (54), град (54), предност (54), снага (52), утакмица (52), гол (52), низ (52), моћ (52), закон (51)
 
 ==========================================================================================
-WARIANT A: 100 czasowników przechodnich, kolokacje czasownik–dopełnienie
+SIEĆ KOHONENA (50 neuronów, siatka 5 × 10)
 ==========================================================================================
-Zbiór treningowy: 50 wektorów × 100 składowych
-Suma kolokacji: 762, niezerowe składowe: 338 (6.8% macierzy)
-Sieć 10×10, 20000 iteracji: błąd kwantyzacji = 0.3361, błąd topograficzny = 0.00%
-Zajęte neurony: 41 / 100
-Neurony z więcej niż jednym rzeczownikiem (najbliżej siebie w przestrzeni 100D):
-  neuron (0, 9): део, територија
-  neuron (9, 6): одлука, закон
-  neuron (9, 2): независност, република
-  neuron (0, 3): становник, утицај
-  neuron (0, 0): статус, син
-  neuron (5, 9): већина, граница
-  neuron (0, 6): место, положај
-  neuron (2, 7): област, подручје
-  neuron (9, 9): рат, борба
+Uczenie: 40 epok × 1000 wektorów = 40000 kroków, współczynnik uczenia 0,5 → 0,01, promień sąsiedztwa 5.0 → 0,5
+Błąd kwantyzacji: 0.8144, błąd topograficzny: 19.20%
 
 ==========================================================================================
-WARIANT B: 100 najczęstszych czasowników, kolokacje czasownik–dopełnienie
+ZAWARTOŚĆ NEURONÓW (KLASTRÓW)
 ==========================================================================================
-Zbiór treningowy: 50 wektorów × 100 składowych
-Suma kolokacji: 617, niezerowe składowe: 263 (5.3% macierzy)
-Rzeczowniki bez żadnej kolokacji z tymi czasownikami: пораз, отпор
-Sieć 10×10, 20000 iteracji: błąd kwantyzacji = 0.2764, błąd topograficzny = 0.00%
-Zajęte neurony: 43 / 100
-Neurony z więcej niż jednym rzeczownikiem (najbliżej siebie w przestrzeni 100D):
-  neuron (9, 9): део, територија
-  neuron (0, 3): независност, република
-  neuron (9, 6): већина, граница
-  neuron (9, 0): утицај, успех
-  neuron (1, 9): рат, борба
-  neuron (0, 9): политика, преговор
-  neuron (2, 7): пораз, отпор
+
+Neuron #0 (wiersz 0, kolumna 0): 35 rzeczowników, spójność 0.47
+  czasowniki o największych wagach: носити (0.60), користити (0.13), имати (0.09), добити (0.08)
+  pole semantyczne: przedmioty noszone: broń, oznaki, rękawice (klaster niejednorodny)
+  назив, опрема, корен, тежина, топ, оружје, ознака, крв, кост, застава, јаје, лист, сема, рукавица, штит, цвет, бактерија, порука, оклоп, маска, наставак, капица, штитник, припадник, наелектрисање, шешир, трака, појас, одлика, шлем, надимак, младунца, кацига, вест, обиље
+
+Neuron #1 (wiersz 0, kolumna 1): 6 rzeczowników, spójność 0.22
+  czasowniki o największych wagach: носити (0.25), пружати (0.15), дефинисати (0.09), користити (0.09)
+  број, храна, играч, богатство, воља, терет
+
+Neuron #2 (wiersz 0, kolumna 2): 33 rzeczowników, spójność 0.37
+  czasowniki o największych wagach: пружати (0.42), пружити (0.16), имати (0.07), представљати (0.07)
+  pole semantyczne: pomoc, wsparcie, ochrona
+  могућност, подршка, заштита, енергија, помоћ, извор, отпор, доказ, услуга, вид, мера, корист, спектар, поглед, уточиште, стабилност, дом, сигурност, месо, пратња, темељ, цена, калорија, евиденција, длак, осигурање, изолација, приказ, снабдевање, разумевање, исход, напетост, задовољство
+
+Neuron #3 (wiersz 0, kolumna 3): 11 rzeczowników, spójność 0.57
+  czasowniki o największych wagach: доживети (0.29), пружати (0.15), изазвати (0.13), донети (0.10)
+  pole semantyczne: etapy dziejów: rozkwit i upadek
+  пораз, пад, револуција, година, напредак, процват, врхунац, адаптација, разарање, успон, издање
+
+Neuron #4 (wiersz 0, kolumna 4): 24 rzeczowników, spójność 0.40
+  czasowniki o największych wagach: изазвати (0.41), узроковати (0.21), смањивати (0.14), изазивати (0.12)
+  pole semantyczne: skutki negatywne: choroby, szkody, straty
+  промена, болест, потреба, губитак, потешкоћа, случај, повлачење, сукоб, загађење, казна, депресија, окружење, жртва, падавина, штета, побољшање, грозница, осећање, нестабилност, незапосленост, контроверза, глад, шум, узимање
+
+Neuron #5 (wiersz 0, kolumna 5): 25 rzeczowników, spójność 0.51
+  czasowniki o największych wagach: изазивати (0.41), изазвати (0.28), узроковати (0.25), показивати (0.07)
+  pole semantyczne: skutki negatywne: choroby, szkody, straty
+  проблем, ефекат, реакција, осећај, оштећење, повећање, поремећај, смрт, струја, бол, учинак, повреда, зависност, таласа, незадовољство, криза, ситуација, забринутост, повраћање, померање, пожар, радост, тешкоћа, стрес, зеница
+
+Neuron #6 (wiersz 0, kolumna 6): 17 rzeczowników, spójność 0.30
+  czasowniki o największych wagach: узроковати (0.24), изазивати (0.16), омогућити (0.16), омогућавати (0.16)
+  pole semantyczne: procesy i zmiany
+  употреба, развој, кретање, стварање, смањење, појава, покрета, формирање, продукција, пораст, канцер, инфекција, милион, комплекс, уклањање, транспорт, подизање
+
+Neuron #7 (wiersz 0, kolumna 7): 33 rzeczowników, spójność 0.24
+  czasowniki o największych wagach: омогућити (0.24), омогућавати (0.19), укључивати (0.14), обухватати (0.11)
+  pole semantyczne: czynności i działania
+  примена, рад, приступ, корак, коришћење, истраживање, класификација, ширење, пролаз, увид, увођење, превоз, додавање, трговина, планирање, управљање, конструкција, одржавање, постизање, пољопривреда, опис, мерење, точка, трка, учење, извођење, проучавање, завршетак, израда, вештина, освајање, узгој, боравак
+
+Neuron #8 (wiersz 0, kolumna 8): 27 rzeczowników, spójność 0.29
+  czasowniki o największych wagach: извршити (0.27), вршити (0.15), обављати (0.10), започети (0.10)
+  pole semantyczne: działania wykonywane: ataki, reformy, służba
+  утицај, функција, процес, инвазија, задатак, напад, дужност, притисак, реформа, служба, подела, обрада, анализа, инструкција, геноцид, судија, крунисање, трансформација, лечење, изградња, поход, злочин, ревизија, блокада, припрема, испитивање, бомбардовање
+
+Neuron #9 (wiersz 0, kolumna 9): 27 rzeczowników, spójność 0.35
+  czasowniki o największych wagach: водити (0.42), обављати (0.11), покренути (0.08), извршити (0.08)
+  pole semantyczne: wojna, polityka, walka (prowadzić)
+  порекло, посао, политика, живот, рат, реч, војска, слобода, операција, борба, брига, преговор, предузеће, поријекло, једнакост, дан, оркестар, деловање, кампања, народ, свештеник, акција, рачун, импулс, репрезентација, флота, ензим
+
+Neuron #10 (wiersz 1, kolumna 0): 3 rzeczowników, spójność 0.38
+  czasowniki o największych wagach: носити (0.25), користити (0.24), дефинисати (0.11), имати (0.08)
+  дете, светлост, батерија
+
+Neuron #11 (wiersz 1, kolumna 1): 24 rzeczowników, spójność 0.31
+  czasowniki o największych wagach: дефинисати (0.29), развити (0.14), користити (0.13), усвојити (0.09)
+  pole semantyczne: teorie i systemy pojęć
+  клима, језик, теорија, музика, концепт, календар, појам, принцип, стратегија, позориште, специфичност, станица, машина, доба, умјетност, класа, писање, тактика, геометрија, владавина, доктрина, уметник, навик, ера
+
+Neuron #12 (wiersz 1, kolumna 2): 19 rzeczowników, spójność 0.27
+  czasowniki o największych wagach: прихватити (0.20), преузети (0.11), пружати (0.09), усвојити (0.07)
+  pole semantyczne: władza, odpowiedzialność, propozycje
+  власт, услов, идеја, одговорност, предлог, вођство, обавеза, мир, евро, понуда, учешће, чињеница, поредак, дисциплина, примат, хришћанство, савезник, спој, доминација
+
+Neuron #13 (wiersz 1, kolumna 3): 19 rzeczowników, spójność 0.27
+  czasowniki o największych wagach: донети (0.20), доносити (0.17), остварити (0.13), освојити (0.11)
+  pole semantyczne: decyzje i akty prawne
+  одлука, закон, победа, култура, циљ, пласман, декларација, резолуција, побједа, срећа, остатка, акт, дар, познавање, посланик, орган, профит, лоза, ловина
+
+Neuron #14 (wiersz 1, kolumna 4): 9 rzeczowników, spójność 0.35
+  czasowniki o największych wagach: постићи (0.17), изазвати (0.13), показивати (0.12), донети (0.11)
+  pole semantyczne: osiągnięcia: gole, sukcesy
+  гол, успех, погодак, успеха, успјех, васкрсење, жеља, проводљивост, несигурност
+
+Neuron #15 (wiersz 1, kolumna 5): 17 rzeczowników, spójność 0.37
+  czasowniki o największych wagach: показивати (0.28), изазивати (0.18), повећавати (0.12), узроковати (0.10)
+  pole semantyczne: cechy i przejawy zachowania
+  степен, ефект, варијација, сличност, симптом, понашање, интересовање, континуитет, утицаја, ширина, дубина, разноликост, круг, феномен, растворљивост, склоност, расположење
+
+Neuron #16 (wiersz 1, kolumna 6): 7 rzeczowników, spójność 0.54
+  czasowniki o największych wagach: спречавати (0.19), укључивати (0.14), обухватати (0.12), имати (0.09)
+  раст, повратак, мрља, клизање, рефлексија, дуга, режим
+
+Neuron #17 (wiersz 1, kolumna 7): 35 rzeczowników, spójność 0.29
+  czasowniki o największych wagach: укључивати (0.26), обухватати (0.24), значити (0.16), имати (0.10)
+  pole semantyczne: mieszany: przyroda i różne obiekty (klaster niejednorodny)
+  животиња, почетак, реп, аспект, објект, море, долина, пракса, представник, организам, лек, кукуруз, скок, уље, присуство, плоча, уређење, обао, филм, зачин, поврћа, потрошња, бацање, воћа, лишће, исхрана, терапија, стваралаштво, житарица, трајање, кување, јело, трчање, надметање, лица
+
+Neuron #18 (wiersz 1, kolumna 8): 12 rzeczowników, spójność 0.21
+  czasowniki o największych wagach: обухватати (0.16), организовати (0.15), укључивати (0.15), вршити (0.11)
+  pole semantyczne: mieszany: działalność i wydarzenia (klaster niejednorodny)
+  догађај, биљак, размена, делатност, жена, дистрибуција, путовање, каријера, убиство, краљ, коњаник, лов
+
+Neuron #19 (wiersz 1, kolumna 9): 10 rzeczowników, spójność 0.39
+  czasowniki o największych wagach: основати (0.23), организовати (0.22), водити (0.14), покренути (0.10)
+  pole semantyczne: wydarzenia organizowane: gry, wystawy, referenda
+  игра, суд, такмичење, покрет, бог, изложба, одбрана, референдум, протест, пројект
+
+Neuron #20 (wiersz 2, kolumna 0): 34 rzeczowników, spójność 0.28
+  czasowniki o największych wagach: користити (0.42), означавати (0.11), представљати (0.08), обухватати (0.08)
+  pole semantyczne: metody, techniki, narzędzia
+  метод, техника, термин, мотор, симбол, дрво, технологија, мрава, рука, израз, нога, наука, кола, медиј, осовина, циклус, ударац, штап, улица, нафта, пумпа, вук, материјала, ватра, мач, пак, пиће, коњ, знак, предња, претпоставка, камен, валута, течност
+
+Neuron #21 (wiersz 2, kolumna 1): 14 rzeczowników, spójność 0.20
+  czasowniki o największych wagach: користити (0.21), развити (0.12), увести (0.08), укључивати (0.08)
+  pole semantyczne: systemy, programy, modele
+  систем, програм, инструмент, стил, верзија, бојати, брод, образац, тема, модел, тенк, процедура, играча, цивилизација
+
+Neuron #22 (wiersz 2, kolumna 2): 23 rzeczowników, spójność 0.35
+  czasowniki o największych wagach: написати (0.28), објавити (0.12), освојити (0.10), користити (0.07)
+  pole semantyczne: teksty i dzieła
+  део, правило, историја, књига, писмо, извештај, опера, серија, метал, дело, напор, роман, концерт, детаљ, сет, песма, чланак, изасланик, свет, рецепта, прича, текст, фраза
+
+Neuron #23 (wiersz 2, kolumna 3): 26 rzeczowników, spójność 0.46
+  czasowniki o największych wagach: освојити (0.43), доносити (0.07), написати (0.07), заузети (0.06)
+  pole semantyczne: trofea i zawody sportowe
+  титула, медаља, град, награда, првенство, пут, област, турнир, крај, бод, тржиште, злато, лига, куп, сат, мастерс, гренд, риба, провинција, поен, гем, пете, слем, бар, регија, турнира
+
+Neuron #24 (wiersz 2, kolumna 4): 5 rzeczowników, spójność 0.42
+  czasowniki o największych wagach: освојити (0.18), повећавати (0.12), држати (0.12), имати (0.08)
+  лопта, круна, монопол, час, канџа
+
+Neuron #25 (wiersz 2, kolumna 5): 24 rzeczowników, spójność 0.41
+  czasowniki o największych wagach: повећавати (0.34), повећати (0.21), смањивати (0.14), имати (0.12)
+  pole semantyczne: wielkości, które rosną i maleją
+  способност, брзина, производња, граница, ризик, дужина, активност, опасност, температура, стопа, шанса, чврстоћа, удео, отпорност, ефикасност, плодност, потражња, издржљивост, калибар, индекс, продуктивност, вероватност, нагиб, апсорпција
+
+Neuron #26 (wiersz 2, kolumna 6): 10 rzeczowników, spójność 0.47
+  czasowniki o największych wagach: износити (0.21), повећавати (0.12), имати (0.12), поставити (0.09)
+  pole semantyczne: jednostki miary i liczebność
+  становник, тона, сило, деца, долар, резерва, хектар, бруто, метар, покрајина
+
+Neuron #27 (wiersz 2, kolumna 7): 22 rzeczowników, spójność 0.29
+  czasowniki o największych wagach: поставити (0.27), представљати (0.12), укључивати (0.11), имати (0.10)
+  pole semantyczne: mieszany: ludzie, instytucje, normy (klaster niejednorodny)
+  човек, син, стандард, институција, уметност, потенцијал, сцена, питање, ограничење, оквир, особа, локација, механизам, интерес, рекорд, брато, темља, женка, блок, законитост, уједињење, сестра
+
+Neuron #28 (wiersz 2, kolumna 8): 7 rzeczowników, spójność 0.29
+  czasowniki o największych wagach: основати (0.19), успоставити (0.14), представљати (0.11), поставити (0.09)
+  pole semantyczne: porozumienia i związki
+  породица, обичај, контакт, унија, споразум, суверенитет, сарадња
+
+Neuron #29 (wiersz 2, kolumna 9): 33 rzeczowników, spójność 0.44
+  czasowniki o największych wagach: основати (0.55), успоставити (0.10), створити (0.08), чинити (0.08)
+  pole semantyczne: państwa i instytucje zakładane
+  царство, члан, насеље, црква, колонија, индустрија, школа, скупштина, република, друштво, клуб, савез, удружење, смер, болница, фестивал, библиотека, лука, краљевство, сила, манастир, федерација, странка, агенција, комитет, универзитет, династија, епископија, асоцијација, чопор, престоница, имање, округа
+
+Neuron #30 (wiersz 3, kolumna 0): 14 rzeczowników, spójność 0.36
+  czasowniki o największych wagach: садржати (0.34), користити (0.29), производити (0.09), имати (0.08)
+  pole semantyczne: materiały i substancje wytwarzane
+  материјал, ресурс, супстанац, гас, фреквенција, лук, барут, кућа, парадајз, чоколада, једар, мотив, смеша, термина
+
+Neuron #31 (wiersz 3, kolumna 1): 19 rzeczowników, spójność 0.17
+  czasowniki o największych wagach: садржати (0.22), користити (0.13), производити (0.08), имати (0.08)
+  pole semantyczne: mieszany: rodzaje i sposoby (klaster niejednorodny)
+  врста, низ, начин, пар, тело, вино, топлота, тип, мноштво, пример, фока, мелодија, концентрација, глав, уређај, слоја, лик, списак, род
+
+Neuron #32 (wiersz 3, kolumna 2): 18 rzeczowników, spójność 0.17
+  czasowniki o największych wagach: давати (0.13), оставити (0.12), напустити (0.11), дати (0.11)
+  pole semantyczne: mieszany: dźwięki, obrazy, ślady (klaster niejednorodny)
+  звук, слика, траг, последица, острво, план, сигнал, терен, мишљење, правац, ток, мисија, пиво, природ, вера, инвестиција, част, запис
+
+Neuron #33 (wiersz 3, kolumna 3): 10 rzeczowników, spójność 0.36
+  czasowniki o największych wagach: заузети (0.16), освојити (0.16), добити (0.15), добијати (0.10)
+  pole semantyczne: miejsca i pozycje zajmowane
+  место, земља, позиција, став, глас, важност, регион, тврђава, поседа, курс
+
+Neuron #34 (wiersz 3, kolumna 4): 10 rzeczowników, spójność 0.23
+  czasowniki o największych wagach: стећи (0.14), проширити (0.13), поседовати (0.12), добити (0.10)
+  pole semantyczne: role i terytoria zdobywane
+  улога, територија, утакмица, моћ, положај, меч, опсег, фокус, обим, ван
+
+Neuron #35 (wiersz 3, kolumna 5): 25 rzeczowników, spójność 0.34
+  czasowniki o największych wagach: поседовати (0.36), имати (0.14), повећати (0.09), немати (0.08)
+  pole semantyczne: właściwości i cechy
+  снага, својство, особина, капацитет, домет, дејство, страна, надлежност, квалитета, инфраструктура, текстура, отров, стотина, факултет, комуникација, колекција, амбиција, јачин, стабло, тежња, молекула, стадион, танка, интензитет, самопоуздање
+
+Neuron #36 (wiersz 3, kolumna 6): 9 rzeczowników, spójność 0.15
+  czasowniki o największych wagach: имати (0.21), немати (0.16), представљати (0.15), поседовати (0.11)
+  pole semantyczne: właściwości i cechy
+  вредност, однос, тенденција, карактеристика, средство, садржај, густина, војник, намена
+
+Neuron #37 (wiersz 3, kolumna 7): 26 rzeczowników, spójność 0.27
+  czasowniki o największych wagach: представљати (0.35), имати (0.14), стварати (0.10), чинити (0.08)
+  pole semantyczne: mieszany: wielkości i kategorie (klaster niejednorodny)
+  величина, скуп, категорија, предмет, спорт, отвор, претња, фактор, грађевина, галерија, срце, средина, авион, преференција, чин, пројекат, наслеђе, јединство, кратак, власништво, скулптура, прекретница, уживање, нација, макс, стадијум
+
+Neuron #38 (wiersz 3, kolumna 8): 9 rzeczowników, spójność 0.24
+  czasowniki o największych wagach: чинити (0.24), представљати (0.21), имати (0.11), стварати (0.07)
+  pole semantyczne: mieszany: różnice i podziały (klaster niejednorodny)
+  разлика, линија, избор, целина, кухиње, изузетак, продаја, врт, мањина
+
+Neuron #39 (wiersz 3, kolumna 9): 10 rzeczowników, spójność 0.39
+  czasowniki o największych wagach: основати (0.27), формирати (0.25), чинити (0.17), представљати (0.12)
+  pole semantyczne: grupy społeczne i organizacje
+  група, држава, веза, традиција, влада, заједница, центар, организација, савет, коњица
+
+Neuron #40 (wiersz 4, kolumna 0): 38 rzeczowników, spójność 0.52
+  czasowniki o największych wagach: садржати (0.64), имати (0.10), користити (0.10), чинити (0.09)
+  pole semantyczne: substancje i składniki chemiczne
+  материја, киселина, бакар, литијум, протеина, кисеоник, проценат, маст, састојка, шећер, комбинација, седиште, језгро, гвожђе, калцијум, честица, рецепт, примес, збирак, минерала, мешавина, одредба, масноћа, целулоз, угљеник, соба, норма, вектор, антител, аром, азот, збирка, намирница, алкохол, сумпор, килограм, додатак, постотак
+
+Neuron #41 (wiersz 4, kolumna 1): 12 rzeczowników, spójność 0.31
+  czasowniki o największych wagach: садржати (0.36), дати (0.15), давати (0.15), имати (0.09)
+  pole semantyczne: substancje i składniki chemiczne (klaster niejednorodny)
+  количина, вода, ниво, елемент, ћелија, информација, податак, пигмент, млеко, ањон, фосфор, спречавање
+
+Neuron #42 (wiersz 4, kolumna 2): 35 rzeczowników, spójność 0.32
+  czasowniki o największych wagach: дати (0.30), давати (0.29), добити (0.11), имати (0.09)
+  pole semantyczne: korzyści i cechy nadawane
+  предност, боја, резултат, простор, укус, производ, допринос, дефиниција, прилика, квалитет, поље, утисак, висина, покретљивост, распон, приоритет, обележје, печат, формула, плод, мирис, принос, сјај, напон, тумачење, равнотежа, преглед, грана, ранг, упутство, раствор, подстицај, самоуправа, савета, пшеница
+
+Neuron #43 (wiersz 4, kolumna 3): 33 rzeczowników, spójność 0.29
+  czasowniki o największych wagach: добити (0.32), добијати (0.19), дати (0.16), давати (0.13)
+  pole semantyczne: nazwy i formy otrzymywane
+  име, облик, време, значење, карактер, изглед, форма, устав, аутономија, тон, новац, одговор, признање, димензија, приход, привилегија, сврха, фотографија, повеља, мандат, склониште, распоред, повластица, оцена, кафа, перје, једначина, одобрење, позив, копље, село, забрана, датум
+
+Neuron #44 (wiersz 4, kolumna 4): 27 rzeczowników, spójność 0.39
+  czasowniki o największych wagach: стећи (0.38), добити (0.21), добијати (0.10), захтевати (0.09)
+  pole semantyczne: prawa i status zdobywane
+  право, статус, контрола, независност, знање, дозвола, образовање, популарност, искуство, пажња, зона, самосталност, слава, проширење, репутација, управа, ауторитет, звање, противник, иницијатива, хлоропласт, држављанство, упориште, квалификација, надмоћ, превласт, уверење
+
+Neuron #45 (wiersz 4, kolumna 5): 8 rzeczowników, spójność 0.42
+  czasowniki o największych wagach: немати (0.21), имати (0.20), изгубити (0.18), поседовати (0.14)
+  pole semantyczne: mieszany: znaczenie i kompetencje (klaster niejednorodny)
+  значај, зуб, овлашћење, пречник, битак, муж, електрона, отац
+
+Neuron #46 (wiersz 4, kolumna 6): 30 rzeczowników, spójność 0.41
+  czasowniki o największych wagach: немати (0.40), имати (0.36), представљати (0.10), садржати (0.05)
+  pole semantyczne: mieszany: narządy i cechy (klaster niejednorodny)
+  мембрана, око, смисао, жица, захтев, излаз, религија, намера, претак, крила, изотоп, саобраћај, ствар, матица, просторија, праг, хромоз, длака, импликација, музеј, удов, једро, нијанса, еластичност, мана, век, рог, тигр, крвоток, распрострањење
+
+Neuron #47 (wiersz 4, kolumna 7): 12 rzeczowników, spójność 0.29
+  czasowniki o największych wagach: чинити (0.21), представљати (0.21), имати (0.20), немати (0.16)
+  pole semantyczne: części składowe całości
+  период, тачка, компонент, тим, рачунар, половина, кожа, стуб, остатак, архитектура, ослонац, раздобље
+
+Neuron #48 (wiersz 4, kolumna 8): 30 rzeczowników, spójność 0.32
+  czasowniki o największych wagach: чинити (0.39), имати (0.17), покривати (0.12), представљати (0.09)
+  pole semantyczne: obszar i ludność
+  површина, већина, подручје, популација, становништво, трошак, дио, састав, трећина, земљиште, привреда, омотач, молекул, општина, поверење, економија, тврдоћа, четвртина, запремина, шума, канал, мозак, решење, амбијент, вриједност, грађ, елеменат, буџет, обезбеђивање, со
+
+Neuron #49 (wiersz 4, kolumna 9): 34 rzeczowników, spójność 0.34
+  czasowniki o największych wagach: формирати (0.42), чинити (0.20), градити (0.12), имати (0.11)
+  pole semantyczne: struktury tworzone
+  структура, основ, мрежа, маса, језеро, органа, стање, слој, једињење, ред, јединица, интеракција, сола, планина, мост, зид, комора, ивица, река, идентитет, батаљон, фаза, плата, кристала, жлезда, кор, ткива, талог, мравињак, легура, прстен, песак, океан, комисија
 
 ==========================================================================================
-WARIANT C: 100 czasowników przechodnich, kolokacje w oknie ±5 wyrazów
+PODSUMOWANIE ANALIZY KLASTRÓW
 ==========================================================================================
-Zbiór treningowy: 50 wektorów × 100 składowych
-Suma kolokacji: 1784, niezerowe składowe: 824 (16.5% macierzy)
-Sieć 10×10, 20000 iteracji: błąd kwantyzacji = 0.2916, błąd topograficzny = 0.00%
-Zajęte neurony: 49 / 100
-Neurony z więcej niż jednym rzeczownikiem (najbliżej siebie w przestrzeni 100D):
-  neuron (0, 0): територија, површина
-
-==========================================================================================
-PORÓWNANIE WARIANTÓW – czy wynik zależy od wyboru czasowników?
-==========================================================================================
-Wspólne czasowniki w A i B: 49 / 100
-  A vs B: korelacja Spearmana odległości na mapie = 0.701, wspólni sąsiedzi (5 najbliższych) = 48.0%
-  A vs C: korelacja Spearmana odległości na mapie = 0.405, wspólni sąsiedzi (5 najbliższych) = 30.0%
-  B vs C: korelacja Spearmana odległości na mapie = 0.429, wspólni sąsiedzi (5 najbliższych) = 30.0%
+Neurony aktywne: 50 / 50, martwe (nie nauczyły się niczego): 0
+Liczebność klastrów: największy 38, najmniejszy niepusty 3, mediana 19
+Średnia spójność klastrów: 0.340 (średnie podobieństwo dowolnych dwóch rzeczowników: 0.070)
+Neurony z rozpoznanym polem semantycznym: 46, w tym jednorodnych: 35
+Liczba różnych pól semantycznych (z klastrów jednorodnych): 33
+Neurony bez rozpoznanego pola: #1, #10, #16, #24
+  - cechy i przejawy zachowania: neurony #15
+  - czynności i działania: neurony #7
+  - części składowe całości: neurony #47
+  - decyzje i akty prawne: neurony #13
+  - działania wykonywane: ataki, reformy, służba: neurony #8
+  - etapy dziejów: rozkwit i upadek: neurony #3
+  - grupy społeczne i organizacje: neurony #39
+  - jednostki miary i liczebność: neurony #26
+  - korzyści i cechy nadawane: neurony #42
+  - materiały i substancje wytwarzane: neurony #30
+  - metody, techniki, narzędzia: neurony #20
+  - miejsca i pozycje zajmowane: neurony #33
+  - nazwy i formy otrzymywane: neurony #43
+  - obszar i ludność: neurony #48
+  - osiągnięcia: gole, sukcesy: neurony #14
+  - państwa i instytucje zakładane: neurony #29
+  - pomoc, wsparcie, ochrona: neurony #2
+  - porozumienia i związki: neurony #28
+  - prawa i status zdobywane: neurony #44
+  - procesy i zmiany: neurony #6
+  - role i terytoria zdobywane: neurony #34
+  - skutki negatywne: choroby, szkody, straty: neurony #4, #5
+  - struktury tworzone: neurony #49
+  - substancje i składniki chemiczne: neurony #40, #41
+  - systemy, programy, modele: neurony #21
+  - teksty i dzieła: neurony #22
+  - teorie i systemy pojęć: neurony #11
+  - trofea i zawody sportowe: neurony #23
+  - wielkości, które rosną i maleją: neurony #25
+  - wojna, polityka, walka (prowadzić): neurony #9
+  - wydarzenia organizowane: gry, wystawy, referenda: neurony #19
+  - władza, odpowiedzialność, propozycje: neurony #12
+  - właściwości i cechy: neurony #35, #36
 
 Zapisano wyniki w folderze 'wyniki\lab04':
   - czasowniki_przechodnie.csv
+  - liczebnosc_klastrow.png
+  - mapa_kohonena.png
+  - neurony.csv
   - podsumowanie.json
+  - przypisanie_rzeczownikow.csv
   - raport.txt
   - rzeczowniki.csv
   - uczenie.png
-  - wariant_A_macierz.png
-  - wariant_A_mapa.csv
-  - wariant_A_mapa.png
-  - wariant_A_pca.png
-  - wariant_A_plaszczyzny.png
-  - wariant_A_zbior_treningowy.csv
-  - wariant_B_macierz.png
-  - wariant_B_mapa.csv
-  - wariant_B_mapa.png
-  - wariant_B_pca.png
-  - wariant_B_plaszczyzny.png
-  - wariant_B_zbior_treningowy.csv
-  - wariant_C_macierz.png
-  - wariant_C_mapa.csv
-  - wariant_C_mapa.png
-  - wariant_C_pca.png
-  - wariant_C_plaszczyzny.png
-  - wariant_C_zbior_treningowy.csv
+  - wagi_neuronow.csv
+  - zbior_treningowy.csv
